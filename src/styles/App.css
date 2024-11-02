@@ -12,6 +12,18 @@
     --primary-gradient-hover: linear-gradient(104.5deg, #F4A941 20.94%, #F46C3F 76%);
 }
 
+@media (prefers-color-scheme: dark) {
+    .dark {
+        --primary : #F46C3F;
+        --secondary: #1B0B4E;
+        --pure : #ffffff;
+        --dark : #2F2F2F;
+        --light : #8A959E;
+        --primary-gradient: linear-gradient(104.5deg, #F46C3F 20.94%, #F4A941 76%);
+        --primary-gradient-hover: linear-gradient(104.5deg, #F4A941 20.94%, #F46C3F 76%);
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
