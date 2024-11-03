@@ -16,8 +16,8 @@ const Clients = () => {
                             className='sm:text-2xl font-medium font-clash w-spacing-sm tracking-wider'
                             style={{
                                 background: 'linear-gradient(90.15deg, #5832CE -19.16%, #02C6F7 46.21%)',
-                                webkitBackgroundClip: 'text',
-                                webkitTextFillColor: 'transparent',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
                                 color: 'transparent'
                             }}  

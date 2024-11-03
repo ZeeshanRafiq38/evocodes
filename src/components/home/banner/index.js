@@ -7,11 +7,11 @@ import FadeOnScroll from '@/components/global/FadeOnScroll'
 
 const Banner = () => {
     return (
-        <div className='w-full bg-secondary relative overflow-hidden px-3'>
+        <div className='w-full bg-[#150C31] relative overflow-hidden px-3'>
             <div className='absolute bottom-0 -left-0 '>
                 <ElipseLeft />
             </div>
-            <div className='absolute sm:top-0 -top-48 right-0 '>
+            <div className='absolute sm:top-0 -top-48 right-0'>
                 <ElipseRight />
             </div>
             <div className='relative z-10 flex items-center justify-between container mx-auto md:py-20 sm:py-12 py-10'>

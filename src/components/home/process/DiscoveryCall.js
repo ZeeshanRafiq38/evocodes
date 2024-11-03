@@ -17,7 +17,7 @@ const DiscoveryCall = () => {
                             Discovery Call – No <br /> More Guesswork
                         </h4>
                         <p className='mt-3 text-dark sm:text-base text-sm'>
-                            We know that every project brings its own set of challenges. That’s why our process is built to handle the unexpected while keeping you informed every step of the way.
+                            We start with a 15-minute discovery call to fully understand your goals. No long sales pitch, just a simple conversation to clarify your needs.
                         </p>
                     </div>
                 </SlideOnScroll>

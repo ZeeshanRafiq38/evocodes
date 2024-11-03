@@ -1,4 +1,4 @@
-import { FigmaSvg } from '@/assets/svgs'
+import { FigmaSvg, MySqlSvg } from '@/assets/svgs/technologies'
 import React from 'react'
 
 const HappyClients = () => {
@@ -8,8 +8,8 @@ const HappyClients = () => {
             className='sm:text-2xl font-medium font-clash w-spacing-sm tracking-wider'
             style={{
                 background: 'linear-gradient(104.5deg, #F46C3F 20.94%, #F4A941 76%), #FFFFFF',
-                webkitBackgroundClip: 'text',
-                webkitTextFillColor: 'transparent',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 color: 'transparent'
             }}  
@@ -20,7 +20,7 @@ const HappyClients = () => {
                 {
                     [...Array(6).keys()].map(item => (
                         <div key={item}>
-                            <FigmaSvg className='sm:w-[110px] w-[70px]' />
+                            <MySqlSvg className='sm:w-[110px] w-[70px]' />
                         </div>
                     ))
                 }

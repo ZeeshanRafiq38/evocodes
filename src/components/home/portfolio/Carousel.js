@@ -1,13 +1,13 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import portfolioData from "@/constants/portfolio.constants";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation , Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import Image from "next/image";
 
 const Carousel = () => {
     return (
-        <div className="relaitve">
+        <div className="relative">
             <Swiper
                 speed={1000}
                 slidesPerView={3}
@@ -15,65 +15,76 @@ const Carousel = () => {
                 pagination={{
                     clickable: true,
                 }}
-                autoplay ={{
-                    delay : 3000 ,
-                    pauseOnMouseEnter: true
+                autoplay={{
+                    delay: 3000,
+                    pauseOnMouseEnter: true,
                 }}
                 loop={true}
                 navigation={true}
-                modules={[Autoplay ,Navigation]}
+                modules={[Autoplay, Navigation]}
                 breakpoints={{
                     1050: {
-                        slidesPerView: 3
+                        slidesPerView: 3,
                     },
                     950: {
-                        slidesPerView: 2.5
+                        slidesPerView: 2.5,
                     },
                     820: {
-                        slidesPerView: 2.4
+                        slidesPerView: 2.4,
                     },
                     710: {
-                        slidesPerView: 2
+                        slidesPerView: 2,
                     },
                     550: {
-                        slidesPerView: 1.5
+                        slidesPerView: 1.5,
                     },
                     280: {
-                        slidesPerView: 1
-                    }
+                        slidesPerView: 1,
+                    },
                 }}
             >
-                {
-                    portfolioData?.map((item, i) => (
+                {portfolioData?.map((item) => {
+                    const [isHovered, setIsHovered] = useState(false);
+
+                    return (
                         <SwiperSlide key={item.id}>
-                            <div className="">
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                            >
+                                {/* Base Image */}
                                 <Image
-                                src={item.image}
-                                width={500}
-                                height={500}
-                                alt={item.name}
-                                className="rounded-[20px] border border-gray-200"
+                                    src={item.image}
+                                    width={500}
+                                    height={500}
+                                    alt={item.name}
+                                    className={`rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
+                                />
+                                {/* Hover Image */}
+                                <Image
+                                    src={item.hoverImg}
+                                    width={500}
+                                    height={500}
+                                    alt={`${item.name} hover`}
+                                    className={`absolute top-0 left-0 rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
                                 />
                             </div>
                             <div className="content mt-4">
                                 <div className="text-center">
                                     <h3 className="text-xl font-semibold mb-1">{item?.name}</h3>
                                     <div className="flex items-center justify-center mt-4 gap-2">
-                                        {
-                                            item?.tags?.map(tag => (
-                                                <div key={tag} className="bg-pure bg-opacity-50 rounded-full sm:text-sm text-xs py-2 px-4">
-                                                    {tag}
-                                                </div>
-                                            ))
-                                        }
+                                        {item?.tags?.map((tag) => (
+                                            <div key={tag} className="bg-pure bg-opacity-50 rounded-full sm:text-sm text-xs py-2 px-4">
+                                                {tag}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
                         </SwiperSlide>
-                    ))
-                }
-
-
+                    );
+                })}
             </Swiper>
         </div>
     );

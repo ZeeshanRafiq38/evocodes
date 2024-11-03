@@ -11,16 +11,16 @@ const LaunchAndSupport = () => {
                 </div>
                 <div className="sm:mt-8 mt-6">
                     <h4 className='font-clash leading-[1.1] tracking-wide w-spacing-sm md:text-2xl text-xl text-dark font-semibold'>
-                        Transparent Launch <br /> And Ongoing Support
+                        Transparent Launch & <br />  Ongoing Support
                     </h4>
                     <p className='mt-3 text-dark sm:text-base text-sm'>
-                        We know that every project brings its own set of challenges. That’s why our process is built to handle the unexpected while keeping you informed every step of the way.
+                        When it’s time to go live, we don’t just disappear. We make sure everything works as expected and stick around to provide ongoing support whenever you need us. Your success is our success.
                     </p>
                 </div>
             </div>
             <div className='flex-1 flex items-center justify-center'>
                 <Image
-                src='/images/call.png'
+                src='/images/support.png'
                 className='w-auto h-auto '
                 alt='launch and support'
                 width={500}c

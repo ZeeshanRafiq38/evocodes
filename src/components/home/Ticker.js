@@ -5,7 +5,7 @@ const Ticker = () => {
     return (
         <div className="bg-secondary text-pure font-clash font-normal py-6">
             <Marquee
-            speed={100}
+            speed={50}
             pauseOnHover
             >
                 <div className="flex items-center gap-8 mx-4 lg:text-lg md:text-base text-sm">

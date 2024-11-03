@@ -11,16 +11,16 @@ const AgileDevelopment = () => {
                 </div>
                 <div className="sm:mt-8 mt-6">
                     <h4 className='font-clash leading-[1.1] tracking-wide w-spacing-sm md:text-2xl text-xl  text-dark font-semibold'>
-                        Agile Development
+                        Agile Development – Stay <br /> in Control
                     </h4>
                     <p className='mt-3 text-dark sm:text-base text-sm'>
-                        We know that every project brings its own set of challenges. That’s why our process is built to handle the unexpected while keeping you informed every step of the way.
+                        As we build your solution, you’ll be part of the process. You’ll see early prototypes, give feedback, and shape the outcome. We stay flexible to ensure the final product is what you need, not just what was spec’d out months ago.
                     </p>
                 </div>
             </div>
-            <div className='flex-1 flex items-center justify-center'>
+            <div className='flex-1 flex justify-center'>
                 <Image
-                src='/images/call.png'
+                src='/images/agileDev4.png'
                 className='w-auto h-auto '
                 alt='Agile development'
                 width={500}

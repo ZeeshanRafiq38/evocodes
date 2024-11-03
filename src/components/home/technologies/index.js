@@ -1,6 +1,6 @@
-import { HtmlSvg, MicrosoftSvg, MySqlSvg } from "@/assets/svgs";
 import Marquee from "react-fast-marquee";
 import RectangleSvg from "./RectangleSvg";
+import technologies from "@/constants/technologies.constants";
 
 
 const Technologies = () => {
@@ -16,34 +16,39 @@ const Technologies = () => {
             </header>
             <div className='sm:mt-12 mt-8 relative overflow-hidden'>
                 <Marquee
-                speed={80}
+                speed={70}
                 >
                     <div className="flex items-center sm:gap-8 gap-4 mx-4 py-2">
                         {
-                            [...Array(20).keys()].map(item => (
+                            technologies.map(item => (
                                 <div 
-                                className="bg-pure border border-gray-200 shadow-lg rounded-lg sm:py-4 py-3 sm:px-8 px-6 flex items-center justify-center"
-                                key={item}
+                                className={`bg-pure border border-gray-200 shadow-lg rounded-lg sm:py-4 py-3 sm:px-8 px-6 flex items-center justify-center`}
+                                key={item.id}
                                 >
-                                    <MySqlSvg className={'md:w-[90px] sm:w-[75px] w-[40px]'}/>
+                                    <item.icon 
+                                    className={`
+                                        md:w-[60px] sm:w-[50px] w-[40px] sm:h-[50px] h-[40px] 
+                                        ${item?.scale ? 'scale-[1.5]' : ''}
+                                    `}
+                                    />
                                 </div>
                             ))
                         }
                     </div>
                 </Marquee>
                 <Marquee
-                speed={80}
+                speed={60}
                 className="sm:mt-6 mt-2"
                 direction="right"
                 >
                     <div className="flex items-center gap-8 mx-4 py-2">
                         {
-                            [...Array(20).keys()].map(item => (
+                           technologies.map(item => (
                                 <div 
-                                className="bg-pure border border-gray-200 shadow-lg rounded-lg sm:py-4 py-3 sm:px-8 px-6 flex items-center justify-center"
-                                key={item}
+                                className={`bg-pure border border-gray-200 shadow-lg rounded-lg sm:py-4 py-3 sm:px-8 px-6 flex items-center justify-center `}
+                                key={item.id}
                                 >
-                                    <HtmlSvg className={'md:w-[60px] sm:w-[50px] w-[40px] sm:h-[50px] h-[40px]'}/>
+                                    <item.icon className={`md:w-[60px] sm:w-[50px] w-[40px] sm:h-[50px] h-[40px] ${item?.scale ? 'scale-[1.5]' : ''}`}/>
                                 </div>
                             ))
                         }

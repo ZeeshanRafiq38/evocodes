@@ -1,4 +1,5 @@
 import { ClearPlanningSvg } from '@/assets/svgs'
+import SlideOnScroll from '@/components/global/SlideOnScroll'
 import Image from 'next/image'
 import React from 'react'
 
@@ -11,16 +12,16 @@ const ClearPlanning = () => {
                 </div>
                 <div className="sm:mt-8 mt-6">
                     <h4 className='font-clash leading-[1.1] tracking-wide w-spacing-sm md:text-2xl text-xl text-dark font-semibold'>
-                        Clear Planning
+                        Clear Planning – No <br /> More Moving Targets
                     </h4>
                     <p className='mt-3 text-dark sm:text-base text-sm'>
-                        We know that every project brings its own set of challenges. That’s why our process is built to handle the unexpected while keeping you informed every step of the way.
+                        After the discovery, we lay out a clear project roadmap. You’ll have a timeline, milestone updates, and the exact deliverables we’ll provide. No surprises, no guesswork.
                     </p>
                 </div>
             </div>
             <div className='flex-1 flex items-center justify-center'>
                 <Image
-                src='/images/call.png'
+                src='/images/clearPlanning.png'
                 className='w-auto h-auto '
                 alt='clear planning'
                 width={500}

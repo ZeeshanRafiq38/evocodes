@@ -9,11 +9,8 @@ export { default as ServicesShapLeftSvg } from './ServicesShapLeftSvg';
 export { default as ServicesShapeRightSvg } from './ServicesShapeRightSvg';
 export { default as ArrowLeftSvg } from './ArrowLeftSvg';
 export { default as ArrowRightSvg } from './ArrowRightSvg';
-export { default as MySqlSvg } from './MySqlSvg';
 export { default as MicrosoftSvg } from './MicrosoftSvg';
-export { default as HtmlSvg } from './HtmlSvg';
 export { default as ChatSvg } from './ChatSvg';
-export { default as FigmaSvg } from './FigmaSvg';
 export { default as LogoSvg } from './LogoSvg';
 export { default as DarkLogoSvg } from './DarkLogoSvg';
 export { default as FacebookSvg } from './FacebookSvg';
@@ -24,3 +21,4 @@ export { default as CloseSvg } from './CloseSvg';
 export { default as FacebookCircleSvg } from './FacebookCircleSvg';
 export { default as WhatsAppSvg } from './WhatsAppSvg';
 export { default as LinkedInFilledSvg } from './LinkedInFilledSvg';
+
