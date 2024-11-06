@@ -22,27 +22,25 @@ const About = () => {
                                 Through collaborationperse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society.
                             </p>
                         </div>
-                        <div className="w-full flex-col justify-center items-start gap-6 flex sm:mt-8 mt-6">
-                            <div className="w-full justify-start items-center sm:gap-8 gap-6 grid md:grid-cols-2 grid-cols-1">
-                                <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-                                    <h4 className=" sm:text-xl font-semibold leading-9">
-                                        33+ Years
-                                    </h4>
-                                    <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
-                                        Influencing Digital Landscapes Together
-                                    </p>
-                                </div>
-                                <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-                                    <h4 className=" sm:text-xl font-semibold leading-9">
-                                        125+ Projects
-                                    </h4>
-                                    <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
-                                        Excellence Achieved Through Success
-                                    </p>
-                                </div>
+                        <div className="sm:mt-8 mt-6 w-full justify-start items-center sm:gap-8 gap-6 grid md:grid-cols-2 grid-cols-1">
+                            <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
+                                <h4 className=" sm:text-xl font-semibold leading-9">
+                                    33+ Years
+                                </h4>
+                                <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
+                                    Influencing Digital Landscapes Together
+                                </p>
                             </div>
-
+                            <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
+                                <h4 className=" sm:text-xl font-semibold leading-9">
+                                    125+ Projects
+                                </h4>
+                                <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
+                                    Excellence Achieved Through Success
+                                </p>
+                            </div>
                         </div>
+
                         <div className='sm:mt-12 mt-10'>
                             <a 
                             href="#discovery-call" 
