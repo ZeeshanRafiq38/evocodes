@@ -1,4 +1,5 @@
 import FadeOnScroll from "@/components/global/FadeOnScroll";
+import About from "@/components/home/about";
 import Banner from "@/components/home/banner";
 import Clients from "@/components/home/clients";
 import Faqs from "@/components/home/faqs";
@@ -29,6 +30,9 @@ export default function Home() {
             </section>
             <section id="portfolio">
                 <Portfolio />
+            </section>
+            <section id="about">
+                <About />
             </section>
             <section id="technologies">
                 <FadeOnScroll>

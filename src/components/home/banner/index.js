@@ -42,9 +42,11 @@ const Banner = () => {
                             <span className='sm:text-base text-sm'>
                                 Let’s explore your vision in just 15 minutes.
                             </span>
-                            <button className="block sm:mt-0 mt-3 btn-primary sm:py-4 py-2 sm:px-12 px-8 font-clash font-medium w-spacing-sm tracking-wider">
+                            <a 
+                            href='#discovery-call'
+                            className="block sm:mt-0 mt-3 btn-primary sm:py-4 py-2 sm:px-12 px-8 font-clash font-medium w-spacing-sm tracking-wider">
                                 15-minute discovery call
-                            </button>
+                            </a>
                         </div>
                     </SlideOnScroll>
                 </div>

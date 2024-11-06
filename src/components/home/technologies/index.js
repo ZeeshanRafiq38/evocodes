@@ -16,7 +16,7 @@ const Technologies = () => {
             </header>
             <div className='sm:mt-12 mt-8 relative overflow-hidden'>
                 <Marquee
-                speed={70}
+                speed={30}
                 >
                     <div className="flex items-center sm:gap-8 gap-4 mx-4 py-2">
                         {
@@ -37,7 +37,7 @@ const Technologies = () => {
                     </div>
                 </Marquee>
                 <Marquee
-                speed={60}
+                speed={40}
                 className="sm:mt-6 mt-2"
                 direction="right"
                 >

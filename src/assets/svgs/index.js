@@ -21,4 +21,6 @@ export { default as CloseSvg } from './CloseSvg';
 export { default as FacebookCircleSvg } from './FacebookCircleSvg';
 export { default as WhatsAppSvg } from './WhatsAppSvg';
 export { default as LinkedInFilledSvg } from './LinkedInFilledSvg';
+export { default as ErrorSvg } from './ErrorSvg';
+export { default as NotFoundSvg } from './NotFoundSvg';
 

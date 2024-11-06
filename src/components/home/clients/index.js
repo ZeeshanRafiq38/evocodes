@@ -7,7 +7,7 @@ import SlideOnScroll from '@/components/global/SlideOnScroll'
 
 const Clients = () => {
     return (
-        <div className='section bg-secondary relative overflow-hidden'>
+        <div className='section bg-secondary relative overflow-hidden' id='discovery-call'>
             <SlideOnScroll direction='top'>
                 <div className='container mx-auto xl:px-20'>
                     <div className='flex lg:flex-row flex-col items-center justify-between gap-6'>

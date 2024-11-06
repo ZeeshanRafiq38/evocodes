@@ -5,7 +5,7 @@ import React from 'react'
 const MobileApp = () => {
     return (
         <div 
-        className='p-4 rounded-lg sm:px-12'
+        className='p-4 rounded-lg sm:px-12 flex md:flex-col flex-col-reverse sm:gap-12 gap-10'
         style={{
             background: "linear-gradient(180deg, rgba(243, 243, 252, 0) 0%, #F3F3FC 100%)"
         }}
@@ -45,7 +45,7 @@ const MobileApp = () => {
                     </div>
                 </div>
             </div>
-            <h6 className='sm:mt-12 mt-10 font-clash font-semibold sm:text-2xl text-xl text-center '>
+            <h6 className=' font-clash font-semibold sm:text-2xl text-xl text-center '>
                 Mobile App <br /> Development
             </h6>
         </div>

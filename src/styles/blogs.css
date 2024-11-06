@@ -1,0 +1,54 @@
+/* Tailwind CSS styles */
+.blog-content h1 {
+    @apply md:text-3xl sm:text-2xl text-xl font-bold ;
+}
+
+.blog-content h2 {
+    @apply md:text-[26px] sm:text-[22px] text-lg font-semibold;
+}
+
+.blog-content h3 {
+    @apply md:text-[22px] sm:text-xl text-base font-medium;
+}
+
+.blog-content h4 {
+    @apply md:text-xl text-base font-medium;
+}
+
+.blog-content h5 {
+    @apply md:text-lg sm:text-base text-sm font-medium;
+}
+
+.blog-content p {
+    @apply sm:text-base text-sm my-2;
+}
+
+.blog-content a {
+    @apply text-blue-500 underline hover:text-blue-700 ;
+}
+
+.blog-content ul, .blog-content ol {
+    @apply list-disc list-inside ml-4 md:ml-6 py-2;
+}
+
+.blog-content li {
+    @apply my-1 sm:text-base text-sm;
+}
+
+.blog-content blockquote {
+    @apply border-l-4 border-gray-400 pl-4 italic my-4 text-gray-600 sm:text-base text-sm;
+}
+
+.blog-content strong {
+    @apply font-semibold;
+}
+
+.blog-content em {
+    @apply italic;
+}
+
+.blog-content img {
+    @apply my-4 rounded-lg;
+    width: auto;
+    height: auto;
+}

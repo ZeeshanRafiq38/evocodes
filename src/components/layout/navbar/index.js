@@ -27,9 +27,11 @@ const Navbar = () => {
                         }
                     </ul>
                     <div className='md:flex hidden items-center gap-4'>
-                        <button className="btn-primary py-3 w-spacing-sm px-6 font-clash tracking-widest text-sm font-medium">
+                        <a 
+                        href='#discovery-call'
+                        className="btn-primary py-3 w-spacing-sm px-6 font-clash tracking-widest text-sm font-medium">
                             15-MINUTE DISCOVERY CALL
-                        </button>
+                        </a>
                     </div>
                     <div className="md:hidden block">
                         <MobMenu />

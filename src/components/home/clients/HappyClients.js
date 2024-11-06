@@ -1,5 +1,7 @@
 import { FigmaSvg, MySqlSvg } from '@/assets/svgs/technologies'
+import clients from '@/constants/clients.constants'
 import React from 'react'
+import Marquee from 'react-fast-marquee'
 
 const HappyClients = () => {
     return (
@@ -16,15 +18,20 @@ const HappyClients = () => {
             >
                 The Who&apos;s is Who of Happy Clients
             </h4>
-            <div className='grid lg:grid-cols-6 md:grid-cols-4 grid-cols-3 md:gap-12 gap-6 mt-6'>
-                {
-                    [...Array(6).keys()].map(item => (
-                        <div key={item}>
-                            <MySqlSvg className='sm:w-[110px] w-[70px]' />
-                        </div>
-                    ))
-                }
-            </div>
+            <Marquee
+            speed={30}
+            className='mt-6'
+            >
+                <div className="flex items-center sm:gap-8 gap-4 mx-4 py-2">
+                    {
+                        clients.map(item => (
+                            <div key={item.id}>
+                                <item.icon className='sm:w-[150px] w-[100px] sm:h-[100px] h-[60px]' />
+                            </div>
+                        ))
+                    }
+                </div>
+            </Marquee>
 
         </div>
     )

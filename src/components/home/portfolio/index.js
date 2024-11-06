@@ -18,9 +18,11 @@ const Portfolio = () => {
                             </p>
                         </div>
                         <div>
-                            <button className="btn-primary sm:py-4 py-2 sm:px-6 px-4 font-clash w-spacing-sm tracking-wider sm:text-lg font-medium">
+                            <a 
+                            href='#discovery-call'
+                            className="btn-primary sm:py-4 py-2 sm:px-6 px-4 font-clash w-spacing-sm tracking-wider sm:text-lg font-medium">
                                 15-minute discovery call
-                            </button>
+                            </a>
                         </div>
                     </header>
                     <div className="md:mt-20 sm:mt-12 mt-10 relative">

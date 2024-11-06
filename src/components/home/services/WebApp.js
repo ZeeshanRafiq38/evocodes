@@ -4,12 +4,12 @@ import React from 'react'
 const WebApp = () => {
     return (
         <div 
-        className='p-4 rounded-lg sm:px-12'
+        className='p-4 rounded-lg sm:px-12 flex md:flex-col flex-col-reverse md:gap-[124px] gap-12'
         style={{
             background: "linear-gradient(180deg, rgba(243, 243, 252, 0) 0%, #F3F3FC 100%)"
         }}
         >
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center md:pb-0 pb-20 md:translate-x-0 -translate-x-6'>
                 <div className='bg-pure rounded-lg service-shadow p-4 translate-y-16 translate-x-12'>
                     <Image 
                     src='/images/mern.png'
@@ -29,7 +29,7 @@ const WebApp = () => {
                     />
                 </div>
             </div>
-            <h6 className='sm:mt-32 mt-24 font-clash font-semibold sm:text-2xl text-xl text-center'>
+            <h6 className=' font-clash font-semibold sm:text-2xl text-xl text-center'>
                 Web App <br /> Development
             </h6>
         </div>
