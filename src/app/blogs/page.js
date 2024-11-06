@@ -7,6 +7,9 @@ export const metadata = {
     title: 'All Blogs',
 };
 
+export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
 
 const fetchBlogs = async () => {
     try {
