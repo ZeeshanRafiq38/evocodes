@@ -19,8 +19,8 @@ html {
 
 body {
     font-family: var(--font-inter);
-    background-color: var(--pure);
-    color : var(--dark);
+    background-color: var(--pure) !important;
+    color : var(--dark) !important;
 }
 
 

@@ -15,9 +15,13 @@ const Hero = () => {
                 <h1 className='font-clash 2xl:text-[72px] lg:text-[62px] md:text-[50px] sm:text-[40px] text-[22px] 2xl:w-[60%] lg:w-[72%] sm:w-[80%] w-full text-center tracking-medium !leading-[1] font-semibold md:px-0 px-2 sm:scale-1 scale-[1.1] tracking-wide'>
                     Don’t Gamble with Your Next Project. Partner with Experts Who Deliver.
                 </h1>
-                <h4 className='text-center md:text-lg sm:text-base text-[13px] sm:w-full w-[250px] text-gray-200 shadow-md'>
+                {/* <h4 className='text-center md:text-lg sm:text-base text-[13px] sm:w-full w-[250px] text-gray-200 shadow-md'>
+                    No empty promises, just results that speak for themselves.
+                </h4> */}
+                <h4 className="text-center md:text-lg sm:text-base text-[13px] sm:w-full w-[250px] text-gray-200 font-semibold tracking-wide shadow-md">
                     No empty promises, just results that speak for themselves.
                 </h4>
+
                 <div className='mt-2'>
                     <a 
                     href='#discovery-call'

@@ -4,7 +4,7 @@ import Axios from '@/config/api';
 import React from 'react';
 
 export const metadata = {
-    title: 'All Blogs',
+    title: 'All Blogs | Evocodes Insights into Technology & Software',
 };
 
 export const revalidate = 60

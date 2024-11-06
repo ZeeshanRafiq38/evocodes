@@ -36,7 +36,7 @@ const BlogHeader = ({ blog }) => {
                 >
                     {blog?.title}
                 </h1>
-                <div className=' flex items-center justify-between'>
+                <div className=' flex items-center gap-4 justify-between'>
                     <div>
                         <div className='sm:text-base text-sm'>
                             <span className='text-gray-200'>By </span>
@@ -48,7 +48,7 @@ const BlogHeader = ({ blog }) => {
                             {moment(blog?.createdAt).format('DD MMM YYYY')} • 5 min read
                         </p>
                     </div>
-                    <div className='flex items-center gap-4 text-secondary'>
+                    <div className='flex items-center sm:gap-3 gap-2'>
                         {/* <div className='bg-pure sm:w-[30px] w-[28px] sm:h-[30px] h-[28px] rounded-full flex items-center justify-center hover:scale-[1.2] duration-200 ease-in cursor-pointer'>
                             <FacebookCircleSvg size={18} />
                         </div>
@@ -58,15 +58,13 @@ const BlogHeader = ({ blog }) => {
                         <div className='bg-pure sm:w-[30px] w-[28px] sm:h-[30px] h-[28px] rounded-full flex items-center justify-center hover:scale-[1.2] duration-200 ease-in cursor-pointer'>
                             <LinkedInFilledSvg size={18} />
                         </div> */}
-                        <div className='flex items-center gap-3'>
-                            {
-                                blog?.tags.map(item => (
-                                    <div key={item} className='bg-green-200 text-green-700 py-1.5 px-2.5 rounded-md text-[13px]'>
-                                        {item}
-                                    </div>
-                                ))
-                            }
-                        </div>
+                        {
+                            blog?.tags.map(item => (
+                                <div key={item} className='bg-green-200 text-green-700 sm:py-1.5 py-1 sm:px-2.5 px-2 rounded-md sm:text-[13px] text-xs'>
+                                    {item}
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

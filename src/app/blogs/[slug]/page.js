@@ -1,7 +1,6 @@
 import BlogHeader from '@/components/blogs/blogDetails/BlogHeader'
 import RelatedPosts from '@/components/blogs/blogDetails/RelatedPosts'
 import Axios from '@/config/api'
-import Head from 'next/head';
 import React, { cache } from 'react'
 
 

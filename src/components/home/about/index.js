@@ -13,27 +13,27 @@ const About = () => {
                         <h3 className='section-heading !text-pure'>
                             About Us
                         </h3>
-                        <div className='sm:mt-6 mt-4 text-gray-300 sm:text-base text-sm'>
+                        <div className='mt-4 text-gray-300 sm:text-base text-sm'>
                             <p>
-                                Through collaborationperse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society.
+                                Founded in 2019 in Houston, Texas, Evocodes has established itself as a trusted partner in digital transformation, specializing in web and mobile application development. We've built our reputation on a simple yet powerful premise: no empty promises, just results that speak for themselves.
                             </p>
                             <br />
                             <p>
-                                Through collaborationperse perspectives and strengths are leveraged to create inclusive environments where everyone has the opportunity to thrive. This approach not only fosters personal growth and achievement but also strengthens the fabric of society.
+                                Our team of 15-30 skilled professionals brings together diverse expertise in development, design, and project management. This collaborative strength allows us to tackle complex challenges and deliver innovative solutions that drive business growth. Whether it's creating intuitive web applications or developing powerful mobile solutions, we approach each project with the same level of dedication and attention to detail.
                             </p>
                         </div>
                         <div className="sm:mt-8 mt-6 w-full justify-start items-center sm:gap-8 gap-6 grid md:grid-cols-2 grid-cols-1">
                             <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-                                <h4 className=" sm:text-xl font-semibold leading-9">
-                                    33+ Years
+                                <h4 className=" sm:text-[18px] font-semibold leading-9">
+                                    4+ Years
                                 </h4>
                                 <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
                                     Influencing Digital Landscapes Together
                                 </p>
                             </div>
                             <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-                                <h4 className=" sm:text-xl font-semibold leading-9">
-                                    125+ Projects
+                                <h4 className=" sm:text-[18px] font-semibold leading-9">
+                                    50+ Projects
                                 </h4>
                                 <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
                                     Excellence Achieved Through Success

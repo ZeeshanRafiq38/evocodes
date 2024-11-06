@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "../styles/index.css";
-import { Providers } from "./provider";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
@@ -34,29 +33,34 @@ const clashDisplay = localFont({
 });
 
 export const metadata = {
-    title: "EvoCodes",
+    title: "Evocodes - Where Technology Meets Innovation",
     description: "Evocodes - A leading software agency providing innovative solutions in web development, mobile app development, and digital marketing. Transform your business with our expert services tailored to meet your unique needs. Contact us today for a consultation!",
+    icons: [
+        { rel: 'icon', type: 'image/png', url: '/favicon-96x96.png', sizes: '96x96' },
+        { rel: 'icon', type: 'image/svg+xml', url: '/favicon.svg' },
+        { rel: 'shortcut icon', url: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', url: '/apple-touch-icon.png' },
+    ],
+    manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
+        <html lang="en" className="light">
             <body
                 className={`${inter.variable} ${clashDisplay.variable} antialiased`}
             >
-                <Providers>
-                    <header>
-                        <Navbar />
-                    </header>
-                    <Suspense fallback={<Loader />}>
-                        <main>
-                            {children}
-                        </main>
-                    </Suspense>
-                    <footer>
-                        <Footer />
-                    </footer>
-                </Providers>
+                <header>
+                    <Navbar />
+                </header>
+                <Suspense fallback={<Loader />}>
+                    <main>
+                        {children}
+                    </main>
+                </Suspense>
+                <footer>
+                    <Footer />
+                </footer>
             </body>
         </html>
     );
