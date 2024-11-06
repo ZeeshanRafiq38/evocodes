@@ -24,19 +24,19 @@ const About = () => {
                         </div>
                         <div className="w-full flex-col justify-center items-start gap-6 flex sm:mt-8 mt-6">
                             <div className="w-full justify-start items-center sm:gap-8 gap-6 grid md:grid-cols-2 grid-cols-1">
-                                <div className="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
                                     <h4 className=" sm:text-xl font-semibold leading-9">
                                         33+ Years
                                     </h4>
-                                    <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed">
+                                    <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
                                         Influencing Digital Landscapes Together
                                     </p>
                                 </div>
-                                <div className="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
                                     <h4 className=" sm:text-xl font-semibold leading-9">
                                         125+ Projects
                                     </h4>
-                                    <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed">
+                                    <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
                                         Excellence Achieved Through Success
                                     </p>
                                 </div>
