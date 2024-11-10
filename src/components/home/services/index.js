@@ -5,7 +5,7 @@ import WebApp from './WebApp'
 import { ServicesShapeRightSvg, ServicesShapLeftSvg } from '@/assets/svgs'
 import SlideOnScroll from '@/components/global/SlideOnScroll'
 
-const Services = () => {
+const Services = ({ shapes = true }) => {
     return (
         <div className='relative overflow-hidden px-3'>
             <SlideOnScroll>
@@ -25,12 +25,18 @@ const Services = () => {
                 </div>
             </SlideOnScroll>
 
-            <div className='absolute -left-[3%] -top-[15%] sm:block hidden'>
-                <ServicesShapLeftSvg />
-            </div>
-            <div className='absolute -right-[0%] -bottom-[100%] md:block hidden'>
-                <ServicesShapeRightSvg />
-            </div>
+            {
+                shapes && (
+                    <>
+                        <div className='absolute -left-[3%] -top-[15%] sm:block hidden'>
+                            <ServicesShapLeftSvg />
+                        </div>
+                        <div className='absolute -right-[0%] -bottom-[100%] md:block hidden'>
+                            <ServicesShapeRightSvg />
+                        </div>
+                    </>
+                )
+            }
         </div>
     )
 }

@@ -19,6 +19,11 @@ const navLinks = [
         name : 'Blogs' ,
         path : '/blogs'
     } ,
+    {
+        id : 5 ,
+        name : 'Locations' ,
+        path : '/locations'
+    } ,
 ]
 
 export default navLinks;

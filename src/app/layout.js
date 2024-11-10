@@ -10,7 +10,6 @@ import 'swiper/css/scrollbar';
 
 import "react-accordion-comp/dist/styles.css";
 import { Suspense } from "react";
-import Loader from "@/components/global/Loader";
 // import "animate.css/animate.compat.css";
 
 
@@ -53,11 +52,9 @@ export default function RootLayout({ children }) {
                 <header>
                     <Navbar />
                 </header>
-                <Suspense fallback={<Loader />}>
-                    <main>
-                        {children}
-                    </main>
-                </Suspense>
+                <main>
+                    {children}
+                </main>
                 <footer>
                     <Footer />
                 </footer>

@@ -1,6 +1,7 @@
+"use client"
 import React from 'react'
 
-const Loader = () => {
+const Loading = () => {
     return (
         <div className='fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-white z-[999999]'>
             <div className="loader"></div>
@@ -8,4 +9,4 @@ const Loader = () => {
     )
 }
 
-export default Loader
+export default Loading

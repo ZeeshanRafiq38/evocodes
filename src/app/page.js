@@ -12,7 +12,8 @@ import Ticker from "@/components/home/Ticker";
 
 
 
-export default function Home() {
+export default async function Home() {
+    
     return (
         <div>
             <section>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Loader = () => {
     return (
-        <div className='fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-white z-[999999]'>
+        <div className='w-full h-[200px] flex items-center justify-center border border-gray-300 rounded-lg my-6'>
             <div className="loader"></div>
         </div>
     )

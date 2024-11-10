@@ -4,25 +4,25 @@ const socialLinks = [
     {
         id : 1 ,
         name : 'Facebook' ,
-        url : 'https://facebook.com' ,
+        url : 'https://www.facebook.com/evocodes.llc' ,
         icon : FacebookSvg
     } ,
     {
         id : 2 ,
         name : 'Instagram' ,
-        url : 'https://instagram.com' ,
+        url : 'https://www.instagram.com/evocodes.llc/' ,
         icon : InstaSvg
     } ,
     {
         id : 3 ,
         name : 'Twitter' ,
-        url : 'https://twitter.com' ,
+        url : 'https://x.com/evocodesllc' ,
         icon : TwitterSvg
     } ,
     {
         id : 4 ,
         name : 'Linked In' ,
-        url : 'https://linkedin.com' ,
+        url : 'https://www.linkedin.com/in/adsandcode/' ,
         icon : LinkedInSvg
     } ,
 ]
