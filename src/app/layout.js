@@ -10,6 +10,7 @@ import 'swiper/css/scrollbar';
 
 import "react-accordion-comp/dist/styles.css";
 import { Suspense } from "react";
+import Provider from "./Provider";
 // import "animate.css/animate.compat.css";
 
 
@@ -43,21 +44,23 @@ export const metadata = {
     manifest: '/site.webmanifest',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children}) {
     return (
         <html lang="en" className="light">
             <body
                 className={`${inter.variable} ${clashDisplay.variable} antialiased`}
             >
-                <header>
-                    <Navbar />
-                </header>
-                <main>
-                    {children}
-                </main>
-                <footer>
-                    <Footer />
-                </footer>
+                <Provider>
+                    <header>
+                        <Navbar />
+                    </header>
+                    <main>
+                        {children}
+                    </main>
+                    <footer>
+                        <Footer />
+                    </footer>
+                </Provider>
             </body>
         </html>
     );

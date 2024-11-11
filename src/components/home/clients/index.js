@@ -4,6 +4,7 @@ import HappyClients from './HappyClients'
 import ShapeLeft from './ShapeLeft'
 import ShapeRight from './ShapeRight'
 import SlideOnScroll from '@/components/global/SlideOnScroll'
+import { discoveryCallUrl } from '@/constants/app.constants'
 
 const Clients = () => {
     return (
@@ -38,11 +39,16 @@ const Clients = () => {
                             <p className='text-dark sm:text-sm text-xs'>
                                 Have a great idea in your mind? Let discuss.
                             </p>
-                            <div>
-                                <button className="btn-primary sm:text-base text-sm py-2 px-4 font-clash w-spacing-sm tracking-wider mt-2">
+                            <a
+                            href={discoveryCallUrl}
+                            target='_blank'
+                            >
+                                <button 
+                                className="btn-primary sm:text-base text-sm py-2 px-4 font-clash w-spacing-sm tracking-wider mt-2"
+                                >
                                     15-minute discovery call
                                 </button>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className='lg:mt-12 mt-8'>

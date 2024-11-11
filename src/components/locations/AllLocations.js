@@ -1,18 +1,35 @@
+import Axios from '@/config/api'
 import Link from 'next/link'
 import React from 'react'
 
+
+export const revalidate = 60
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
+const fetchLocations = async () => {
+    try {
+        const { data : { data : { docs } } } = await Axios(`/location`);
+        return docs
+    } catch (error) {
+        console.error("Error fetching locations:", error);
+        throw new Error("Could not fetch locations. Please try again later."); // Optionally throw a user-friendly error
+    }
+};
+
 const AllLocations = async () => {
+    const locations = await fetchLocations();
     
     return (
         <div className='grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 sm:mt-10 mt-6 mb-20'>
             {
-                [...Array(30).keys()].map(item => (
+                locations?.map(item => (
                     <Link
-                    href='/locations/new-york' 
-                    key={item} 
-                    className='rounded-md px-4 py-6 text-center bg-gray-200 sm:text-lg font-medium hover:bg-primary duration-200 ease-in hover:text-pure cursor-pointer hover:scale-[1.05] text-dark'
+                    href={`/locations/${item?.slug}`} 
+                    key={item?._id} 
+                    className='rounded-md px-4 py-6 text-center bg-gray-200 sm:text-lg font-medium hover:bg-secondary duration-200 ease-in hover:text-pure cursor-pointer hover:scale-[1.05] text-dark'
                     >
-                        New York
+                        {item?.name}
                     </Link>
                 ))
             }

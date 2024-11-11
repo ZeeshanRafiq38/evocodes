@@ -9,6 +9,7 @@ import Process from "@/components/home/process";
 import Services from "@/components/home/services";
 import Technologies from "@/components/home/technologies";
 import Ticker from "@/components/home/Ticker";
+import faqsData from '@/constants/faqs.constants'
 
 
 
@@ -44,7 +45,7 @@ export default async function Home() {
                 <Clients /> 
             </section>
             <section id="faqs">
-                <Faqs />
+                <Faqs faqsData={faqsData} />
             </section>
 
         </div>

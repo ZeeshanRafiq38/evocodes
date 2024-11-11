@@ -1,7 +1,12 @@
 import { BookSvg, EmailSvg, PhoneSvg } from '@/assets/svgs'
 import Loader from '@/components/global/Loader'
 import AllLocations from '@/components/locations/AllLocations'
+import { discoveryCallUrl } from '@/constants/app.constants';
 import React, { Suspense } from 'react'
+
+export const metadata = {
+    title: 'All Locations | Evocodes Global Offices and Services',
+};
 
 const Locations = () => {
     return (
@@ -20,8 +25,8 @@ const Locations = () => {
                         <div className='bg-gray-200 rounded-tl-lg rounded-bl-lg md:rounded-none rounded-lg p-4'>
                             <a href='tel:+11234567890'>
                                 <div className='flex items-center gap-4'>
-                                    <PhoneSvg className='md:w-[50px] w-[30px] text-primary' />
-                                    <h4 className='md:text-xl sm:text-lg text-base font-semibold text-primary'>CALL US</h4>
+                                    <PhoneSvg className='md:w-[50px] w-[30px] text-secondary' />
+                                    <h4 className='md:text-xl sm:text-lg text-base font-semibold text-secondary'>CALL US</h4>
                                 </div>
                                 <p className='md:ml-[66px] ml-[46px]'>
                                     +1 (123) 456-7890
@@ -32,8 +37,8 @@ const Locations = () => {
                         <div className='bg-gray-200 md:border-x-2 border-x-pure md:rounded-none rounded-lg p-4'>
                             <a href='mailto:contact@evocodes.com'>
                                 <div className='flex items-center gap-4'>
-                                    <EmailSvg className='md:w-[50px] w-[30px] text-primary' />
-                                    <h4 className='md:text-xl sm:text-lg text-base font-semibold text-primary'>EMAIL US</h4>
+                                    <EmailSvg className='md:w-[50px] w-[30px] text-secondary' />
+                                    <h4 className='md:text-xl sm:text-lg text-base font-semibold text-secondary'>EMAIL US</h4>
                                 </div>
                                 <p className='md:ml-[66px] ml-[46px]'>
                                     contact@evocodes.com
@@ -41,13 +46,18 @@ const Locations = () => {
                             </a>
                         </div>
                         <div className='bg-gray-200 rounded-tr-lg rounded-br-lg p-4 md:rounded-none rounded-lg'>
-                            <div className='flex items-center gap-4'>
-                                <BookSvg className='md:w-[50px] w-[30px] text-primary' />
-                                <h4 className='md:text-xl sm:text-lg text-base font-semibold text-primary'>BOOK A CALL</h4>
-                            </div>
-                            <div className='md:ml-[66px] ml-[46px]'>
-                                15 Minute Discovery Call
-                            </div>
+                            <a 
+                            href={discoveryCallUrl}
+                            target='_blank'
+                            >
+                                <div className='flex items-center gap-4'>
+                                    <BookSvg className='md:w-[50px] w-[30px] text-secondary' />
+                                    <h4 className='md:text-xl sm:text-lg text-base font-semibold text-secondary'>BOOK A CALL</h4>
+                                </div>
+                                <div className='md:ml-[66px] ml-[46px]'>
+                                    15 Minute Discovery Call
+                                </div>
+                            </a>
                         </div>
 
                     </div>

@@ -32,7 +32,7 @@ const technologies = [
     { id: 5, icon: CssSvg },
     { id: 6, icon: DjangoSvg },
     { id: 7, icon: DockerSvg },
-    { id: 7, icon: FigmaSvg },
+    { id: 8, icon: FigmaSvg },
     { id: 9, icon: FirebaseSvg },
     { id: 10, icon: FlutterSvg , scale : true },
     { id: 11, icon: GithubSvg },

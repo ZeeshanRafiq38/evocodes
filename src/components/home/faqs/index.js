@@ -1,10 +1,9 @@
-import faqsData from '@/constants/faqs.constants'
 import React from 'react'
 import FaqItem from './FaqItem'
 import { ProcessLeftShapeSvg, ServicesShapLeftSvg } from '@/assets/svgs'
 import SlideOnScroll from '@/components/global/SlideOnScroll'
 
-const Faqs = () => {
+const Faqs = ({ faqsData }) => {
     return (
         <div className='relative overflow-hidden px-3 '>
             <SlideOnScroll direction='bottom'>
