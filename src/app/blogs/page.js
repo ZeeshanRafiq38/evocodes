@@ -2,6 +2,9 @@ import AllBlogs from '@/components/blogs/AllBlogs';
 import Loader from '@/components/global/Loader';
 import React, { Suspense } from 'react';
 
+export const dynamic = 'force-dynamic'
+
+
 export const metadata = {
     title: 'All Blogs | Evocodes Insights into Technology & Software',
 };

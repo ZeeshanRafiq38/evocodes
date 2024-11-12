@@ -2,11 +2,6 @@ import Axios from '@/config/api'
 import Link from 'next/link'
 import React from 'react'
 
-
-export const revalidate = 60
-export const dynamic = 'force-dynamic'
-export const fetchCache = 'force-no-store'
-
 const fetchLocations = async () => {
     try {
         const { data : { data : { docs } } } = await Axios(`/location`);

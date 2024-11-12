@@ -2,17 +2,17 @@ const navLinks = [
     {
         id : 1 ,
         name : 'About' ,
-        path : '#about'
+        path : '/#about'
     } ,
     {
         id : 2 ,
         name : 'Services' ,
-        path : '#services'
+        path : '/#services'
     } ,
     {
         id : 3 ,
         name : 'Portfolio' ,
-        path : '#portfolio'
+        path : '/#portfolio'
     } ,
     {
         id : 4 ,

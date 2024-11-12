@@ -1,8 +1,11 @@
 import { BookSvg, EmailSvg, PhoneSvg } from '@/assets/svgs'
 import Loader from '@/components/global/Loader'
 import AllLocations from '@/components/locations/AllLocations'
-import { discoveryCallUrl } from '@/constants/app.constants';
-import React, { Suspense } from 'react'
+import app from '@/constants/app.constants';
+import React, { Suspense } from 'react';
+
+export const dynamic = 'force-dynamic'
+
 
 export const metadata = {
     title: 'All Locations | Evocodes Global Offices and Services',
@@ -23,19 +26,19 @@ const Locations = () => {
                 <div className='sm:my-12 my-8 rounded-lg'>
                     <div className='grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-4'>
                         <div className='bg-gray-200 rounded-tl-lg rounded-bl-lg md:rounded-none rounded-lg p-4'>
-                            <a href='tel:+11234567890'>
+                            <a href={`tel:${app.contactForCall}`}>
                                 <div className='flex items-center gap-4'>
                                     <PhoneSvg className='md:w-[50px] w-[30px] text-secondary' />
                                     <h4 className='md:text-xl sm:text-lg text-base font-semibold text-secondary'>CALL US</h4>
                                 </div>
                                 <p className='md:ml-[66px] ml-[46px]'>
-                                    +1 (123) 456-7890
+                                    {app.contactNo}
                                 </p>
                             </a>
                         </div>
 
                         <div className='bg-gray-200 md:border-x-2 border-x-pure md:rounded-none rounded-lg p-4'>
-                            <a href='mailto:contact@evocodes.com'>
+                            <a href={`mailto:${app.email}`}>
                                 <div className='flex items-center gap-4'>
                                     <EmailSvg className='md:w-[50px] w-[30px] text-secondary' />
                                     <h4 className='md:text-xl sm:text-lg text-base font-semibold text-secondary'>EMAIL US</h4>
@@ -47,7 +50,7 @@ const Locations = () => {
                         </div>
                         <div className='bg-gray-200 rounded-tr-lg rounded-br-lg p-4 md:rounded-none rounded-lg'>
                             <a 
-                            href={discoveryCallUrl}
+                            href={app.discoveryCallUrl}
                             target='_blank'
                             >
                                 <div className='flex items-center gap-4'>

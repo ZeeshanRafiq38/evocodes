@@ -4,7 +4,7 @@ import HappyClients from './HappyClients'
 import ShapeLeft from './ShapeLeft'
 import ShapeRight from './ShapeRight'
 import SlideOnScroll from '@/components/global/SlideOnScroll'
-import { discoveryCallUrl } from '@/constants/app.constants'
+import app from '@/constants/app.constants'
 
 const Clients = () => {
     return (
@@ -40,7 +40,7 @@ const Clients = () => {
                                 Have a great idea in your mind? Let discuss.
                             </p>
                             <a
-                            href={discoveryCallUrl}
+                            href={app.discoveryCallUrl}
                             target='_blank'
                             >
                                 <button 

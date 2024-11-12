@@ -1,5 +1,5 @@
 'use client'
-import { officeAddress } from "@/constants/app.constants";
+import app from "@/constants/app.constants";
 import { useAddress } from "@/context/AddressContext"
 import { useEffect } from "react";
 
@@ -11,7 +11,7 @@ const AddressLayout = ({ children , footerAddress }) => {
             setAddress(footerAddress);
         }
 
-        return () => setAddress(officeAddress)
+        return () => setAddress(app.officeAddress)
     } , [footerAddress]);
 
     return (

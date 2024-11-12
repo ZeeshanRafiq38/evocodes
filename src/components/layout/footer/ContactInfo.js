@@ -1,5 +1,5 @@
 'use client'
-import { contactNo } from "@/constants/app.constants";
+import app from "@/constants/app.constants";
 import { useAddress } from "@/context/AddressContext"
 
 
@@ -15,14 +15,13 @@ const ContactInfo = () => {
         {
             id : 2 ,
             label : 'Phone' ,
-            value : contactNo
+            value : app.contactNo
         } ,
         {
             id : 3 ,
             label : 'Email' ,
-            value : 'contact@evocodes.com'
+            value : app.email
         } ,
-    
         {
             id : 4 ,
             label : 'Working Hours' ,

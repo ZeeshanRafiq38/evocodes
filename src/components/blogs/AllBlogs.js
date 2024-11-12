@@ -3,9 +3,6 @@ import PrimaryBlog from './PrimaryBlog';
 import Blog from './Blog';
 
 
-export const revalidate = 60
-export const dynamic = 'force-dynamic'
-export const fetchCache = 'force-no-store'
 
 const fetchBlogs = async () => {
     try {

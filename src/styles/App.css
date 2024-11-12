@@ -23,6 +23,10 @@ body {
     color : var(--dark) !important;
 }
 
+section {
+    scroll-margin-top: 100px; /* Adjust as needed */
+}
+
 
 ::-webkit-scrollbar{
     width: 5px;
