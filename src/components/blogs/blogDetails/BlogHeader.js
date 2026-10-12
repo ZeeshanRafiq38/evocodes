@@ -1,6 +1,6 @@
 import { FacebookCircleSvg, LinkedInFilledSvg, WhatsAppSvg } from '@/assets/svgs';
 import Breadcrumbs from '@/components/global/Breadcrumbs';
-import { baseURL } from '@/config/api';
+import { getImageUrl } from '@/utils/getImageUrl';
 import moment from 'moment';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -59,7 +59,7 @@ const BlogHeader = ({ blog }) => {
                             <LinkedInFilledSvg size={18} />
                         </div> */}
                         {
-                            blog?.tags.map(item => (
+                            blog?.tags?.map(item => (
                                 <div key={item} className='bg-green-200 text-green-700 sm:py-1.5 py-1 sm:px-2.5 px-2 rounded-md sm:text-[13px] text-xs'>
                                     {item}
                                 </div>
@@ -70,7 +70,7 @@ const BlogHeader = ({ blog }) => {
             </div>
             <div className='container mx-auto flex items-center justify-center sm:mt-16 mt-12'>
                 <Image
-                src={baseURL + blog?.image}
+                src={getImageUrl(blog?.image)}
                 alt='blog details'
                 width={800}
                 height={800}

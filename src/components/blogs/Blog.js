@@ -1,4 +1,4 @@
-import { baseURL } from '@/config/api'
+import { getImageUrl } from '@/utils/getImageUrl'
 import moment from 'moment'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,7 +9,7 @@ const Blog = ({ blog }) => {
         <div className='bg-gray-100 p-4 rounded-md duration-300 ease-in-out group'>
             <div className='overflow-hidden rounded-lg'>
                 <Image
-                    src={baseURL + blog?.image}
+                    src={getImageUrl(blog?.image)}
                     width={500}
                     height={300}
                     alt='Blog'
@@ -20,7 +20,7 @@ const Blog = ({ blog }) => {
                 <span className='sm:text-sm text-xs text-light'>Date: {moment(blog?.createdAt)?.format('DD MMM YYYY')}</span>
                 <div className='flex items-center gap-3 mt-4'>
                     {
-                        blog?.tags.map(item => (
+                        blog?.tags?.map(item => (
                             <div key={item} className='bg-green-200 text-green-700 py-1.5 px-2.5 rounded-md text-[13px]'>
                                 {item}
                             </div>

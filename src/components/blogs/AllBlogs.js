@@ -17,6 +17,14 @@ const fetchBlogs = async () => {
 const AllBlogs = async () => {
     const blogs = await fetchBlogs();
 
+    if (!blogs?.length) {
+        return (
+            <p className='py-12 text-center text-light'>
+                No published blogs are available yet.
+            </p>
+        );
+    }
+
     return (
         <div>
             <div className='bg-gray-100 rounded-md py-4 px-4'>
