@@ -5,11 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Image from "next/image";
 
-const PortfolioSlide = ({ item }) => {
+const PortfolioCard = ({ item }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <SwiperSlide>
+        <>
             <div
                 className="relative"
                 onMouseEnter={() => setIsHovered(true)}
@@ -42,7 +42,7 @@ const PortfolioSlide = ({ item }) => {
                     </div>
                 </div>
             </div>
-        </SwiperSlide>
+        </>
     );
 };
 
@@ -85,7 +85,9 @@ const Carousel = () => {
                 }}
             >
                 {portfolioData?.map((item) => (
-                    <PortfolioSlide key={item.id} item={item} />
+                    <SwiperSlide key={item.id}>
+                        <PortfolioCard item={item} />
+                    </SwiperSlide>
                 ))}
             </Swiper>
         </div>
