@@ -15,11 +15,11 @@ const About = () => {
                         </h3>
                         <div className='mt-4 text-gray-300 sm:text-base text-sm'>
                             <p>
-                                Founded in 2019 in Houston, Texas, Evocodes has established itself as a trusted partner in digital transformation, specializing in web and mobile application development. We've built our reputation on a simple yet powerful premise: no empty promises, just results that speak for themselves.
+                                Founded in 2019 in Houston, Texas, Evocodes has established itself as a trusted partner in digital transformation, specializing in web and mobile application development. We&apos;ve built our reputation on a simple yet powerful premise: no empty promises, just results that speak for themselves.
                             </p>
                             <br />
                             <p>
-                                Our team of 15-30 skilled professionals brings together diverse expertise in development, design, and project management. This collaborative strength allows us to tackle complex challenges and deliver innovative solutions that drive business growth. Whether it's creating intuitive web applications or developing powerful mobile solutions, we approach each project with the same level of dedication and attention to detail.
+                                Our team of 15-30 skilled professionals brings together diverse expertise in development, design, and project management. This collaborative strength allows us to tackle complex challenges and deliver innovative solutions that drive business growth. Whether it&apos;s creating intuitive web applications or developing powerful mobile solutions, we approach each project with the same level of dedication and attention to detail.
                             </p>
                         </div>
                         <div className="sm:mt-8 mt-6 w-full justify-start items-center sm:gap-8 gap-6 grid md:grid-cols-2 grid-cols-1">

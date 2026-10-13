@@ -5,6 +5,47 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Image from "next/image";
 
+const PortfolioSlide = ({ item }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <SwiperSlide>
+            <div
+                className="relative"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+            >
+                <Image
+                    src={item.image}
+                    width={500}
+                    height={500}
+                    alt={item.name}
+                    className={`rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
+                />
+                <Image
+                    src={item.hoverImg}
+                    width={500}
+                    height={500}
+                    alt={`${item.name} hover`}
+                    className={`absolute top-0 left-0 rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                />
+            </div>
+            <div className="content mt-4">
+                <div className="text-center">
+                    <h3 className="text-xl font-semibold mb-1">{item?.name}</h3>
+                    <div className="flex items-center justify-center mt-4 gap-2">
+                        {item?.tags?.map((tag) => (
+                            <div key={tag} className="bg-pure bg-opacity-50 rounded-full sm:text-sm text-xs py-2 px-4">
+                                {tag}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </SwiperSlide>
+    );
+};
+
 const Carousel = () => {
     return (
         <div className="relative">
@@ -43,48 +84,9 @@ const Carousel = () => {
                     },
                 }}
             >
-                {portfolioData?.map((item) => {
-                    const [isHovered, setIsHovered] = useState(false);
-
-                    return (
-                        <SwiperSlide key={item.id}>
-                            <div
-                                className="relative"
-                                onMouseEnter={() => setIsHovered(true)}
-                                onMouseLeave={() => setIsHovered(false)}
-                            >
-                                {/* Base Image */}
-                                <Image
-                                    src={item.image}
-                                    width={500}
-                                    height={500}
-                                    alt={item.name}
-                                    className={`rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
-                                />
-                                {/* Hover Image */}
-                                <Image
-                                    src={item.hoverImg}
-                                    width={500}
-                                    height={500}
-                                    alt={`${item.name} hover`}
-                                    className={`absolute top-0 left-0 rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
-                                />
-                            </div>
-                            <div className="content mt-4">
-                                <div className="text-center">
-                                    <h3 className="text-xl font-semibold mb-1">{item?.name}</h3>
-                                    <div className="flex items-center justify-center mt-4 gap-2">
-                                        {item?.tags?.map((tag) => (
-                                            <div key={tag} className="bg-pure bg-opacity-50 rounded-full sm:text-sm text-xs py-2 px-4">
-                                                {tag}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    );
-                })}
+                {portfolioData?.map((item) => (
+                    <PortfolioSlide key={item.id} item={item} />
+                ))}
             </Swiper>
         </div>
     );
