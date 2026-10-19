@@ -1,9 +1,55 @@
-import Image from 'next/image'
 import React from 'react'
-import MobileApp from './MobileApp'
-import WebApp from './WebApp'
 import { ServicesShapeRightSvg, ServicesShapLeftSvg } from '@/assets/svgs'
 import SlideOnScroll from '@/components/global/SlideOnScroll'
+import ServiceCard from './ServiceCard'
+
+const services = [
+    {
+        title: 'Web Development',
+        href: '/services/web-development',
+        description: 'Build and maintain professional websites without hiring an in-house development team.'
+    },
+    {
+        title: 'App Development',
+        href: '/services/app-development',
+        description: 'Create fast, reliable mobile applications for iOS and Android with scalable cross-platform technology.'
+    },
+    {
+        title: 'UI/UX & Graphic Design',
+        href: '/services/ui-ux-graphic-design',
+        description: 'Design intuitive digital experiences and polished brand visuals that are clear, consistent, and easy to use.'
+    },
+    {
+        title: 'AI Integrations',
+        href: '/services/ai-integrations',
+        description: 'Connect practical AI tools with your products and workflows to automate tasks and improve customer experiences.'
+    },
+    {
+        title: 'SEO & Content',
+        href: '/services/seo-content',
+        description: 'Create search-focused content and support your organic growth with ongoing SEO execution.'
+    },
+    {
+        title: 'Lead Generation & Outbound Sales',
+        href: '/services/lead-generation-outbound-sales',
+        description: 'Build prospect lists, manage outreach, and support your outbound sales process with dedicated specialists.'
+    },
+    {
+        title: 'Social Media Management',
+        href: '/services/social-media-management',
+        description: 'Keep your social channels active with consistent content, scheduling, and day-to-day management.'
+    },
+    {
+        title: 'Email Marketing',
+        href: '/services/email-marketing',
+        description: 'Plan and execute email marketing campaigns and retention activities without adding another specialist to your team.'
+    },
+    {
+        title: 'Digital Advertising',
+        href: '/services/digital-advertising',
+        description: 'Get support managing your Google and Meta advertising campaigns and the work that happens behind them.'
+    }
+]
 
 const Services = ({ shapes = true }) => {
     return (
@@ -12,15 +58,16 @@ const Services = ({ shapes = true }) => {
                 <div className='section container mx-auto relative z-10'>
                     <header className='text-center'>
                         <h3 className='section-heading'>
-                            Provide Powerful <br /> Solutions At All Time    
+                            Our Services
                         </h3>
                         <p className='sub-text'>
-                            Powerful technology solutions drive innovation, optimize processes, and boost efficiency. Leveraging AI, cloud computing, and automation, they solve complex problems, enhance decision-making, and help businesses stay competitive.
+                            Flexible outsourced support across development, marketing, sales, and digital operations.
                         </p>
                     </header>
-                    <div className='flex justify-center md:flex-row flex-col gap-6 mt-16'>
-                        <MobileApp />
-                        <WebApp />
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-16'>
+                        {services.map(service => (
+                            <ServiceCard key={service.title} {...service} />
+                        ))}
                     </div>
                 </div>
             </SlideOnScroll>

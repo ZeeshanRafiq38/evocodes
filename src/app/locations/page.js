@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 
 
 export const metadata = {
-    title: 'All Locations | Evocodes Global Offices and Services',
+    title: 'All Locations | Vaforus Global Services',
 };
 
 const Locations = () => {
@@ -43,8 +43,8 @@ const Locations = () => {
                                     <EmailSvg className='md:w-[50px] w-[30px] text-secondary' />
                                     <h4 className='md:text-xl sm:text-lg text-base font-semibold text-secondary'>EMAIL US</h4>
                                 </div>
-                                <p className='md:ml-[66px] ml-[46px]'>
-                                    contact@evocodes.com
+                                <p className='md:ml-[66px] ml-[46px] break-words'>
+                                    {app.email}
                                 </p>
                             </a>
                         </div>

@@ -15,17 +15,17 @@ const tabs = [
     } ,
     {
         id : 2 ,
-        name : 'Clear Planning' ,
+        name : 'Define the Scope' ,
         icon : ClearPlanningSvg
     } ,
     {
         id : 3 ,
-        name : 'Agile Development' ,
+        name : 'Build Your Vaforus Team' ,
         icon : AgileDevSvg
     } ,
     {
         id : 4 ,
-        name : 'Transparent Launch And Ongoing Support' ,
+        name : 'Managed Execution' ,
         icon : LaunchAndSupportSvg
     } ,
 ]
@@ -44,7 +44,7 @@ const Tabs = () => {
                         key={item.id}
                         className={`
                             p-4 cursor-pointer duration-200 ease-in-out transition-all border-b-4  flex items-center gap-1.5
-                            ${activeTab === item?.id ? 'border-b-purple-600 font-medium text-dark' : 'border-b-transparent text-gray-400'}
+                            ${activeTab === item?.id ? 'border-b-primary font-medium text-dark' : 'border-b-transparent text-gray-400'}
                         `}
                         onClick={() => setActiveTab(item?.id)}
                         >

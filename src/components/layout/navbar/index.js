@@ -1,9 +1,10 @@
-import { DarkLogoSvg } from '@/assets/svgs'
+import logo from '@/assets/svgs/logo.svg'
 import navLinks from '@/constants/nav.constants'
 import Link from 'next/link'
 import React from 'react'
 import NavContainer from './NavContainer'
 import MobMenu from './MobMenu'
+import Image from 'next/image'
 
 const Navbar = () => {
     return (
@@ -12,7 +13,12 @@ const Navbar = () => {
                 <div className='container sm:py-4 py-2 flex items-center justify-between gap-4'>
                     <h3 className='text-2xl font-semibold'>
                         <Link href='/'>
-                            <DarkLogoSvg className={'sm:w-[160px] w-[120px]'} />
+                            <Image
+                                src={logo}
+                                alt='Vaforus'
+                                className='w-[120px] md:w-[160px] h-auto'
+                                priority
+                            />
                         </Link>
                     </h3>
                     <ul className='md:flex hidden items-center gap-10 text-dark '>

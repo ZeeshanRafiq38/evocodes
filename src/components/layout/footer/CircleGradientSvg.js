@@ -13,7 +13,7 @@ const CircleGradientSvg = (props) => (
                 cx="38"
                 cy="499.543"
                 r="193"
-                fill="#02C6F7"
+                fill="var(--primary)"
                 transform="rotate(180 38 499.543)"
             ></circle>
         </g>
@@ -22,7 +22,7 @@ const CircleGradientSvg = (props) => (
                 cx="300.5"
                 cy="367.043"
                 r="155.5"
-                fill="#5832CE"
+                fill="#182230"
                 transform="rotate(180 300.5 367.043)"
             ></circle>
         </g>

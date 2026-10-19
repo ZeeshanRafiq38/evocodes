@@ -3,13 +3,18 @@
 @tailwind utilities;
 
 :root {
-    --primary : #F46C3F;
-    --secondary: #1B0B4E;
+    --primary : #C45122;
+    --primary-hover: #A6411B;
+    --primary-deep: #873516;
+    --primary-soft: #F8EDE7;
+    --secondary: #182230;
     --pure : #ffffff;
-    --dark : #2F2F2F;
-    --light : #8A959E;
-    --primary-gradient: linear-gradient(104.5deg, #F46C3F 20.94%, #F4A941 76%);
-    --primary-gradient-hover: linear-gradient(104.5deg, #F4A941 20.94%, #F46C3F 76%);
+    --dark : #374151;
+    --light : #667085;
+    --surface: #F3F6F7;
+    --accent: #E9B44C;
+    --primary-gradient: linear-gradient(104.5deg, #C45122 20.94%, #A6411B 76%);
+    --primary-gradient-hover: linear-gradient(104.5deg, #A6411B 20.94%, #873516 76%);
 }
 
 

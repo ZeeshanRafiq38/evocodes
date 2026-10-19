@@ -33,12 +33,11 @@ const clashDisplay = localFont({
 });
 
 export const metadata = {
-    title: "Evocodes - Where Technology Meets Innovation",
-    description: "Evocodes - A leading software agency providing innovative solutions in web development, mobile app development, and digital marketing. Transform your business with our expert services tailored to meet your unique needs. Contact us today for a consultation!",
+    metadataBase: new URL('https://vaforus.com'),
+    title: "Business Process Outsourcing & Remote Teams | Vaforus",
+    description: "Vaforus provides business process outsourcing and remote team services across marketing, sales, web development, SEO, content, and digital operations.",
     icons: [
         { rel: 'icon', type: 'image/png', url: '/favicon-96x96.png', sizes: '96x96' },
-        { rel: 'icon', type: 'image/svg+xml', url: '/favicon.svg' },
-        { rel: 'shortcut icon', url: '/favicon.ico' },
         { rel: 'apple-touch-icon', sizes: '180x180', url: '/apple-touch-icon.png' },
     ],
     manifest: '/site.webmanifest',

@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect } from 'react';
+import app from '@/constants/app.constants';
 
 const CalendlyWidget = () => {
     useEffect(() => {
@@ -15,7 +16,7 @@ const CalendlyWidget = () => {
     return (
         <div
             className="calendly-inline-widget !bg-gray-100"
-            data-url="https://calendly.com/evocodes/30-minutes-1-1-consultation"
+            data-url={app.discoveryCallUrl}
             style={{ minWidth: '320px', height: '500px' }}
         ></div>
 

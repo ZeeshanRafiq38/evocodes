@@ -10,10 +10,10 @@ const Process = () => {
                 <div className='section container mx-auto relative z-10'>
                     <header className='text-center'>
                         <h3 className='section-heading'>
-                            Our Process, Built <br /> Around Your Needs    
+                            How Does It Work?
                         </h3>
                         <p className='sub-text'>
-                        We know that every project brings its own set of challenges. That’s why our process is built to handle the unexpected while keeping you informed every step of the way.
+                            From understanding your needs to managing delivery, Vaforus keeps the entire outsourcing process clear and accountable.
                         </p>
                     </header>
                     <div className='md:mt-12 mt-8'>

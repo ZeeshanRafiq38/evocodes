@@ -8,28 +8,30 @@ const LaunchAndSupport = () => {
         <div className='flex justify-between gap-8 md:flex-row flex-col'>
             <div className='flex-1'>
                 <SlideOnScroll direction='left'>
-                    <div className='w-16 h-16 flex items-center justify-center bg-pure shadow-circle rounded-full text-yellow-500'>
+                    <div className='w-16 h-16 flex items-center justify-center bg-pure shadow-circle rounded-full text-primary'>
                         <LaunchAndSupportSvg />
                     </div>
                     <div className="sm:mt-8 mt-6">
                         <h4 className='font-clash leading-[1.1] tracking-wide w-spacing-sm md:text-2xl text-xl text-dark font-semibold'>
-                            Transparent Launch & <br />  Ongoing Support
+                            Managed Execution
                         </h4>
                         <p className='mt-3 text-dark sm:text-base text-sm'>
-                            When it’s time to go live, we don’t just disappear. We make sure everything works as expected and stick around to provide ongoing support whenever you need us. Your success is our success.
+                            Once your project is underway, our team handles the agreed work and communicates with you throughout the process. Our founder-led team supervises projects internally to maintain quality, consistency, and accountability.
                         </p>
                     </div>
                 </SlideOnScroll>
             </div>
             <div className='flex-1 flex items-center justify-center'>
                 <SlideOnScroll direction='right'>
-                    <Image
-                    src='/images/support.png'
-                    className='w-auto h-auto '
-                    alt='launch and support'
-                    width={500}c
-                    height={500}
-                    />
+                    <div className='relative w-[500px] max-w-full aspect-[3/2] overflow-hidden rounded-lg'>
+                        <Image
+                        src='/images/managed-execution.jpg'
+                        className='object-cover'
+                        alt='Project manager supervising an active workflow'
+                        fill
+                        sizes='(min-width: 768px) 500px, 100vw'
+                        />
+                    </div>
                 </SlideOnScroll>
             </div>
         </div>

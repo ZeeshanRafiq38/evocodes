@@ -21,7 +21,7 @@ const Blog = ({ blog }) => {
                 <div className='flex items-center gap-3 mt-4'>
                     {
                         blog?.tags?.map(item => (
-                            <div key={item} className='bg-green-200 text-green-700 py-1.5 px-2.5 rounded-md text-[13px]'>
+                            <div key={item} className='bg-primary-soft text-primary-hover py-1.5 px-2.5 rounded-md text-[13px]'>
                                 {item}
                             </div>
                         ))

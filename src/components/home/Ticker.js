@@ -12,32 +12,32 @@ const Ticker = () => {
 
                     <div className="flex items-center gap-4">
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
-                        <p className="tracking-wider">Crafting Tomorrow, Today</p>
+                        <p className="tracking-wider">Access skilled remote teams across marketing, sales, web development, and digital operations</p>
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
-                        <p className="tracking-wider">Crafting Tomorrow, Today</p>
+                        <p className="tracking-wider">Focus on growing your business while our team handles the day-to-day work</p>
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
-                        <p className="tracking-wider">Crafting Tomorrow, Today</p>
+                        <p className="tracking-wider">Get managed outsourcing services without the cost of building every function in-house</p>
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
-                        <p className="tracking-wider">Crafting Tomorrow, Today</p>
+                        <p className="tracking-wider">Scale your business with a reliable remote team and flexible outsourced services</p>
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
-                        <p className="tracking-wider">Crafting Tomorrow, Today</p>
+                        <p className="tracking-wider">Access skilled remote teams across marketing, sales, web development, and digital operations</p>
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
-                        <p className="tracking-wider">Crafting Tomorrow, Today</p>
+                        <p className="tracking-wider">Focus on growing your business while our team handles the day-to-day work</p>
                         <div className="sm:w-4 w-3 sm:h-4 h-3 bg-pure rounded-full"></div>
                     </div>
                 </div>

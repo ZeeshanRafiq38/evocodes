@@ -5,7 +5,7 @@ import Carousel from "./Carousel";
 
 const Portfolio = () => {
     return (
-        <div className='relative overflow-hidden px-3 bg-[#F3F3FC]'>
+        <div className='relative overflow-hidden px-3 bg-[#F3F6F7]'>
             <SlideOnScroll direction="right">
                 <div className='section container mx-auto relative z-10'>
                     <header className='flex items-center justify-between md:flex-row flex-col gap-6'>

@@ -24,8 +24,8 @@ const ShapeLeft = (props) => (
                 y2="627.564"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stopColor="#F2ECFA"></stop>
-                <stop offset="1" stopColor="#FDE2E3"></stop>
+                <stop stopColor="#F3F6F7"></stop>
+                <stop offset="1" stopColor="var(--primary-soft)"></stop>
             </linearGradient>
         </defs>
     </svg>

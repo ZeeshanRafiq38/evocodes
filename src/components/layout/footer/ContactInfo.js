@@ -1,17 +1,10 @@
 'use client'
 import app from "@/constants/app.constants";
-import { useAddress } from "@/context/AddressContext"
 
 
 const ContactInfo = () => {
-    const { address } = useAddress();
 
     const info = [
-        {
-            id : 1 ,
-            label : 'Office Address' ,
-            value : address 
-        } ,
         {
             id : 2 ,
             label : 'Phone' ,
@@ -25,7 +18,7 @@ const ContactInfo = () => {
         {
             id : 4 ,
             label : 'Working Hours' ,
-            value : 'Mon-Fri, 9:00 AM - 6:00 PM'
+            value : 'Available 24/7'
         } ,
     ]
 

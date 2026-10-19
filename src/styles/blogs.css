@@ -24,7 +24,7 @@
 }
 
 .blog-content a {
-    @apply text-blue-500 underline hover:text-blue-700 ;
+    @apply text-primary underline hover:text-primary-hover ;
 }
 
 .blog-content ul, .blog-content ol {

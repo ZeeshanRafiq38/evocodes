@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 
 
 export const metadata = {
-    title: 'All Blogs | Evocodes Insights into Technology & Software',
+    title: 'Blogs & Resources | Vaforus',
 };
 
 const Page = async () => {

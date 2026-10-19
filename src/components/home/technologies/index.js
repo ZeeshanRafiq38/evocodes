@@ -11,7 +11,7 @@ const Technologies = () => {
                     Technologies We <br /> Work With
                 </h3>
                 <p className='sub-text'>
-                    Evocodes leverages transformative technologies to accelerate our enterprise software development for unique business needs
+                    Vaforus brings together development platforms, design tools, and marketing technology to support your business with the right expertise.
                 </p>
             </header>
             <div className='sm:mt-12 mt-8 relative overflow-hidden'>

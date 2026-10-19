@@ -8,28 +8,30 @@ const ClearPlanning = () => {
         <div className='flex justify-between gap-8 md:flex-row flex-col'>
             <div className='flex-1'>
                 <SlideOnScroll direction='left'>
-                    <div className='w-16 h-16 flex items-center justify-center bg-pure shadow-circle rounded-full text-purple-500'>
+                    <div className='w-16 h-16 flex items-center justify-center bg-pure shadow-circle rounded-full text-primary'>
                         <ClearPlanningSvg />
                     </div>
                     <div className="sm:mt-8 mt-6">
                         <h4 className='font-clash leading-[1.1] tracking-wide w-spacing-sm md:text-2xl text-xl text-dark font-semibold'>
-                            Clear Planning – No <br /> More Moving Targets
+                            Define the Scope
                         </h4>
                         <p className='mt-3 text-dark sm:text-base text-sm'>
-                            After the discovery, we lay out a clear project roadmap. You’ll have a timeline, milestone updates, and the exact deliverables we’ll provide. No surprises, no guesswork.
+                            We agree on the services, responsibilities, priorities, and workflow. You don&apos;t have to recruit or manage individual freelancers. Vaforus takes responsibility for managing the outsourced work internally.
                         </p>
                     </div>
                 </SlideOnScroll>
             </div>
             <div className='flex-1 flex items-center justify-center'>
                 <SlideOnScroll direction='right'>
-                    <Image
-                    src='/images/clearPlanning.png'
-                    className='w-auto h-auto '
-                    alt='clear planning'
-                    width={500}
-                    height={500}
-                    />
+                    <div className='relative w-[500px] max-w-full aspect-[3/2] overflow-hidden rounded-lg'>
+                        <Image
+                        src='/images/clearPlanning.png'
+                        className='object-cover'
+                        alt='clear planning'
+                        fill
+                        sizes='(min-width: 768px) 500px, 100vw'
+                        />
+                    </div>
                 </SlideOnScroll>
             </div>
         </div>

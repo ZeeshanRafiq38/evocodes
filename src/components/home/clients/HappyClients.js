@@ -9,7 +9,7 @@ const HappyClients = () => {
             <h4
             className='sm:text-2xl font-medium font-clash w-spacing-sm tracking-wider'
             style={{
-                background: 'linear-gradient(104.5deg, #F46C3F 20.94%, #F4A941 76%), #FFFFFF',
+                background: 'linear-gradient(104.5deg, var(--primary) 20.94%, var(--primary-hover) 76%), #FFFFFF',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',

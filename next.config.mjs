@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = (phase) => ({
+    distDir: phase === 'phase-development-server' ? '.next-dev' : '.next',
     images : {
         remotePatterns : [
             {
@@ -11,6 +12,6 @@ const nextConfig = {
             }
         ]
     }
-};
+});
 
 export default nextConfig;

@@ -60,7 +60,7 @@ const BlogHeader = ({ blog }) => {
                         </div> */}
                         {
                             blog?.tags?.map(item => (
-                                <div key={item} className='bg-green-200 text-green-700 sm:py-1.5 py-1 sm:px-2.5 px-2 rounded-md sm:text-[13px] text-xs'>
+                                <div key={item} className='bg-primary-soft text-primary-hover sm:py-1.5 py-1 sm:px-2.5 px-2 rounded-md sm:text-[13px] text-xs'>
                                     {item}
                                 </div>
                             ))

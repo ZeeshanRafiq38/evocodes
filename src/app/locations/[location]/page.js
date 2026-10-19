@@ -44,7 +44,7 @@ const page = async ({ params }) => {
                         <Section2 location={location} />
                     </section>
                 </div>
-                <section className='bg-[#F3F3FC]'>
+                <section className='bg-[#F3F6F7]'>
                     <Services shapes={false} />
                 </section>
                 <section>

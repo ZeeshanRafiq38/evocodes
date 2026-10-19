@@ -10,6 +10,16 @@ import Services from "@/components/home/services";
 import Technologies from "@/components/home/technologies";
 import Ticker from "@/components/home/Ticker";
 import faqsData from '@/constants/faqs.constants'
+import pageMetadata from '@/utils/pageMetadata'
+
+export const metadata = {
+    ...pageMetadata(
+        'Business Process Outsourcing & Remote Teams | Vaforus',
+        'Vaforus provides business process outsourcing and remote team services across marketing, sales, web development, SEO, content, and digital operations.',
+        '/'
+    ),
+    keywords: ['business process outsourcing', 'outsourcing services', 'remote teams', 'outsourced business services', 'remote talent', 'outsourced marketing services', 'sales outsourcing', 'web development outsourcing', 'digital operations', 'virtual assistant services']
+}
 
 
 

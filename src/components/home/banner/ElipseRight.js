@@ -33,8 +33,8 @@ const ElipseRight = (props) => (
                 y2="125.748"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stopColor="#F4A941"></stop>
-                <stop offset="1" stopColor="#F4A941"></stop>
+                <stop stopColor="var(--primary-hover)"></stop>
+                <stop offset="1" stopColor="var(--primary-hover)"></stop>
             </linearGradient>
             <linearGradient
                 id="paint1_linear_6429_92"
@@ -44,8 +44,8 @@ const ElipseRight = (props) => (
                 y2="376.546"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stopColor="#184BFF" stopOpacity="0"></stop>
-                <stop offset="1" stopColor="#F46C3F"></stop>
+                <stop stopColor="#182230" stopOpacity="0"></stop>
+                <stop offset="1" stopColor="var(--primary)"></stop>
             </linearGradient>
             <filter
                 id="filter0_f_6429_92"

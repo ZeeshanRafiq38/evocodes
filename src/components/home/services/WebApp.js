@@ -6,7 +6,7 @@ const WebApp = () => {
         <div 
         className='p-4 rounded-lg sm:px-12 flex md:flex-col flex-col-reverse md:gap-[124px] gap-12'
         style={{
-            background: "linear-gradient(180deg, rgba(243, 243, 252, 0) 0%, #F3F3FC 100%)"
+            background: "linear-gradient(180deg, rgba(243, 246, 247, 0) 0%, #F3F6F7 100%)"
         }}
         >
             <div className='flex items-center justify-center md:pb-0 pb-20 md:translate-x-0 -translate-x-6'>

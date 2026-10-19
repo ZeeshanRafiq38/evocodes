@@ -9,28 +9,30 @@ const DiscoveryCall = () => {
         <div className='flex justify-between gap-8 md:flex-row flex-col'>
             <div className='flex-1'>
                 <SlideOnScroll direction='left'>
-                    <div className='w-16 h-16 flex items-center justify-center bg-pure shadow-circle rounded-full text-pink-500'>
+                    <div className='w-16 h-16 flex items-center justify-center bg-pure shadow-circle rounded-full text-primary'>
                         <DiscoverCallSvg />
                     </div>
                     <div className="sm:mt-8 mt-6">
                         <h4 className='font-clash leading-[1.1] tracking-wide w-spacing-sm md:text-2xl text-xl  text-dark font-semibold'>
-                            Discovery Call – No <br /> More Guesswork
+                            Discovery Call
                         </h4>
                         <p className='mt-3 text-dark sm:text-base text-sm'>
-                            We start with a 15-minute discovery call to fully understand your goals. No long sales pitch, just a simple conversation to clarify your needs.
+                            We learn about your business, the work you need completed, and the areas where your existing team needs support. We discuss your goals, priorities, and the services we can manage for you.
                         </p>
                     </div>
                 </SlideOnScroll>
             </div>
             <div className='flex-1 flex items-center justify-center'>
                 <SlideOnScroll direction='right'>
-                    <Image
-                    src='/images/call.png'
-                    className='w-auto h-auto '
-                    alt='discovery call'
-                    width={500}
-                    height={500}
-                    />
+                    <div className='relative w-[500px] max-w-full aspect-[3/2] overflow-hidden rounded-lg'>
+                        <Image
+                        src='/images/call.png'
+                        className='object-cover'
+                        alt='discovery call'
+                        fill
+                        sizes='(min-width: 768px) 500px, 100vw'
+                        />
+                    </div>
                 </SlideOnScroll>
             </div>
         </div>

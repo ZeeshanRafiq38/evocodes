@@ -12,14 +12,11 @@ const Hero = () => {
         >
             {/* <div className='absolute top-0 left-0 w-full h-full bg-secondary opacity-65'></div> */}
             <div className='flex items-center justify-center flex-col md:gap-10 sm:gap-8 gap-6 h-full relative z-10'>
-                <h1 className='font-clash 2xl:text-[72px] lg:text-[62px] md:text-[50px] sm:text-[40px] text-[22px] 2xl:w-[60%] lg:w-[72%] sm:w-[80%] w-full text-center tracking-medium !leading-[1] font-semibold md:px-0 px-2 sm:scale-1 scale-[1.1] tracking-wide'>
-                    Don’t Gamble with Your Next Project. Partner with Experts Who Deliver.
+                <h1 className='font-clash 2xl:text-[64px] lg:text-[56px] md:text-[44px] sm:text-[36px] text-[22px] 2xl:w-[60%] lg:w-[72%] sm:w-[80%] w-full text-center tracking-medium !leading-[1] font-semibold md:px-0 px-2 sm:scale-1 scale-[1.1] tracking-wide'>
+                    Outsource Your Business Tasks Without Building Another Full-Time Team
                 </h1>
-                {/* <h4 className='text-center md:text-lg sm:text-base text-[13px] sm:w-full w-[250px] text-gray-200 shadow-md'>
-                    No empty promises, just results that speak for themselves.
-                </h4> */}
                 <h4 className="text-center md:text-lg sm:text-base text-[13px] sm:w-full w-[250px] text-gray-200 font-semibold tracking-wide shadow-md">
-                    No empty promises, just results that speak for themselves.
+                    Discover How Vaforus Outsourcing Services Can Save You Time and Money
                 </h4>
 
                 <div className='mt-2'>
@@ -38,13 +35,13 @@ const Hero = () => {
             {/*  Gradients */}
             <div className='absolute bottom-0 left-0 w-full h-full'
             style={{
-                background: 'linear-gradient(180deg, rgba(21, 12, 49, 0) 0%, #150C31 100%)'
+                background: 'linear-gradient(180deg, rgba(24, 34, 48, 0) 0%, #182230 100%)'
             }}
             >
             </div>
             <div className='absolute sm:-top-52 -top-20 left-0 w-full h-full'
             style={{
-                background: 'linear-gradient(180deg, rgba(21, 12, 49, 0) 0%, #150C31 100%)',
+                background: 'linear-gradient(180deg, rgba(24, 34, 48, 0) 0%, #182230 100%)',
                 transform: 'matrix(1, 0, 0, -1, 0, 0)'
             }}
             >

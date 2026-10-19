@@ -7,7 +7,7 @@ const MobileApp = () => {
         <div 
         className='p-4 rounded-lg sm:px-12 flex md:flex-col flex-col-reverse sm:gap-12 gap-10'
         style={{
-            background: "linear-gradient(180deg, rgba(243, 243, 252, 0) 0%, #F3F3FC 100%)"
+            background: "linear-gradient(180deg, rgba(243, 246, 247, 0) 0%, #F3F6F7 100%)"
         }}
         >
             <div className=''>

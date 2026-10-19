@@ -33,8 +33,8 @@ const ElipseLeft = (props) => (
         y2="936.151"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#00C2FF" stopOpacity="0"></stop>
-        <stop offset="1" stopColor="#FF29C3"></stop>
+        <stop stopColor="var(--primary)" stopOpacity="0"></stop>
+        <stop offset="1" stopColor="#E9B44C"></stop>
       </linearGradient>
       <linearGradient
         id="paint1_linear_6429_95"
@@ -44,8 +44,8 @@ const ElipseLeft = (props) => (
         y2="952.026"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#184BFF" stopOpacity="0"></stop>
-        <stop offset="1" stopColor="#174AFF"></stop>
+        <stop stopColor="#182230" stopOpacity="0"></stop>
+        <stop offset="1" stopColor="var(--primary)"></stop>
       </linearGradient>
       <filter
         id="filter0_f_6429_95"

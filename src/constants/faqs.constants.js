@@ -1,23 +1,23 @@
 const faqsData = [
     {
-        question: "What makes Evocodes different from other agencies?",
-        answer: "Evocodes is more than just a service provider; we’re your tech partner. Our focus is on understanding your vision first, then delivering solutions that not only meet your needs but also add long-term value."
+        question: "What services can I outsource to Vaforus?",
+        answer: "You can outsource web and app development, UI/UX and graphic design, AI integrations, SEO and content, lead generation and outbound sales, social media management, email marketing, and digital advertising. Start with the work your business needs most, and we will agree on the scope and the specialists required."
     },
     {
-        question: "What if I don’t know exactly what I need?",
-        answer: "No worries! We’re here to guide you. Our team will work with you to shape your ideas into a clear, effective plan that matches your goals."
+        question: "Can I start with one service instead of hiring a full team?",
+        answer: "Yes. You can begin with a single project, one service, or ongoing support for day-to-day work. During the discovery call, we discuss your priorities and existing resources, then define responsibilities and deliverables. If your needs change, we can review the scope together."
     },
     {
-        question: "How do you ensure quality in your work?",
-        answer: "Quality is built into our process. We focus on detailed planning, regular updates, and testing at each step to ensure your project exceeds expectations."
+        question: "Who manages the work, and how will I stay informed?",
+        answer: "Vaforus manages the assigned specialists internally, with founder-led supervision to maintain quality and accountability. Before work begins, we agree on priorities, communication channels, and review points. You receive progress updates and provide feedback without coordinating multiple independent freelancers."
     },
     {
-        question: "What is the timeline for a typical project?",
-        answer: "Timelines depend on the project’s scope, but we’ll provide you with a clear roadmap and updates along the way."
+        question: "Can Vaforus work with our existing team and tools?",
+        answer: "Yes. We can support your existing team and work within an agreed workflow using the platforms you already rely on. This may include your website, CRM, design tools, advertising accounts, or email marketing system. We review compatibility and access requirements during onboarding so responsibilities and handoffs are clear."
     },
     {
-        question: "How much will my project cost?",
-        answer: "Every project is unique, and we tailor pricing to fit each client’s needs. Contact us, and we’ll give you an estimate that works with your budget and goals."
+        question: "How are pricing, timelines, and results agreed on?",
+        answer: "Pricing and timelines depend on the services, scope, complexity, and level of ongoing support you need. We agree on deliverables, milestones, and fees before starting. For marketing services, we also define relevant measures of progress; outcomes depend on factors such as your offer, audience, budget, and market conditions, so we do not promise guaranteed rankings, leads, or sales."
     },
 ];
 

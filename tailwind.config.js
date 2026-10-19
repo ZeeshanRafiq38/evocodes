@@ -20,6 +20,8 @@ module.exports = {
             } ,
             colors: {
                 primary: "var(--primary)",
+                'primary-hover': "var(--primary-hover)",
+                'primary-soft': "var(--primary-soft)",
                 secondary: "var(--secondary)",
                 pure: "var(--pure)",
                 dark: "var(--dark)",
@@ -28,7 +30,7 @@ module.exports = {
                 primaryGradientHover : "var(--primary-gradient-hover)"
             },
             backgroundImage : {
-                'hero-gradient' : "linear-gradient(180deg, rgba(21, 12, 49, 0) 0%, #150C31 100%)"
+                'hero-gradient' : "linear-gradient(180deg, rgba(24, 34, 48, 0) 0%, #182230 100%)"
             } ,
             screens: {
                 '2xl': '1550px', // Change the 2xl breakpoint to 1550px
