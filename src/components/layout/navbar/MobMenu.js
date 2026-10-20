@@ -34,12 +34,13 @@ const MobMenu = () => {
                 >
                     <CloseSvg />
                 </button>
-                <ul className='flex flex-col items-center gap-4 py-12 px-6 w-full'>
+                <ul className='flex flex-col gap-1 py-12 px-6 w-full max-w-lg text-left'>
                     {
                         navLinks.map(item => (
-                            <li key={item.id} className='hover:text-primary'>
+                            <li key={item.id} className='w-full min-w-0'>
                                 {item.name === 'Services' ? <ServicesDropdown mobile onNavigate={() => setShowMenu(false)} /> : <Link 
                                 href={item.path} 
+                                className='flex items-center min-h-11 px-3 py-2 hover:text-primary transition-colors'
                                 onClick={() => setShowMenu(false)}
                                 >
                                     {item?.name}
