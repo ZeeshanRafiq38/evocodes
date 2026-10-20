@@ -14,7 +14,7 @@ export const metadata = {
 const Locations = () => {
     return (
         <div>
-            <header className='bg-secondary md:py-20 sm:py-12 py-10 flex flex-col items-center justify-center text-center text-pure'>
+            <header className='bg-secondary bg-[image:var(--section-gradient)] md:py-20 sm:py-12 py-10 flex flex-col items-center justify-center text-center text-pure'>
                 <h1 className='lg:text-4xl md:text-3xl sm:text-2xl text-xl font-clash w-spacing-sm tracking-wide font-semibold'>
                     Where Innovation Meets Your Location
                 </h1>
@@ -25,7 +25,7 @@ const Locations = () => {
             <div className='container mx-auto px-3'>
                 <div className='sm:my-12 my-8 rounded-lg'>
                     <div className='grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-4'>
-                        <div className='bg-gray-200 rounded-tl-lg rounded-bl-lg md:rounded-none rounded-lg p-4'>
+                        <div className='bg-gray-100 bg-[image:var(--card-gradient)] rounded-tl-lg rounded-bl-lg md:rounded-none rounded-lg p-4'>
                             <a href={`tel:${app.contactForCall}`}>
                                 <div className='flex items-center gap-4'>
                                     <PhoneSvg className='md:w-[50px] w-[30px] text-secondary' />
@@ -37,7 +37,7 @@ const Locations = () => {
                             </a>
                         </div>
 
-                        <div className='bg-gray-200 md:border-x-2 border-x-pure md:rounded-none rounded-lg p-4'>
+                        <div className='bg-gray-100 bg-[image:var(--card-gradient)] md:border-x-2 border-x-pure md:rounded-none rounded-lg p-4'>
                             <a href={`mailto:${app.email}`}>
                                 <div className='flex items-center gap-4'>
                                     <EmailSvg className='md:w-[50px] w-[30px] text-secondary' />
@@ -48,7 +48,7 @@ const Locations = () => {
                                 </p>
                             </a>
                         </div>
-                        <div className='bg-gray-200 rounded-tr-lg rounded-br-lg p-4 md:rounded-none rounded-lg'>
+                        <div className='bg-gray-100 bg-[image:var(--card-gradient)] rounded-tr-lg rounded-br-lg p-4 md:rounded-none rounded-lg'>
                             <a 
                             href={app.discoveryCallUrl}
                             target='_blank'

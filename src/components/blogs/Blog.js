@@ -6,7 +6,7 @@ import React from 'react'
 
 const Blog = ({ blog }) => {
     return (
-        <div className='bg-gray-100 p-4 rounded-md duration-300 ease-in-out group'>
+        <div className='bg-gray-100 bg-[image:var(--card-gradient)] p-4 rounded-md duration-300 ease-in-out group'>
             <div className='overflow-hidden rounded-lg'>
                 <Image
                     src={getImageUrl(blog?.image)}

@@ -32,17 +32,9 @@ const Hero = () => {
 
 
 
-            {/*  Gradients */}
-            <div className='absolute bottom-0 left-0 w-full h-full'
+            <div aria-hidden='true' className='absolute inset-0 pointer-events-none'
             style={{
-                background: 'linear-gradient(180deg, rgba(24, 34, 48, 0) 0%, #182230 100%)'
-            }}
-            >
-            </div>
-            <div className='absolute sm:-top-52 -top-20 left-0 w-full h-full'
-            style={{
-                background: 'linear-gradient(180deg, rgba(24, 34, 48, 0) 0%, #182230 100%)',
-                transform: 'matrix(1, 0, 0, -1, 0, 0)'
+                background: 'var(--hero-overlay)'
             }}
             >
             </div>

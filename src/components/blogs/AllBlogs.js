@@ -27,7 +27,7 @@ const AllBlogs = async () => {
 
     return (
         <div>
-            <div className='bg-gray-100 rounded-md py-4 px-4'>
+            <div className='bg-gray-100 bg-[image:var(--card-gradient)] rounded-md py-4 px-4'>
                 <PrimaryBlog blog={blogs[0]} />
             </div>
             <div className='sm:mt-16 mt-6 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8'>

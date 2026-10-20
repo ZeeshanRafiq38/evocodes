@@ -6,9 +6,9 @@ import Image from 'next/image'
 
 const About = () => {
     return (
-        <div className='section relative bg-secondary text-pure'>
-            <div className="container mx-auto flex md:flex-row flex-col md:gap-8 gap-12 items-center">
-                <div className='flex-1'>
+        <div className='section relative bg-secondary text-pure' style={{ backgroundImage: 'var(--section-gradient)' }}>
+            <div className="container mx-auto relative z-10 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-center">
+                <div className='min-w-0'>
                     <SlideOnScroll direction='left'>
                         <h3 className='section-heading !text-pure'>
                             Our Team Becomes an Extension of Yours
@@ -64,16 +64,18 @@ const About = () => {
                         </div>
                     </SlideOnScroll>
                 </div>
-                <div className="flex-1 w-full justify-center items-start flex">
+                <div className="w-full min-w-0 max-w-[560px] mx-auto">
                     <SlideOnScroll direction='right'>
-                        <div className="sm:w-[85%] w-full h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
+                        <div className="w-full bg-gray-100 rounded-3xl p-3 sm:p-4">
+                            <div className="relative w-full aspect-[4/3] lg:aspect-[4/5] overflow-hidden rounded-2xl">
                             <Image
-                                className="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover"
+                                className="object-cover object-center"
                                 src="/images/about.jpg"
-                                width={500}
-                                height={500}
-                                alt="about Us"
+                                fill
+                                sizes="(min-width: 1280px) 530px, (min-width: 1024px) 420px, (min-width: 640px) 528px, calc(100vw - 48px)"
+                                alt="Team collaborating on a project"
                             />
+                            </div>
                         </div>
                     </SlideOnScroll>
                 </div>

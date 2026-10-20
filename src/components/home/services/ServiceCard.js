@@ -7,7 +7,7 @@ const ServiceCard = ({ title, description, href }) => {
         <article
             className='p-5 sm:p-7 rounded-lg flex flex-col min-h-[390px]'
             style={{
-                background: 'linear-gradient(180deg, rgba(243, 246, 247, 0) 0%, #F3F6F7 100%)'
+                background: 'var(--card-gradient)'
             }}
         >
             <ServiceTools title={title} floating />

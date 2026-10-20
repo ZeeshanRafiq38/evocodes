@@ -7,6 +7,7 @@ const Bracket = (props) => (
         height="260"
         fill="none"
         viewBox="0 0 79 260"
+        {...props}
     >
         <path
             fill="#fff"

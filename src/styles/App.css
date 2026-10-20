@@ -15,6 +15,11 @@
     --accent: #E9B44C;
     --primary-gradient: linear-gradient(104.5deg, #C45122 20.94%, #A6411B 76%);
     --primary-gradient-hover: linear-gradient(104.5deg, #A6411B 20.94%, #873516 76%);
+    --section-gradient: linear-gradient(120deg, #182230 15%, #222831 65%, #302925 100%);
+    --card-gradient: linear-gradient(160deg, #FFFFFF 15%, #F3F6F7 75%, #F8EDE7 100%);
+    --heading-gradient: linear-gradient(100deg, #FFF1E8 10%, #F2B08B 100%);
+    --hero-overlay: linear-gradient(180deg, rgba(24, 34, 48, 0.7) 0%, rgba(24, 34, 48, 0.4) 45%, #182230 100%);
+    --service-overlay: linear-gradient(110deg, rgba(0, 0, 0, 0.82) 0%, rgba(24, 34, 48, 0.75) 55%, rgba(0, 0, 0, 0.65) 100%);
 }
 
 

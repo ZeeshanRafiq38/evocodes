@@ -26,7 +26,7 @@ const crumbs = [
 
 const BlogHeader = ({ blog }) => {
     return (
-        <div className='bg-secondary md:py-20 sm:py-12 py-8 relative text-pure lg:px-0 px-3'>
+        <div className='bg-secondary bg-[image:var(--section-gradient)] md:py-20 sm:py-12 py-8 relative text-pure lg:px-0 px-3'>
             <div className='container mx-auto'>
                 <div className=''>
                     <Breadcrumbs crumbs={crumbs} />

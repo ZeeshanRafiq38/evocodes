@@ -11,7 +11,7 @@ export default function ServicePage({ service }) {
         <div className='overflow-hidden'>
             <section className='relative isolate overflow-hidden bg-secondary text-pure'>
                 <Image src={service.coverImage} alt='' fill priority sizes='100vw' className='object-cover object-center -z-20' />
-                <div className='absolute inset-0 bg-black/65 -z-10' />
+                <div className='absolute inset-0 bg-[image:var(--service-overlay)] -z-10' />
                 <div className='container px-5 py-12 md:py-20'>
                     <nav aria-label='Breadcrumb' className='text-sm text-gray-200 mb-10'>
                         <Link href='/#services' className='underline underline-offset-4 hover:text-white'>Our Services</Link>
@@ -63,7 +63,7 @@ export default function ServicePage({ service }) {
                     </div>
                 </section>
             ))}
-            <section id='discovery-call' className='section bg-secondary text-pure'>
+            <section id='discovery-call' className='section bg-secondary bg-[image:var(--section-gradient)] text-pure'>
                 <div className='container px-5 text-center'>
                     <FadeOnScroll>
                         <h2 className='section-heading !text-pure max-w-2xl mx-auto'>{service.ctaTitle}</h2>

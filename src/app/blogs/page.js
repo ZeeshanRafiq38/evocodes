@@ -13,7 +13,7 @@ const Page = async () => {
     
     return (
         <div>
-            <header className='bg-secondary md:py-20 sm:py-12 py-8 text-center text-pure'>
+            <header className='bg-secondary bg-[image:var(--section-gradient)] md:py-20 sm:py-12 py-8 text-center text-pure'>
                 <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl font-clash w-spacing-sm tracking-wide font-semibold'>
                     Blogs and Resources
                 </h1>

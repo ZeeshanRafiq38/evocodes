@@ -1,63 +1,38 @@
 import React from 'react'
-import ElipseLeft from './ElipseLeft'
-import ElipseRight from './ElipseRight'
 import Bracket from './Bracket'
-import SlideOnScroll from '@/components/global/SlideOnScroll'
 import FadeOnScroll from '@/components/global/FadeOnScroll'
+import app from '@/constants/app.constants'
 
-const Banner = () => {
-    return (
-        <div className='w-full bg-[#182230] relative overflow-hidden px-3'>
-            <div className='absolute bottom-0 -left-0 '>
-                <ElipseLeft />
-            </div>
-            <div className='absolute sm:top-0 -top-48 right-0'>
-                <ElipseRight />
-            </div>
-            <div className='relative z-10 flex items-center justify-between container mx-auto md:py-20 sm:py-12 py-10'>
-                <div className='rotate-180 sm:block hidden'>
-                    <SlideOnScroll direction='right'>
-                        <Bracket />
-                    </SlideOnScroll>
-                </div>
-                <div className='text-pure mx-auto'>
-                    <SlideOnScroll direction='bottom'>
-                        <div className='xl:text-[100px] lg:text-[70px] md:text-[50px] text-[30px] font-clash w-spacing-md leading-[1] font-semibold'>
+const Banner = () => (
+    <section className='bg-secondary px-4 text-pure' style={{ backgroundImage: 'var(--section-gradient)' }}>
+        <div className='container mx-auto py-12 md:py-16 lg:py-20'>
+            <FadeOnScroll>
+                <div className='flex items-center gap-6 lg:gap-10'>
+                    <div aria-hidden='true' className='hidden sm:block shrink-0 rotate-180 opacity-60'>
+                        <Bracket className='w-8 lg:w-12 h-auto' />
+                    </div>
+                    <div className='min-w-0 flex-1 grid lg:grid-cols-[1.2fr_1fr] items-center gap-8 lg:gap-12 text-center lg:text-left'>
+                        <h2 className='font-clash font-semibold text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-normal'>
                             An Extension
-                        </div>
-                        <div className='flex lg:flex-row flex-col items-center justify-between lg:gap-10 gap-4'>
-                            <span
-                                className="xl:text-[100px] lg:text-[70px] md:text-[50px] text-[30px] font-clash font-semibold inline-block sm:mt-0 mt-2"
-                                style={{
-                                    background: "linear-gradient(104.5deg, var(--primary) 20.94%, var(--primary-hover) 76%)",
-                                    backgroundClip: "text",
-                                    WebkitBackgroundClip: "text",
-                                    color: "transparent"
-                                }}
-                            >
-                                Of Your Team
-                            </span>
-
-
-                            <span className='sm:text-base text-sm'>
+                            <span className='block mt-2'>Of Your Team</span>
+                            <span aria-hidden='true' className='block w-16 h-1 bg-primary mt-6 mx-auto lg:mx-0' />
+                        </h2>
+                        <div className='min-w-0'>
+                            <p className='text-base sm:text-lg leading-relaxed text-gray-200 max-w-md mx-auto lg:mx-0'>
                                 Let&apos;s discuss how Vaforus can become an extension of your team.
-                            </span>
-                            <a 
-                            href='#discovery-call'
-                            className="block sm:mt-0 mt-3 btn-primary sm:py-4 py-2 sm:px-12 px-8 font-clash font-medium w-spacing-sm tracking-wider">
+                            </p>
+                            <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className='btn-primary inline-flex justify-center mt-6 px-6 py-3.5 font-clash font-medium text-base max-w-full text-center'>
                                 Schedule a Call With Us
                             </a>
                         </div>
-                    </SlideOnScroll>
+                    </div>
+                    <div aria-hidden='true' className='hidden sm:block shrink-0 opacity-60'>
+                        <Bracket className='w-8 lg:w-12 h-auto' />
+                    </div>
                 </div>
-                <div className='sm:block hidden'>
-                    <SlideOnScroll direction='right'>
-                        <Bracket />
-                    </SlideOnScroll>
-                </div>
-            </div>
+            </FadeOnScroll>
         </div>
-    )
-}
+    </section>
+)
 
 export default Banner

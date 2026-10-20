@@ -8,7 +8,7 @@ import app from '@/constants/app.constants'
 
 const Clients = () => {
     return (
-        <div className='section bg-secondary relative overflow-hidden' id='discovery-call'>
+        <div className='section bg-secondary relative overflow-hidden' style={{ backgroundImage: 'var(--section-gradient)' }} id='discovery-call'>
             <SlideOnScroll direction='top'>
                 <div className='container mx-auto xl:px-20'>
                     <div className='flex lg:flex-row flex-col items-center justify-between gap-6'>
@@ -16,7 +16,7 @@ const Clients = () => {
                             <h3
                             className='sm:text-2xl font-medium font-clash w-spacing-sm tracking-wider'
                             style={{
-                                background: 'linear-gradient(90.15deg, #182230 -19.16%, var(--primary) 46.21%)',
+                                background: 'var(--heading-gradient)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                                 backgroundClip: 'text',
@@ -29,7 +29,7 @@ const Clients = () => {
                                 In just 15 minutes, we’ll get to the bottom of what’s not working with your current solutions—and start building the path to something better. It’s simple, fast, and free.
                             </p>
                         </div>
-                        <div className='flex-1 bg-pure rounded-lg p-4  flex items-center justify-center flex-col gap-4'>
+                        <div className='flex-1 bg-pure rounded-lg p-4 pb-8 flex items-center justify-center flex-col gap-4'>
                             <div className='sm:w-[200px] w-[130px]'>
                                 <ChatSvg className='w-full' />
                             </div>

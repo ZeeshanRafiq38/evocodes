@@ -5,6 +5,7 @@ import React from 'react'
 import NavContainer from './NavContainer'
 import MobMenu from './MobMenu'
 import Image from 'next/image'
+import ServicesDropdown from './ServicesDropdown'
 
 const Navbar = () => {
     return (
@@ -21,25 +22,25 @@ const Navbar = () => {
                             />
                         </Link>
                     </h3>
-                    <ul className='md:flex hidden items-center gap-10 text-dark '>
+                    <ul className='xl:flex hidden items-center gap-6 text-dark '>
                         {
                             navLinks?.map(item => (
                                 <li key={item.id} className='nav-link'>
-                                    <Link href={item.path}>
+                                    {item.name === 'Services' ? <ServicesDropdown /> : <Link href={item.path}>
                                         {item.name}
-                                    </Link>
+                                    </Link>}
                                 </li>
                             ))
                         }
                     </ul>
-                    <div className='md:flex hidden items-center gap-4'>
+                    <div className='xl:flex hidden items-center gap-4'>
                         <a 
                         href='#discovery-call'
                         className="btn-primary py-3 w-spacing-sm px-6 font-clash tracking-widest text-sm font-medium">
                             15-MINUTE DISCOVERY CALL
                         </a>
                     </div>
-                    <div className="md:hidden block">
+                    <div className="xl:hidden block">
                         <MobMenu />
                     </div>
                 </div>
