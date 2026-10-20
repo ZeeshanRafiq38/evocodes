@@ -33,7 +33,7 @@ const PortfolioCard = ({ item }) => {
             <div className="content mt-4">
                 <div className="text-center">
                     <h3 className="text-xl font-semibold mb-1">{item?.name}</h3>
-                    <div className="flex items-center justify-center mt-4 gap-2">
+                    <div className="flex flex-wrap items-center justify-center mt-4 gap-2">
                         {item?.tags?.map((tag) => (
                             <div key={tag} className="bg-pure bg-opacity-50 rounded-full sm:text-sm text-xs py-2 px-4">
                                 {tag}
@@ -51,7 +51,7 @@ const Carousel = () => {
         <div className="relative">
             <Swiper
                 speed={1000}
-                slidesPerView={3}
+                slidesPerView={1}
                 spaceBetween={30}
                 pagination={{
                     clickable: true,

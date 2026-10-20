@@ -17,7 +17,7 @@ const CalendlyWidget = () => {
         <div
             className="calendly-inline-widget !bg-gray-100"
             data-url={app.discoveryCallUrl}
-            style={{ minWidth: '320px', height: '500px' }}
+            style={{ width: '100%', minWidth: 0, height: '500px' }}
         ></div>
 
     );

@@ -51,4 +51,24 @@
     @apply my-4 rounded-lg;
     width: auto;
     height: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .blog-content {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .blog-content table,
+    .blog-content pre {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .blog-content iframe,
+    .blog-content video {
+        max-width: 100%;
+    }
 }

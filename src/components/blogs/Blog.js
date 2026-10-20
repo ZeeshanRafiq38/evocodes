@@ -18,7 +18,7 @@ const Blog = ({ blog }) => {
             </div>
             <div className='mt-4'>
                 <span className='sm:text-sm text-xs text-light'>Date: {moment(blog?.createdAt)?.format('DD MMM YYYY')}</span>
-                <div className='flex items-center gap-3 mt-4'>
+                <div className='flex flex-wrap items-center gap-3 mt-4'>
                     {
                         blog?.tags?.map(item => (
                             <div key={item} className='bg-primary-soft text-primary-hover py-1.5 px-2.5 rounded-md text-[13px]'>

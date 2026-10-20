@@ -5,7 +5,7 @@ import React from 'react'
 const Section1 = ({ location }) => {
     return (
         <div className='flex lg:flex-row flex-col lg:gap-0 gap-6 items-center justify-between'>
-            <div className='flex-1'>
+            <div className='flex-1 min-w-0 w-full'>
                 <h3 className='font-clash w-spacing-sm tracking-wide md:text-3xl sm:text-2xl text-xl font-semibold text-secondary'>
                     {location?.sectionOne?.heading}
                 </h3>
@@ -19,7 +19,7 @@ const Section1 = ({ location }) => {
 
                 </div>
             </div>
-            <div className='flex-1'>
+            <div className='flex-1 min-w-0 w-full'>
                <CalendlyWidget />
             </div>
         </div>

@@ -36,7 +36,7 @@ const ContactInfo = () => {
                             <span className='font-medium'>
                                 {item.label}:
                             </span>
-                            <span className='text-gray-200'> {item.value}</span>
+                            <span className='text-gray-200 break-words'> {item.value}</span>
                         </li>
                     ))
                 }

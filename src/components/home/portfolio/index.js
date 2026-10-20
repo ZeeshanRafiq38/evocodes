@@ -13,7 +13,7 @@ const Portfolio = () => {
                             <h3 className='section-heading'>
                                 Real Results, <br /> Real Impact    
                             </h3>
-                            <p className='text-dark sm:w-[500px] w-[300px] sm:text-base text-sm mt-2'>
+                            <p className='text-dark sm:w-[500px] w-full max-w-full sm:text-base text-sm mt-2'>
                                 We know that every project brings its own set of challenges. That’s why our process is built to handle the unexpected while keeping you informed every step of the way.
                             </p>
                         </div>

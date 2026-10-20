@@ -8,8 +8,8 @@ import services from '@/constants/services.constants'
 const Services = ({ shapes = true }) => {
     return (
         <div className='relative overflow-hidden px-3'>
-            <SlideOnScroll>
                 <div className='section container mx-auto relative z-10'>
+                    <SlideOnScroll direction='bottom'>
                     <header className='text-center'>
                         <h3 className='section-heading'>
                             Our Services
@@ -18,13 +18,15 @@ const Services = ({ shapes = true }) => {
                             Flexible outsourced support across development, marketing, sales, and digital operations.
                         </p>
                     </header>
+                    </SlideOnScroll>
                     <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-16'>
                         {services.map(service => (
-                            <ServiceCard key={service.title} {...service} />
+                            <SlideOnScroll key={service.title} direction='bottom' className='h-full min-w-0'>
+                                <ServiceCard {...service} />
+                            </SlideOnScroll>
                         ))}
                     </div>
                 </div>
-            </SlideOnScroll>
 
             {
                 shapes && (

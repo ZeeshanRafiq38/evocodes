@@ -22,8 +22,8 @@ const LaunchAndSupport = () => {
                 </SlideOnScroll>
             </div>
             <div className='flex-1 flex items-center justify-center'>
-                <SlideOnScroll direction='right'>
-                    <div className='relative w-[500px] max-w-full aspect-[3/2] overflow-hidden rounded-lg'>
+                <SlideOnScroll direction='right' className='w-full md:w-auto max-w-full min-w-0'>
+                    <div className='relative w-full md:w-[500px] max-w-full aspect-[3/2] overflow-hidden rounded-lg'>
                         <Image
                         src='/images/managed-execution.jpg'
                         className='object-cover'

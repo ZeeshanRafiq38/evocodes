@@ -36,7 +36,7 @@ const BlogHeader = ({ blog }) => {
                 >
                     {blog?.title}
                 </h1>
-                <div className=' flex items-center gap-4 justify-between'>
+                <div className='flex flex-wrap items-center gap-4 justify-between'>
                     <div>
                         <div className='sm:text-base text-sm'>
                             <span className='text-gray-200'>By </span>
@@ -48,7 +48,7 @@ const BlogHeader = ({ blog }) => {
                             {moment(blog?.createdAt).format('DD MMM YYYY')} • 5 min read
                         </p>
                     </div>
-                    <div className='flex items-center sm:gap-3 gap-2'>
+                    <div className='flex flex-wrap items-center sm:gap-3 gap-2'>
                         {/* <div className='bg-pure sm:w-[30px] w-[28px] sm:h-[30px] h-[28px] rounded-full flex items-center justify-center hover:scale-[1.2] duration-200 ease-in cursor-pointer'>
                             <FacebookCircleSvg size={18} />
                         </div>

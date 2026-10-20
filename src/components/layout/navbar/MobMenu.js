@@ -15,7 +15,7 @@ const MobMenu = () => {
 
     return (
         <div>
-            <button aria-label='Open navigation' aria-expanded={showMenu} onClick={() => setShowMenu(true)}>
+            <button className='w-11 h-11 flex items-center justify-center' aria-label='Open navigation' aria-expanded={showMenu} onClick={() => setShowMenu(true)}>
                 <HamburgerSvg />
             </button>
             <div

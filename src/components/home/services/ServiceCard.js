@@ -5,7 +5,7 @@ import React from 'react'
 const ServiceCard = ({ title, description, href }) => {
     return (
         <article
-            className='p-5 sm:p-7 rounded-lg flex flex-col min-h-[390px]'
+            className='p-5 sm:p-7 rounded-lg flex flex-col h-full min-h-[390px]'
             style={{
                 background: 'var(--card-gradient)'
             }}

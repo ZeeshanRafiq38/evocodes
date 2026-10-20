@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
-export default function SlideOnScroll({ children, direction = "left" }) {
+export default function SlideOnScroll({ children, direction = "left", className }) {
     const ref = useRef(null);
     const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -33,6 +33,7 @@ export default function SlideOnScroll({ children, direction = "left" }) {
 
     return (
         <motion.div
+            className={className}
             ref={ref}
             initial="hidden"
             animate={hasAnimated ? "visible" : "hidden"}

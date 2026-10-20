@@ -37,6 +37,30 @@ section {
     scroll-margin-top: 100px; /* Adjust as needed */
 }
 
+@media (max-width: 767px) {
+    body {
+        overflow-x: clip;
+    }
+
+    main, footer {
+        overflow-wrap: anywhere;
+    }
+
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        max-width: 100%;
+        text-align: center;
+        white-space: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        letter-spacing: 0 !important;
+    }
+}
+
 
 ::-webkit-scrollbar{
     width: 5px;

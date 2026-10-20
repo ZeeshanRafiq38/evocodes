@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const PrimaryBlog = ({ blog }) => {
     return (
-        <div className='flex items-center md:flex-row flex-col md:gap-10 group'>
+        <div className='flex items-center md:flex-row flex-col gap-6 md:gap-10 group'>
             <div className='overflow-hidden rounded-lg'>
                 <Image
                     src={getImageUrl(blog?.image)}
@@ -15,9 +15,9 @@ const PrimaryBlog = ({ blog }) => {
                     className='group-hover:scale-[1.1] rounded-lg duration-200 ease-in'
                 />
             </div>
-            <div className='flex-1 '>
+            <div className='flex-1 min-w-0 w-full'>
                 <span className='sm:text-sm text-xs text-light'>Date: {moment(blog?.createdAt)?.format('DD MMM YYYY')}</span>
-                <div className='flex items-center gap-3 mt-4'>
+                <div className='flex flex-wrap items-center gap-3 mt-4'>
                     {
                         blog?.tags?.map(item => (
                             <div key={item} className='bg-primary-soft text-primary-hover py-1.5 px-2.5 rounded-md text-[13px]'>

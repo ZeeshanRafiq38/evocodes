@@ -12,10 +12,10 @@ const Hero = () => {
         >
             {/* <div className='absolute top-0 left-0 w-full h-full bg-secondary opacity-65'></div> */}
             <div className='flex items-center justify-center flex-col md:gap-10 sm:gap-8 gap-6 h-full relative z-10'>
-                <h1 className='font-clash 2xl:text-[64px] lg:text-[56px] md:text-[44px] sm:text-[36px] text-[22px] 2xl:w-[60%] lg:w-[72%] sm:w-[80%] w-full text-center tracking-medium !leading-[1] font-semibold md:px-0 px-2 sm:scale-1 scale-[1.1] tracking-wide'>
+                <h1 className='font-clash 2xl:text-[64px] lg:text-[56px] md:text-[44px] sm:text-[36px] text-[30px] 2xl:w-[60%] lg:w-[72%] sm:w-[80%] w-full text-center leading-[1.15] sm:!leading-[1] font-semibold md:px-0 px-2 tracking-normal sm:tracking-wide'>
                     Outsource Your Business Tasks Without Building Another Full-Time Team
                 </h1>
-                <h4 className="text-center md:text-lg sm:text-base text-[13px] sm:w-full w-[250px] text-gray-200 font-semibold tracking-wide shadow-md">
+                <h4 className="text-center md:text-lg sm:text-base text-sm sm:w-full w-full text-gray-200 font-semibold tracking-wide shadow-md">
                     Discover How Vaforus Outsourcing Services Can Save You Time and Money
                 </h4>
 
