@@ -7,20 +7,9 @@ import Link from 'next/link'
 import socialLinks from '@/constants/socialLinks.constants';
 import ContactInfo from './ContactInfo'
 
-const legalLinks = [
-    {
-        id : 1 ,
-        label : 'Privacy Policy'
-    } , 
-    {
-        id : 2 ,
-        label : 'Terms of Service'
-    }
-]
-
 const Footer = () => {
     return (
-        <div className='relative bg-secondary text-pure overflow-hidden md:pt-20 sm:pt-12 pt-8 lg:px-28 sm:px-16 px-6'>
+        <div className='relative bg-secondary text-pure overflow-hidden md:pt-20 sm:pt-12 pt-8 sm:pb-12 pb-8 lg:px-28 sm:px-16 px-6'>
             <div className='flex justify-between md:flex-row flex-col gap-6 relative z-10 '>
                 <div>
                     <Image src={logoWhite} alt='Vaforus' className='sm:w-[200px] w-[150px] h-auto' />
@@ -32,7 +21,7 @@ const Footer = () => {
                                 className='text-gray-200 hover:scale-[1.4] duration-200 ease-in-out' 
                                 key={item.id}
                                 >
-                                    <Link href={item.url} target='_blank'>
+                                    <Link href={item.url} target='_blank' rel='noopener noreferrer' aria-label={item.name}>
                                         <item.icon />
                                     </Link>
                                 </li>
@@ -64,18 +53,6 @@ const Footer = () => {
                     <ContactInfo />
                 </div>
 
-            </div>
-            <div className='border-t sm:mt-10 mt-6 flex items-center justify-between md:text-base sm:text-sm text-[13px] sm:py-6 py-4 relative z-10'>
-                {
-                    legalLinks?.map(item => (
-                        <p
-                        className='text-gray-200 hover:underline cursor-pointer' 
-                        key={item.id}
-                        >
-                            {item.label}
-                        </p>
-                    ))
-                }
             </div>
             
             <div className='absolute sm:-bottom-20 -bottom-40 sm:-left-10 -left-40 sm:rotate-0 rotate-45'>
