@@ -6,11 +6,12 @@ import NavContainer from './NavContainer'
 import MobMenu from './MobMenu'
 import Image from 'next/image'
 import ServicesDropdown from './ServicesDropdown'
+import app from '@/constants/app.constants'
 
 const Navbar = () => {
     return (
         <NavContainer>
-            <nav className='lg:px-0 px-3 sticky top-0 z-50'>
+            <nav aria-label='Main navigation' className='lg:px-0 px-3 sticky top-0 z-50 bg-white border-b border-gray-100'>
                 <div className='container sm:py-4 py-2 flex items-center justify-between gap-4'>
                     <h3 className='text-2xl font-semibold'>
                         <Link href='/'>
@@ -26,7 +27,7 @@ const Navbar = () => {
                         {
                             navLinks?.map(item => (
                                 <li key={item.id} className='nav-link'>
-                                    {item.name === 'Services' ? <ServicesDropdown /> : <Link href={item.path}>
+                                    {item.name === 'Services' ? <ServicesDropdown /> : <Link className='inline-flex items-center min-h-11 hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4' href={item.path}>
                                         {item.name}
                                     </Link>}
                                 </li>
@@ -35,9 +36,11 @@ const Navbar = () => {
                     </ul>
                     <div className='xl:flex hidden items-center gap-4'>
                         <a 
-                        href='#discovery-call'
+                        href={app.discoveryCallUrl}
+                        target='_blank'
+                        rel='noopener noreferrer'
                         className="btn-primary py-3 w-spacing-sm px-6 font-clash tracking-widest text-sm font-medium">
-                            15-MINUTE DISCOVERY CALL
+                            Book a 15-Minute Call
                         </a>
                     </div>
                     <div className="xl:hidden block">

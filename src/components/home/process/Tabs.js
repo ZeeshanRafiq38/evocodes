@@ -1,92 +1,31 @@
-"use client"
-import { AgileDevSvg, ClearPlanningSvg, DiscoverCallSvg, LaunchAndSupportSvg, SunSvg } from '@/assets/svgs'
-import React, { useState } from 'react'
+'use client'
+import { useState } from 'react'
 import DiscoveryCall from './DiscoveryCall'
 import ClearPlanning from './ClearPlanning'
 import AgileDevelopment from './AgileDevelopment'
 import LaunchAndSupport from './LaunchAndSupport'
-import { useWindowSize } from 'react-use'
 
-const tabs = [
-    {
-        id : 1 ,
-        name : 'Discovery Call' ,
-        icon : DiscoverCallSvg
-    } ,
-    {
-        id : 2 ,
-        name : 'Define the Scope' ,
-        icon : ClearPlanningSvg
-    } ,
-    {
-        id : 3 ,
-        name : 'Build Your Vaforus Team' ,
-        icon : AgileDevSvg
-    } ,
-    {
-        id : 4 ,
-        name : 'Managed Execution' ,
-        icon : LaunchAndSupportSvg
-    } ,
+const steps = [
+    { name: 'Discovery Call', component: DiscoveryCall },
+    { name: 'Define the Scope', component: ClearPlanning },
+    { name: 'Build Your Team', component: AgileDevelopment },
+    { name: 'Managed Execution', component: LaunchAndSupport },
 ]
 
-
-const Tabs = () => {
-    const { width } = useWindowSize();
-    const [activeTab , setActiveTab] = useState(1);
-
+export default function Tabs() {
+    const [active, setActive] = useState(0)
+    const Content = steps[active].component
     return (
         <div>
-            <ul className='flex items-center justify-between border-b-2 border-b-gray-300'>
-                {
-                    tabs?.map(item => (
-                        <li 
-                        key={item.id}
-                        className={`
-                            p-4 cursor-pointer duration-200 ease-in-out transition-all border-b-4  flex items-center gap-1.5
-                            ${activeTab === item?.id ? 'border-b-primary font-medium text-dark' : 'border-b-transparent text-gray-400'}
-                        `}
-                        onClick={() => setActiveTab(item?.id)}
-                        >
-                            <div className={`sm:block hidden ${activeTab === item.id ? 'opacity-1' : 'opacity-50'}`}>
-                                <item.icon size={20} />
-                            </div>
-                            <span className='sm:text-base text-sm'>
-                                {
-                                    width > 800 
-                                    ? 
-                                        item.name 
-                                    :
-                                        `Step ${item.id}`
-                                }
-                                
-                            </span>
-                        </li>
-                    ))
-                }
-            </ul>
-            <div className='md:mt-16 mt-8'>
-                {
-                    activeTab === 1 
-                    ? 
-                        <DiscoveryCall />
-                    : 
-                    activeTab === 2 
-                    ? 
-                        <ClearPlanning />
-                    : 
-                    activeTab === 3 
-                    ? 
-                        <AgileDevelopment />
-                    : 
-                    activeTab === 4 
-                    ? 
-                        <LaunchAndSupport />
-                    :  ''
-                }
+            <div aria-label='Our delivery process' className='grid grid-cols-2 md:grid-cols-4 border-b border-gray-200 gap-2'>
+                {steps.map((step, index) => (
+                    <button key={step.name} type='button' aria-pressed={active === index} onClick={() => setActive(index)} className={`text-left px-3 sm:px-5 py-4 border-b-2 min-h-[88px] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary ${active === index ? 'border-primary bg-primary-soft text-primary-hover' : 'border-transparent text-gray-600 hover:bg-gray-50'}`}>
+                        <span className='block text-xs font-semibold mb-2'>0{index + 1}</span>
+                        <span className='block text-sm sm:text-base font-medium leading-snug'>{step.name}</span>
+                    </button>
+                ))}
             </div>
+            <div className='mt-8 md:mt-12'><Content key={active} /></div>
         </div>
     )
 }
-
-export default Tabs;

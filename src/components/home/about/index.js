@@ -11,9 +11,9 @@ const About = () => {
                 <div className='min-w-0'>
                     <SlideOnScroll direction='left'>
                         <h3 className='section-heading !text-pure'>
-                            Our Team Becomes an Extension of Yours
+                            More Support. Less Hiring Overhead.
                         </h3>
-                        <div className='mt-4 text-gray-300 sm:text-base text-sm'>
+                        <div className='mt-6 text-gray-200 text-base leading-relaxed'>
                             <p>
                                 <strong className='text-pure'>Lower operating costs</strong><br />
                                 Access skilled remote professionals without the overhead associated with hiring full-time employees, including salaries, workspace, benefits, and other employment costs.
@@ -37,18 +37,18 @@ const About = () => {
                         </div>
                         <div className="sm:mt-8 mt-6 w-full justify-start items-center sm:gap-8 gap-6 grid md:grid-cols-2 grid-cols-1">
                             <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-                                <h4 className=" sm:text-[18px] font-semibold leading-9">
+                                <h4 className=" text-2xl sm:text-3xl font-semibold leading-tight">
                                     4+ Years
                                 </h4>
-                                <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
+                                <p className="text-gray-300 text-base font-normal leading-relaxed mt-2">
                                     Influencing Digital Landscapes Together
                                 </p>
                             </div>
                             <div className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-300">
-                                <h4 className=" sm:text-[18px] font-semibold leading-9">
+                                <h4 className=" text-2xl sm:text-3xl font-semibold leading-tight">
                                     50+ Projects
                                 </h4>
-                                <p className="text-gray-400 sm:text-base text-sm font-normal leading-relaxed mt-2">
+                                <p className="text-gray-300 text-base font-normal leading-relaxed mt-2">
                                     Excellence Achieved Through Success
                                 </p>
                             </div>
@@ -82,10 +82,10 @@ const About = () => {
             </div>
 
 
-            <div className='absolute left-0 -top-[30%] rotate-0'>
+            <div className='pointer-events-none absolute left-0 -top-[30%] rotate-0'>
                 <ShapeLeft />
             </div>
-            <div className='absolute right-0 top-[0%] md:block hidden'>
+            <div className='pointer-events-none absolute right-0 top-[0%] md:block hidden'>
                 <ShapeRight />
             </div>
         </div>

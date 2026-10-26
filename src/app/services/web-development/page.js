@@ -26,7 +26,7 @@ const callClass = 'btn-primary inline-flex items-center justify-center px-7 py-3
 
 export default function WebDevelopmentPage() {
     return (
-        <div>
+        <div className='service-page'>
             <section className='relative isolate overflow-hidden bg-secondary text-pure'>
                 <Image src='/images/cover-web-development.jpg' alt='' fill priority sizes='100vw' className='object-cover object-center -z-20' />
                 <div className='absolute inset-0 bg-[image:var(--service-overlay)] -z-10' />
@@ -36,8 +36,8 @@ export default function WebDevelopmentPage() {
                         <span aria-hidden='true' className='mx-3'>/</span>
                         <span aria-current='page'>Web Development</span>
                     </nav>
-                    <h1 className='font-clash font-semibold text-4xl md:text-6xl leading-tight'>Web Development</h1>
-                    <p className='mt-5 max-w-3xl font-clash text-2xl md:text-3xl leading-snug'>Your website shouldn&apos;t become another task on your to-do list</p>
+                    <h1 className='page-title'>Web Development</h1>
+                    <p className='service-hook mt-5 max-w-3xl font-clash'>Your website shouldn&apos;t become another task on your to-do list</p>
                     <p className='mt-5 max-w-2xl text-gray-200 leading-relaxed'>A website needs more than a good design. It needs to be fast, functional, mobile-friendly, easy to manage, and built to turn visitors into customers.</p>
                     <a href='#discovery-call' className={`${callClass} mt-8`}>15-minute discovery call</a>
                 </div>

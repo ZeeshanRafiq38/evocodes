@@ -19,7 +19,7 @@ const Banner = () => (
                         </h2>
                         <div className='min-w-0'>
                             <p className='text-base sm:text-lg leading-relaxed text-gray-200 max-w-md mx-auto lg:mx-0'>
-                                Let&apos;s discuss how Vaforus can become an extension of your team.
+                                Bring us into the work that needs attention. We coordinate the people and delivery so you can focus on running your business.
                             </p>
                             <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className='btn-primary inline-flex justify-center mt-6 px-6 py-3.5 font-clash font-medium text-base max-w-full text-center'>
                                 Schedule a Call With Us

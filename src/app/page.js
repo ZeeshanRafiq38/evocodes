@@ -26,7 +26,7 @@ export const metadata = {
 export default async function Home() {
     
     return (
-        <div>
+        <div className='home-page'>
             <section>
                 <Hero />
                 <Ticker />

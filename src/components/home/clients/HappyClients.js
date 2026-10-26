@@ -16,7 +16,7 @@ const HappyClients = () => {
                 color: 'transparent'
             }}  
             >
-                The Who&apos;s is Who of Happy Clients
+                Teams We&apos;ve Worked With
             </h4>
             <Marquee
             speed={30}

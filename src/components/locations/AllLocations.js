@@ -22,7 +22,7 @@ const AllLocations = async () => {
                     <Link
                     href={`/locations/${item?.slug}`} 
                     key={item?._id} 
-                    className='rounded-md px-4 py-6 text-center bg-gray-100 bg-[image:var(--card-gradient)] sm:text-lg font-medium hover:bg-secondary hover:bg-[image:var(--section-gradient)] duration-200 ease-in hover:text-pure cursor-pointer hover:scale-[1.05] text-dark'
+                    className='location-card px-4 py-6 text-center bg-gray-100 bg-[image:var(--card-gradient)] sm:text-lg font-medium hover:bg-secondary hover:bg-[image:var(--section-gradient)] duration-200 ease-in hover:text-pure cursor-pointer text-dark'
                     >
                         {item?.name}
                     </Link>

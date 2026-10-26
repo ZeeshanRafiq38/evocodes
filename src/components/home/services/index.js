@@ -12,10 +12,10 @@ const Services = ({ shapes = true }) => {
                     <SlideOnScroll direction='bottom'>
                     <header className='text-center'>
                         <h3 className='section-heading'>
-                            Our Services
+                            What Can We Take Off Your Plate?
                         </h3>
                         <p className='sub-text'>
-                            Flexible outsourced support across development, marketing, sales, and digital operations.
+                            Choose the expertise you need across development, marketing and sales. We coordinate the specialists and manage delivery.
                         </p>
                     </header>
                     </SlideOnScroll>

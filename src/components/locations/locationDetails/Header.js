@@ -2,11 +2,11 @@ import React from 'react'
 
 const Header = ({ location }) => {
     return (
-        <header className='px-4 sm:px-0 bg-secondary bg-[image:var(--section-gradient)] lg:py-28 md:py-20 sm:py-12 py-10 flex flex-col items-center justify-center text-center text-pure'>
-                <h1 className='lg:text-4xl md:text-3xl sm:text-2xl text-xl font-clash w-spacing-sm tracking-wide font-semibold'>
+        <header className='listing-header bg-secondary bg-[image:var(--section-gradient)] text-center text-pure'>
+                <h1 className='page-title'>
                {location?.mainHeading}
             </h1>
-            <p className='md:mt-5 mt-2 sm:text-sm text-xs sm:w-full w-[250px] mx-auto text-gray-300'>
+            <p className='page-intro'>
                 {location?.mainHeadingSubText}
             </p>
         </header>

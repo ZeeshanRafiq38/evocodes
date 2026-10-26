@@ -4,6 +4,7 @@ import portfolioData from "@/constants/portfolio.constants";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Image from "next/image";
+import { useReducedMotion } from 'framer-motion';
 
 const PortfolioCard = ({ item }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -20,14 +21,14 @@ const PortfolioCard = ({ item }) => {
                     width={500}
                     height={500}
                     alt={item.name}
-                    className={`rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
+                    className={`w-full rounded-lg border border-gray-200 motion-safe:transition-opacity duration-300 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
                 />
                 <Image
                     src={item.hoverImg}
                     width={500}
                     height={500}
                     alt={`${item.name} hover`}
-                    className={`absolute top-0 left-0 rounded-[20px] border border-gray-200 transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 w-full h-full object-cover rounded-lg border border-gray-200 motion-safe:transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
                 />
             </div>
             <div className="content mt-4">
@@ -47,16 +48,17 @@ const PortfolioCard = ({ item }) => {
 };
 
 const Carousel = () => {
+    const reduceMotion = useReducedMotion();
     return (
         <div className="relative">
             <Swiper
-                speed={1000}
+                speed={reduceMotion ? 0 : 450}
                 slidesPerView={1}
                 spaceBetween={30}
                 pagination={{
                     clickable: true,
                 }}
-                autoplay={{
+                autoplay={reduceMotion ? false : {
                     delay: 3000,
                     pauseOnMouseEnter: true,
                 }}

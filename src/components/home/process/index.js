@@ -10,7 +10,7 @@ const Process = () => {
                 <div className='section container mx-auto relative z-10'>
                     <header className='text-center'>
                         <h3 className='section-heading'>
-                            How Does It Work?
+                            From First Call to Managed Delivery
                         </h3>
                         <p className='sub-text'>
                             From understanding your needs to managing delivery, Vaforus keeps the entire outsourcing process clear and accountable.

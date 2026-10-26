@@ -9,7 +9,7 @@ import ContactInfo from './ContactInfo'
 
 const Footer = () => {
     return (
-        <div className='relative bg-secondary text-pure overflow-hidden md:pt-20 sm:pt-12 pt-8 sm:pb-12 pb-8 lg:px-28 sm:px-16 px-6'>
+        <div className='site-footer relative bg-secondary text-pure overflow-hidden md:pt-20 sm:pt-12 pt-8 sm:pb-12 pb-8 lg:px-28 sm:px-16 px-6'>
             <div className='flex justify-between md:flex-row flex-col gap-6 relative z-10 '>
                 <div>
                     <Image src={logoWhite} alt='Vaforus' className='sm:w-[200px] w-[150px] h-auto' />
@@ -18,7 +18,7 @@ const Footer = () => {
                         {
                             socialLinks?.map(item => (
                                 <li
-                                className='text-gray-200 hover:scale-[1.4] duration-200 ease-in-out' 
+                                className='text-gray-200 transition-colors duration-200' 
                                 key={item.id}
                                 >
                                     <Link href={item.url} target='_blank' rel='noopener noreferrer' aria-label={item.name}>
@@ -33,7 +33,7 @@ const Footer = () => {
                     <h6 className='text-lg font-medium font-clash tracking-wide w-spacing-sm'>
                         MAIN LINKS
                     </h6>
-                    <ul className="mt-4 flex flex-col gap-4 text-sm">
+                    <ul className="mt-3 flex flex-col gap-1 text-sm">
                         {
                             navLinks?.map(item => (
                                 <li
@@ -55,7 +55,7 @@ const Footer = () => {
 
             </div>
             
-            <div className='absolute sm:-bottom-20 -bottom-40 sm:-left-10 -left-40 sm:rotate-0 rotate-45'>
+            <div className='pointer-events-none absolute sm:-bottom-20 -bottom-40 sm:-left-10 -left-40 sm:rotate-0 rotate-45'>
                 <CircleGradientSvg />
             </div>
         </div>

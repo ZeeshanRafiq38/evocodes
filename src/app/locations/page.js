@@ -14,11 +14,11 @@ export const metadata = {
 const Locations = () => {
     return (
         <div>
-            <header className='px-4 sm:px-0 bg-secondary bg-[image:var(--section-gradient)] md:py-20 sm:py-12 py-10 flex flex-col items-center justify-center text-center text-pure'>
-                <h1 className='lg:text-4xl md:text-3xl sm:text-2xl text-xl font-clash w-spacing-sm tracking-wide font-semibold'>
+            <header className='listing-header bg-secondary bg-[image:var(--section-gradient)] text-center text-pure'>
+                <h1 className='page-title'>
                     Where Innovation Meets Your Location
                 </h1>
-                <p className='md:mt-5 mt-2 sm:text-sm text-xs sm:w-full w-[250px] mx-auto text-gray-300'>
+                <p className='page-intro'>
                     From here to anywhere, we bring solutions closer to you with personalized service and local insight.
                 </p>
             </header>

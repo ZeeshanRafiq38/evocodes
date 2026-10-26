@@ -13,11 +13,11 @@ const Page = async () => {
     
     return (
         <div>
-            <header className='px-4 sm:px-0 bg-secondary bg-[image:var(--section-gradient)] md:py-20 sm:py-12 py-8 text-center text-pure'>
-                <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl font-clash w-spacing-sm tracking-wide font-semibold'>
+            <header className='listing-header bg-secondary bg-[image:var(--section-gradient)] text-center text-pure'>
+                <h1 className='page-title'>
                     Blogs and Resources
                 </h1>
-                <p className='md:mt-4 mt-2 sm:text-sm text-xs sm:w-full w-[250px] mx-auto text-gray-300'>
+                <p className='page-intro'>
                     No empty promises, just results that speak for themselves.
                 </p>
             </header>

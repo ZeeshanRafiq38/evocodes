@@ -32,7 +32,7 @@ const BlogHeader = ({ blog }) => {
                     <Breadcrumbs crumbs={crumbs} />
                 </div>
                 <h1 
-                className='font-clash w-spacing-sm tracking-wide lg:text-4xl md:text-2xl text-xl   font-medium sm:my-8 my-8'
+                className='page-title my-8'
                 >
                     {blog?.title}
                 </h1>
@@ -44,7 +44,7 @@ const BlogHeader = ({ blog }) => {
                                 {blog?.author?.username}
                             </span>
                         </div>
-                        <p className='text-light text-xs mt-1.5'>
+                        <p className='text-gray-300 text-sm mt-1.5'>
                             {moment(blog?.createdAt).format('DD MMM YYYY')} • 5 min read
                         </p>
                     </div>
@@ -71,7 +71,7 @@ const BlogHeader = ({ blog }) => {
             <div className='container mx-auto flex items-center justify-center sm:mt-16 mt-12'>
                 <Image
                 src={getImageUrl(blog?.image)}
-                alt='blog details'
+                alt={blog?.title || 'Vaforus article'}
                 width={800}
                 height={800}
                 sizes='(min-width: 1550px) 1250px, (min-width: 1280px) 1150px, (min-width: 1024px) 950px, 100vw'

@@ -11,10 +11,10 @@ const Portfolio = () => {
                     <header className='flex items-center justify-between md:flex-row flex-col gap-6'>
                         <div>
                             <h3 className='section-heading'>
-                                Real Results, <br /> Real Impact    
+                                See What We&apos;ve Built
                             </h3>
                             <p className='text-dark sm:w-[500px] w-full max-w-full sm:text-base text-sm mt-2'>
-                                We know that every project brings its own set of challenges. That’s why our process is built to handle the unexpected while keeping you informed every step of the way.
+                                Explore our development and design work, from business websites to digital products. Let&apos;s discuss what your business needs next.
                             </p>
                         </div>
                         <div>

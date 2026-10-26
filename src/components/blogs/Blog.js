@@ -6,18 +6,18 @@ import React from 'react'
 
 const Blog = ({ blog }) => {
     return (
-        <div className='bg-gray-100 bg-[image:var(--card-gradient)] p-4 rounded-md duration-300 ease-in-out group'>
+        <div className='article-card bg-gray-100 bg-[image:var(--card-gradient)] p-5 group'>
             <div className='overflow-hidden rounded-lg'>
                 <Image
                     src={getImageUrl(blog?.image)}
                     width={500}
                     height={300}
-                    alt='Blog'
-                    className='group-hover:scale-[1.1] rounded-lg duration-200 ease-in sm:h-[250px] object-cover'
+                    alt={blog?.title || 'Vaforus article'}
+                    className='article-image rounded-lg'
                 />
             </div>
             <div className='mt-4'>
-                <span className='sm:text-sm text-xs text-light'>Date: {moment(blog?.createdAt)?.format('DD MMM YYYY')}</span>
+                <span className='text-sm text-light'>Date: {moment(blog?.createdAt)?.format('DD MMM YYYY')}</span>
                 <div className='flex flex-wrap items-center gap-3 mt-4'>
                     {
                         blog?.tags?.map(item => (
@@ -28,12 +28,12 @@ const Blog = ({ blog }) => {
                     }
                 </div>
                 
-                <h3 className='font-clash w-spacing-sm tracking-wide sm:text-lg text-base font-medium mt-2'>
-                    {blog?.title}
+                <h3 className='article-title mt-3'>
+                    <Link href={`/blogs/${blog?.slug}`} className='hover:text-primary'>{blog?.title}</Link>
                 </h3>
                 <Link
                 href={`/blogs/${blog?.slug}`} 
-                className="inline-block mt-4 btn-primary py-2 px-4 sm:text-sm text-xs">
+                className="inline-block mt-4 btn-primary py-2 px-4 text-sm">
                     LEARN MORE
                 </Link>
             </div>

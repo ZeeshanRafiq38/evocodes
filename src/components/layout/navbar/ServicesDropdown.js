@@ -22,13 +22,14 @@ export default function ServicesDropdown({ mobile = false, onNavigate }) {
             }}
             onKeyDown={event => {
                 if (event.key === 'Escape') {
+                    if (open) event.stopPropagation()
                     setOpen(false)
                     event.currentTarget.querySelector('button')?.focus()
                 }
             }}
         >
             <div className={mobile ? 'flex items-center gap-1' : 'flex items-center justify-center gap-1'}>
-                <Link href='/#services' onClick={close} onFocus={() => !mobile && setOpen(true)} className={`hover:text-primary transition-colors ${mobile ? 'flex items-center min-h-11 pl-3 pr-1 py-2' : ''}`}>
+                <Link href='/#services' onClick={close} onFocus={() => !mobile && setOpen(true)} className={`transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${mobile ? 'flex items-center min-h-11 pl-3 pr-1 py-2 hover:text-orange-200 focus-visible:outline-white' : 'inline-flex items-center min-h-11 hover:text-primary focus-visible:outline-primary'}`}>
                     Services
                 </Link>
                 <button
@@ -39,7 +40,7 @@ export default function ServicesDropdown({ mobile = false, onNavigate }) {
                     onClick={() => setOpen(value => !value)}
                     className={`${mobile ? 'w-11 h-11 shrink-0' : 'w-7 h-8'} flex items-center justify-center rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary`}
                 >
-                    <span aria-hidden='true' className={`block w-2 h-2 border-b-2 border-r-2 motion-safe:transition-transform motion-safe:duration-200 ${open ? 'rotate-[225deg]' : 'rotate-45'}`} />
+                    <span aria-hidden='true' className={`block w-2 h-2 border-b-2 border-r-2 border-current motion-safe:transition-transform motion-safe:duration-200 ${open ? 'rotate-[225deg]' : 'rotate-45'}`} />
                 </button>
             </div>
             <div

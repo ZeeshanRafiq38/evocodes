@@ -1,46 +1,22 @@
-import React from 'react'
-import SlideOnScroll from '../global/SlideOnScroll'
-import FadeOnScroll from '../global/FadeOnScroll'
+import app from '@/constants/app.constants'
 
-const Hero = () => {
+export default function Hero() {
     return (
-        <div
-        className="bg-[url('/images/hero.png')] bg-cover w-full 2xl:h-[86vh] lg:h-[90vh] md:h-[70vh] sm:h-[60vh] h-full py-16 relative text-pure sm:px-0 px-4 overflow-hidden"
-        style={{
-            backgroundPosition : 'bottom'
-        }}
-        >
-            {/* <div className='absolute top-0 left-0 w-full h-full bg-secondary opacity-65'></div> */}
-            <div className='flex items-center justify-center flex-col md:gap-10 sm:gap-8 gap-6 h-full relative z-10'>
-                <h1 className='font-clash 2xl:text-[64px] lg:text-[56px] md:text-[44px] sm:text-[36px] text-[30px] 2xl:w-[60%] lg:w-[72%] sm:w-[80%] w-full text-center leading-[1.15] sm:!leading-[1] font-semibold md:px-0 px-2 tracking-normal sm:tracking-wide'>
-                    Outsource Your Business Tasks Without Building Another Full-Time Team
+        <section className="home-hero relative isolate flex flex-col justify-center overflow-hidden bg-secondary bg-[url('/images/hero.png')] bg-cover bg-bottom text-white sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[90vh] 2xl:min-h-[86vh]">
+            <div aria-hidden='true' className='absolute inset-0 pointer-events-none bg-[image:var(--hero-overlay)]' />
+            <div className='container relative z-10 flex flex-col justify-center px-5 sm:px-8 py-14 sm:py-8 text-center'>
+                <h1 className='font-clash text-[32px] sm:text-[44px] lg:text-[56px] leading-[1.15] font-semibold max-w-[1040px] mx-auto text-balance'>
+                    Outsource Your Business Tasks{' '}
+                    <span className='block mt-1 text-orange-200'>Without Building Another Full-Time Team</span>
                 </h1>
-                <h4 className="text-center md:text-lg sm:text-base text-sm sm:w-full w-full text-gray-200 font-semibold tracking-wide shadow-md">
+                <p className='max-w-[760px] mx-auto mt-6 sm:mt-7 text-base sm:text-lg leading-[1.7] text-gray-100'>
                     Discover How Vaforus Outsourcing Services Can Save You Time and Money
-                </h4>
-
-                <div className='mt-2'>
-                    <a 
-                    href='#discovery-call'
-                    className="btn-primary sm:py-3 py-2 sm:px-18 px-6 font-medium sm:text-lg text-sm font-clash tracking-wider"
-                    
-                    >
-                        15-minute discovery call
-                    </a>
+                </p>
+                <div className='flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-4 mt-8 max-w-[680px] mx-auto'>
+                    <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className='btn-primary px-6 py-4 font-medium'>Book a 15-Minute Discovery Call</a>
+                    <a href='#services' className='home-secondary-button px-6 py-4 font-medium'>Explore Our Services</a>
                 </div>
             </div>
-
-
-
-            <div aria-hidden='true' className='absolute inset-0 pointer-events-none'
-            style={{
-                background: 'var(--hero-overlay)'
-            }}
-            >
-            </div>
-
-        </div>
+        </section>
     )
 }
-
-export default Hero

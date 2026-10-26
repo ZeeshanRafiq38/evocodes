@@ -4,7 +4,7 @@ import React from 'react'
 
 const Section2 = ({ location }) => {
     return (
-        <div className='flex md:flex-row flex-col md:gap-0 gap-4 items-center justify-between'>
+        <div className='flex md:flex-row flex-col md:gap-12 gap-8 items-center justify-between'>
             <div className='flex-1 min-w-0 w-full'>
                 <Image
                 src={baseURL + location?.sectionTwo?.image}
@@ -15,10 +15,10 @@ const Section2 = ({ location }) => {
                 />
             </div>
             <div className='flex-1 min-w-0 w-full'>
-                <h3 className='font-clash w-spacing-sm tracking-wide md:text-3xl sm:text-2xl text-xl font-semibold text-secondary'>
+                <h3 className='section-heading'>
                     {location?.sectionTwo?.heading}
                 </h3>
-                <div className='sm:mt-3 mt-2 flex flex-col gap-4 text-dark sm:text-base text-sm'>
+                <div className='mt-5 flex flex-col gap-4 text-dark text-base leading-relaxed'>
                     <p >
                         {location?.sectionTwo?.firstParagraph}
                     </p>

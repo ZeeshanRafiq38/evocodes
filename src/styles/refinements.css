@@ -1,0 +1,95 @@
+/* Shared hierarchy: page title, section title, card title, then body copy. */
+.page-title {
+    font-family: var(--font-clash-display);
+    font-size: clamp(2rem, 1.3rem + 2.5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    word-spacing: normal;
+    text-wrap: balance;
+    max-width: 22ch;
+    overflow-wrap: break-word;
+}
+
+.page-intro {
+    font-size: clamp(1rem, .95rem + .25vw, 1.125rem);
+    line-height: 1.75;
+    max-width: 62ch;
+    margin-top: 1.25rem;
+    color: #E5E7EB;
+    text-wrap: pretty;
+}
+
+.listing-header { padding: clamp(3rem, 7vw, 6rem) 1.25rem; }
+.listing-header .page-title, .listing-header .page-intro { margin-inline: auto; }
+
+.section-heading {
+    font-size: clamp(1.75rem, 1.25rem + 1.6vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: 0;
+    word-spacing: normal;
+    text-wrap: balance;
+}
+
+.sub-text { font-size: 1rem; line-height: 1.75; }
+.service-page p { line-height: 1.75; text-wrap: pretty; }
+.service-hook {
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.875rem);
+    line-height: 1.4;
+    color: #FFDCBE;
+    text-wrap: balance;
+}
+.service-page .section { padding-block: clamp(3rem, 6vw, 5rem); }
+.service-page h3 { line-height: 1.4; }
+
+.article-card {
+    height: 100%;
+    border: 1px solid #E2E5E9;
+    border-radius: 1rem;
+    transition: border-color 200ms, box-shadow 200ms;
+}
+.article-title {
+    font-family: var(--font-clash-display);
+    font-size: clamp(1.25rem, 1.1rem + .5vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--secondary);
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+}
+.featured-article .article-title { font-size: clamp(1.5rem, 1.15rem + 1vw, 2rem); }
+.article-image { width: 100%; height: auto; transition: transform 300ms ease; }
+.article-card .article-image { aspect-ratio: 5 / 3; object-fit: cover; }
+.article-card:focus-within { border-color: var(--primary); }
+.location-card {
+    border: 1px solid #E2E5E9;
+    border-radius: 1rem;
+    transition: border-color 200ms, box-shadow 200ms;
+}
+.site-footer p { font-size: 1rem; line-height: 1.75; }
+.site-footer a { display: inline-flex; align-items: center; min-height: 44px; }
+.site-footer a:hover { color: #FFDCBE; }
+
+/* Focus remains visible on both light and dark surfaces. */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+.bg-secondary .btn-primary:focus-visible { outline-color: white; }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .article-card:hover, .location-card:hover {
+        border-color: var(--primary);
+        box-shadow: 0 12px 28px rgba(24,34,48,.08);
+    }
+    .article-card:hover .article-image, .featured-article:hover .article-image { transform: scale(1.025); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
