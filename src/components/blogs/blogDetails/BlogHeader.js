@@ -74,7 +74,8 @@ const BlogHeader = ({ blog }) => {
                 alt='blog details'
                 width={800}
                 height={800}
-                className='w-full max-h-[500px] object-cover rounded-lg'
+                sizes='(min-width: 1550px) 1250px, (min-width: 1280px) 1150px, (min-width: 1024px) 950px, 100vw'
+                className='w-full h-auto rounded-lg'
                 />
             </div>
         </div>
