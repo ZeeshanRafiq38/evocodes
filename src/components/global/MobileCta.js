@@ -21,7 +21,7 @@ export default function MobileCta() {
                 inert={visible ? undefined : ''}
                 className={`md:hidden fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-gray-200 px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom,0px))] flex items-center gap-3 motion-safe:transition-transform motion-safe:duration-300 ${visible ? 'translate-y-0' : 'translate-y-full'}`}
             >
-                <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className='btn-primary flex-1 px-4 py-3 text-sm font-medium'>
+                <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className='btn-primary flex-1 min-w-0 px-4 py-3 text-sm leading-tight font-medium'>
                     {app.ctaLabel}
                 </a>
                 <a href={app.whatsappUrl} target='_blank' rel='noopener noreferrer' aria-label='Chat with us on WhatsApp' className='w-12 h-12 shrink-0 flex items-center justify-center rounded-full bg-[#25D366] text-white'>

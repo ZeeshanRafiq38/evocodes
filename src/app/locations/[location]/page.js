@@ -36,7 +36,7 @@ const page = async ({ params }) => {
                 <Header location={location} />
             </div>
             <div className=''>
-                <div className='container mx-auto sm:py-12 py-6 px-3'>
+                <div className='container mx-auto sm:py-12 py-6 px-5'>
                     <section>
                         <Section1 location={location} />
                     </section>
@@ -55,7 +55,7 @@ const page = async ({ params }) => {
                         <h3 className="section-heading text-center sm:mb-4 mb-2">
                             {location?.bottomSection?.heading}
                         </h3>
-                        <div className='sm:text-base text-sm'>
+                        <div className='sm:text-base text-sm break-words'>
                             <p>
                                 {location?.bottomSection?.firstParagraph}
                             </p>

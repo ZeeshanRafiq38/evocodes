@@ -47,7 +47,7 @@ export default function ServicesDropdown({ mobile = false, onNavigate }) {
                 id={id}
                 inert={open ? undefined : ''}
                 aria-hidden={!open}
-                className={`${mobile ? 'grid' : 'absolute left-1/2 top-full w-[880px] -translate-x-1/2 pt-3'} motion-safe:transition-all motion-safe:duration-200 ${open ? 'visible opacity-100 translate-y-0 grid-rows-[1fr]' : 'invisible opacity-0 -translate-y-2 pointer-events-none grid-rows-[0fr]'}`}
+                className={`${mobile ? 'grid' : 'absolute left-1/2 top-full w-[880px] max-w-[calc(100vw-2rem)] -translate-x-1/2 pt-3'} motion-safe:transition-all motion-safe:duration-200 ${open ? 'visible opacity-100 translate-y-0 grid-rows-[1fr]' : 'invisible opacity-0 -translate-y-2 pointer-events-none grid-rows-[0fr]'}`}
             >
                 <div className='overflow-hidden min-h-0'>
                     <div className={mobile ? 'ml-3 mb-2 border-l border-white/20 pl-3 space-y-3 text-left' : 'grid grid-cols-3 gap-2 rounded-xl border border-gray-200 bg-white p-4 shadow-xl text-dark'}>

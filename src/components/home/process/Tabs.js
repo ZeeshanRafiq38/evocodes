@@ -1,5 +1,5 @@
 'use client'
-import { useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion, useInView, useReducedMotion } from 'framer-motion'
 import { AgileDevSvg, ClearPlanningSvg, DiscoverCallSvg, LaunchAndSupportSvg } from '@/assets/svgs'
@@ -41,15 +41,27 @@ export default function Tabs() {
     const [active, setActive] = useState(0)
     const [paused, setPaused] = useState(false)
     const [userChose, setUserChose] = useState(false)
+    const [started, setStarted] = useState(false)
     const rootRef = useRef(null)
+    const tablistRef = useRef(null)
     const tabRefs = useRef([])
-    const inView = useInView(rootRef, { amount: 0.4 })
+    // The timer only runs while the tab row itself is fully on screen and clear of the screen edges,
+    // so a visitor always sees step 1 begin instead of arriving mid-way through.
+    const inView = useInView(tablistRef, { amount: 1, margin: '-12% 0px -12% 0px' })
     const reduceMotion = useReducedMotion()
     const id = useId()
     // Auto-advance is driven by the progress bar's animationend, so pausing the bar pauses the timer too.
     // It stops for good once the visitor picks a step themselves.
     const autoAdvance = !userChose && !reduceMotion
-    const running = autoAdvance && inView && !paused
+    const running = autoAdvance && started && inView && !paused
+
+    // First time the tabs come into view: start from step 1 with a fresh bar.
+    useEffect(() => {
+        if (inView && !started) {
+            if (!userChose) setActive(0)
+            setStarted(true)
+        }
+    }, [inView, started, userChose])
 
     const select = index => {
         setUserChose(true)
@@ -73,7 +85,7 @@ export default function Tabs() {
 
     return (
         <div ref={rootRef} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocusCapture={() => setPaused(true)} onBlurCapture={() => setPaused(false)}>
-            <div role='tablist' aria-label='Our delivery process' onKeyDown={onKeyDown} className='grid grid-cols-2 md:grid-cols-4 gap-2'>
+            <div ref={tablistRef} role='tablist' aria-label='Our delivery process' onKeyDown={onKeyDown} className='grid grid-cols-2 md:grid-cols-4 gap-2'>
                 {steps.map((item, index) => {
                     const selected = active === index
                     return (
@@ -95,7 +107,7 @@ export default function Tabs() {
                                 {selected && (
                                     <span
                                         key={active}
-                                        className={`block h-full bg-primary ${autoAdvance ? `tab-progress ${running ? '' : 'is-paused'}` : ''}`}
+                                        className={`block h-full bg-primary ${autoAdvance ? (started ? `tab-progress ${running ? '' : 'is-paused'}` : 'w-0') : ''}`}
                                         style={{ '--tab-duration': `${STEP_DURATION}ms` }}
                                         onAnimationEnd={() => setActive((active + 1) % steps.length)}
                                     />

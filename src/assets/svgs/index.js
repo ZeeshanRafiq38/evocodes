@@ -17,6 +17,7 @@ export { default as FacebookSvg } from './FacebookSvg';
 export { default as InstaSvg } from './InstaSvg';
 export { default as TwitterSvg } from './TwitterSvg';
 export { default as LinkedInSvg } from './LinkedInSvg';
+export { default as LinkedInWordmarkSvg } from './LinkedInWordmarkSvg';
 export { default as CloseSvg } from './CloseSvg';
 export { default as FacebookCircleSvg } from './FacebookCircleSvg';
 export { default as WhatsAppSvg } from './WhatsAppSvg';

@@ -23,7 +23,7 @@ const Footer = () => {
                         {
                             socialLinks?.map(item => (
                                 <li key={item.id}>
-                                    <Link href={item.url} target='_blank' rel='noopener noreferrer' aria-label={item.name} className='social-icon text-gray-200'>
+                                    <Link href={item.url} target='_blank' rel='noopener noreferrer' aria-label={item.name} className='social-icon text-white'>
                                         <item.icon />
                                     </Link>
                                 </li>

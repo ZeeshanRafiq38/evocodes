@@ -6,7 +6,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import useClickOutside from '@/utils/clickOutside'
 import Link from 'next/link';
 import ServicesDropdown from './ServicesDropdown';
-import app from '@/constants/app.constants';
 
 const MobMenu = () => {
     const navRef = useRef();
@@ -76,7 +75,7 @@ const MobMenu = () => {
                 >
                     <CloseSvg />
                 </button>
-                <ul className='flex flex-col gap-1 pt-16 pb-3 px-6 w-full max-w-lg text-left'>
+                <ul className='flex flex-col gap-1 pt-16 pb-8 px-6 w-full max-w-lg text-left'>
                     {
                         navLinks.map(item => (
                             <li key={item.id} className='w-full min-w-0'>
@@ -91,9 +90,6 @@ const MobMenu = () => {
                         ))
                     }
                 </ul>
-                <div className='w-full max-w-lg px-9 pb-8'>
-                    <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' onClick={() => setShowMenu(false)} className='btn-primary w-full px-5 py-3.5 text-sm font-medium'>{app.ctaLabel}</a>
-                </div>
 
             </div>
         </div>

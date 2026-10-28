@@ -44,7 +44,7 @@ export default function ServicePage({ service, href }) {
                             <li key={item} className='border-b border-gray-200 group'>
                                 <FadeOnScroll>
                                     <div className='flex items-baseline gap-4 py-5 px-2 -mx-2 rounded-md motion-safe:transition-[background-color,transform] motion-safe:duration-200 group-hover:bg-[rgba(248,237,231,0.6)] motion-safe:group-hover:translate-x-1'>
-                                        <span aria-hidden='true' className='text-primary text-sm font-semibold'>{String(index + 1).padStart(2, '0')}</span>
+                                        <span aria-hidden='true' className='w-7 shrink-0 whitespace-nowrap tabular-nums text-primary text-sm font-semibold'>{String(index + 1).padStart(2, '0')}</span>
                                         <h3 className='font-clash text-lg md:text-xl font-medium'>{item}</h3>
                                     </div>
                                 </FadeOnScroll>

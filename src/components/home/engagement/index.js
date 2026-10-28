@@ -46,7 +46,7 @@ const Engagement = () => {
 
                 <div className='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 text-center'>
                     <p className='text-dark'>Fees and timelines depend on scope and are agreed before any work starts.</p>
-                    <a href='#discovery-call' className='font-semibold text-primary whitespace-nowrap'>
+                    <a href='#discovery-call' className='font-semibold text-primary sm:whitespace-nowrap'>
                         <span className='link-grow'>Find the right fit on a call</span> <span aria-hidden='true' className='arrow-icon'>→</span>
                     </a>
                 </div>

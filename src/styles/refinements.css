@@ -25,6 +25,7 @@
 
 /* Type scale: h1 36→60, h2 28→44, h3 20→24, body 16–18. */
 .section-heading {
+    overflow-wrap: break-word;
     font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.75rem);
     line-height: 1.15;
     letter-spacing: 0;
@@ -96,6 +97,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* Long-form policy text. */
+.legal-prose { overflow-wrap: anywhere; }
 .legal-prose section { scroll-margin-top: 110px; padding-bottom: 2rem; }
 .legal-prose section + section { border-top: 1px solid #E2E5E9; padding-top: 2rem; }
 .legal-prose h2 { font-family: var(--font-clash-display); font-size: clamp(1.375rem, 1.2rem + .6vw, 1.75rem); font-weight: 600; line-height: 1.25; color: var(--secondary); }

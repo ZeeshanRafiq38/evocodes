@@ -37,10 +37,11 @@ section {
     scroll-margin-top: 100px; /* Adjust as needed */
 }
 
+html, body {
+    overflow-x: clip;
+}
+
 @media (max-width: 767px) {
-    body {
-        overflow-x: clip;
-    }
 
     main, footer {
         overflow-wrap: anywhere;
