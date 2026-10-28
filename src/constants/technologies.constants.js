@@ -1,53 +1,20 @@
-import {
-    AiSvg,
-    AndroidSvg,
-    AngularSvg,
-    AwsSvg,
-    CssSvg,
-    DjangoSvg,
-    DockerSvg,
-    FigmaSvg,
-    FirebaseSvg,
-    FlutterSvg,
-    GithubSvg,
-    HtmlSvg,
-    JavascriptSvg,
-    JavaSvg,
-    KotlinSvg,
-    LaravelSvg,
-    MongoDbSvg,
-    MySqlSvg,
-    NextSvg,
-    PhotoshopSvg,
-    PhpSvg,
-    ReactSvg,
-    TailwindSvg
-} from "@/assets/svgs/technologies";
+const svg = (name, label) => ({ src: `/images/service-${name}.svg`, label })
+const png = (name, label) => ({ src: `/images/tool-${name}.png`, label })
 
-const technologies = [
-    { id: 1, icon: AiSvg },
-    { id: 2, icon: AndroidSvg },
-    { id: 3, icon: AngularSvg , scale : true },
-    { id: 4, icon: AwsSvg },
-    { id: 5, icon: CssSvg },
-    { id: 6, icon: DjangoSvg },
-    { id: 7, icon: DockerSvg },
-    { id: 8, icon: FigmaSvg },
-    { id: 9, icon: FirebaseSvg },
-    { id: 10, icon: FlutterSvg , scale : true },
-    { id: 11, icon: GithubSvg },
-    { id: 12, icon: HtmlSvg },
-    { id: 13, icon: JavascriptSvg },
-    { id: 14, icon: JavaSvg },
-    { id: 15, icon: KotlinSvg },
-    { id: 16, icon: LaravelSvg },
-    { id: 17, icon: MongoDbSvg , scale : true },
-    { id: 18, icon: MySqlSvg },
-    { id: 19, icon: NextSvg },
-    { id: 20, icon: PhotoshopSvg },
-    { id: 21, icon: PhpSvg },
-    { id: 22, icon: ReactSvg },
-    { id: 23, icon: TailwindSvg },
-];
+const technologies = {
+    build: [
+        svg('react', 'React'), svg('nextjs', 'Next.js'), svg('wordpress', 'WordPress'), svg('flutter', 'Flutter'),
+        svg('swift', 'Swift'), svg('kotlin', 'Kotlin'), svg('figma', 'Figma'), svg('framer', 'Framer'),
+        png('photoshop', 'Photoshop'), png('openai', 'OpenAI'), png('claude', 'Claude'),
+        svg('gemini', 'Gemini'), svg('hugging-face', 'Hugging Face'),
+    ],
+    grow: [
+        svg('google-ads', 'Google Ads'), svg('meta', 'Meta Ads'), svg('google-analytics', 'Google Analytics'),
+        svg('search-console', 'Search Console'), svg('semrush', 'Semrush'), svg('hubspot', 'HubSpot'),
+        png('klaviyo', 'Klaviyo'), png('omnisend', 'Omnisend'), svg('mailchimp', 'Mailchimp'), svg('brevo', 'Brevo'),
+        png('apollo', 'Apollo'), png('instantly', 'Instantly'), png('clay', 'Clay'), png('buffer', 'Buffer'),
+        png('canva', 'Canva'),
+    ],
+}
 
 export default technologies;

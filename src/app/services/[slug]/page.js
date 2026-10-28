@@ -18,5 +18,5 @@ export function generateMetadata({ params }) {
 export default function ServiceDetailPage({ params }) {
     const service = servicePages[params.slug]
     if (!service) notFound()
-    return <ServicePage service={service} />
+    return <ServicePage service={service} href={`/services/${params.slug}`} />
 }

@@ -3,10 +3,12 @@ import Link from 'next/link'
 import FadeOnScroll from '@/components/global/FadeOnScroll'
 import app from '@/constants/app.constants'
 import ServiceTools from './ServiceTools'
+import RelatedServices from './RelatedServices'
+import Testimonials from '@/components/home/testimonials'
 
-const callClass = 'btn-primary inline-flex items-center justify-center px-7 py-3 font-clash font-medium text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4'
+const callClass = 'btn-primary inline-flex items-center justify-center gap-2 px-7 py-3 font-medium text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4'
 
-export default function ServicePage({ service }) {
+export default function ServicePage({ service, href }) {
     return (
         <div className='service-page overflow-hidden'>
             <section className='relative isolate overflow-hidden bg-secondary text-pure'>
@@ -21,7 +23,7 @@ export default function ServicePage({ service }) {
                     <h1 className='page-title'>{service.title}</h1>
                     <p className='service-hook mt-5 max-w-3xl font-clash'>{service.headline}</p>
                     <p className='mt-5 max-w-2xl text-gray-200 leading-relaxed'>{service.intro[0]}</p>
-                    <a href='#discovery-call' className={`${callClass} mt-8`}>15-minute discovery call</a>
+                    <a href='#discovery-call' className={`${callClass} mt-8`}>{app.ctaLabel}</a>
                 </div>
             </section>
             <section className='section'>
@@ -39,9 +41,9 @@ export default function ServicePage({ service }) {
                     <h2 className='section-heading mt-12'>{service.capabilitiesTitle}</h2>
                     <ul className='grid md:grid-cols-2 gap-x-12 mt-8'>
                         {service.capabilities.map((item, index) => (
-                            <li key={item} className='border-b border-gray-200'>
+                            <li key={item} className='border-b border-gray-200 group'>
                                 <FadeOnScroll>
-                                    <div className='flex items-baseline gap-4 py-5'>
+                                    <div className='flex items-baseline gap-4 py-5 px-2 -mx-2 rounded-md motion-safe:transition-[background-color,transform] motion-safe:duration-200 group-hover:bg-[rgba(248,237,231,0.6)] motion-safe:group-hover:translate-x-1'>
                                         <span aria-hidden='true' className='text-primary text-sm font-semibold'>{String(index + 1).padStart(2, '0')}</span>
                                         <h3 className='font-clash text-lg md:text-xl font-medium'>{item}</h3>
                                     </div>
@@ -63,6 +65,7 @@ export default function ServicePage({ service }) {
                     </div>
                 </section>
             ))}
+            <Testimonials category={href} />
             <section id='discovery-call' className='section bg-secondary bg-[image:var(--section-gradient)] text-pure'>
                 <div className='container px-5 text-center'>
                     <FadeOnScroll>
@@ -70,11 +73,12 @@ export default function ServicePage({ service }) {
                         <div className='mt-6 max-w-2xl mx-auto space-y-4 text-gray-200 leading-relaxed'>
                             {service.ctaParagraphs.map(text => <p key={text}>{text}</p>)}
                         </div>
-                        <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className={`${callClass} mt-8`}>15-minute discovery call</a>
+                        <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className={`${callClass} mt-8`}>{app.ctaLabel}</a>
                         <div className='mt-6'><Link href='/#services' className='text-sm underline underline-offset-4 hover:text-white'>Explore all services</Link></div>
                     </FadeOnScroll>
                 </div>
             </section>
+            <RelatedServices href={href} />
         </div>
     )
 }

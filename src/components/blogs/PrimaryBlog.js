@@ -16,7 +16,7 @@ const PrimaryBlog = ({ blog }) => {
                 />
             </div>
             <div className='flex-1 min-w-0 w-full'>
-                <span className='text-sm text-light'>Date: {moment(blog?.createdAt)?.format('DD MMM YYYY')}</span>
+                <span className='text-sm text-light'><time dateTime={blog?.createdAt}>{moment(blog?.createdAt)?.format('DD MMM YYYY')}</time></span>
                 <div className='flex flex-wrap items-center gap-3 mt-4'>
                     {
                         blog?.tags?.map(item => (
@@ -32,11 +32,9 @@ const PrimaryBlog = ({ blog }) => {
                 <p className='text-dark mt-4 mb-6 text-base leading-relaxed'>
                     {blog?.shortDescription}
                 </p>
-                <Link
-                href={`/blogs/${blog?.slug}`} 
-                className="btn-primary py-2 px-4 text-sm"
-                >
-                    LEARN MORE
+                <Link href={`/blogs/${blog?.slug}`} className='inline-flex items-center gap-1.5 mt-4 font-semibold text-primary'>
+                    <span className='link-grow'>Read article</span> <span aria-hidden='true' className='arrow-icon'>→</span>
+                    <span className='sr-only'>: {blog?.title}</span>
                 </Link>
             </div>
         </div>

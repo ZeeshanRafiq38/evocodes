@@ -30,16 +30,15 @@
     }
     
     .section {
-        @apply w-full md:py-16 py-8 xl:px-0 px-3;
+        @apply w-full md:py-16 py-8 xl:px-0 px-5;
     }
     
     .section-heading {
-        @apply text-secondary leading-[1.2] tracking-wide lg:text-4xl md:text-3xl sm:text-2xl text-[22px] font-semibold;
+        @apply text-secondary font-semibold;
         font-family: var(--font-clash-display);
-        word-spacing: 4px;
     }
     .sub-text {
-        @apply text-dark md:text-base text-[13px] text-center sm:mt-3 mt-2 xl:w-[40%] lg:w-1/2 md:w-[60%] sm:w-[70%] w-full mx-auto;
+        @apply text-dark text-center mt-4 w-full max-w-[620px] mx-auto;
     }
         
     .shadow-circle {

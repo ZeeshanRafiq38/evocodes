@@ -14,8 +14,6 @@
 }
 
 .home-page .section-heading {
-    font-size: 32px;
-    line-height: 1.2;
     max-width: 760px;
 }
 
@@ -31,11 +29,33 @@
     margin-top: 16px;
 }
 
+/* Section label: small pill with a dot. */
 .home-eyebrow {
-    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid rgba(196,81,34,0.22);
+    border-radius: 999px;
+    background-color: rgba(196,81,34,0.07);
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0;
+    line-height: 1.2;
+    letter-spacing: .08em;
     text-transform: uppercase;
+    color: var(--primary);
+}
+.home-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: currentColor;
+}
+/* On dark sections the label is recoloured with !text-orange-200; give the pill a light glass look there. */
+.home-eyebrow.\!text-orange-200 {
+    border-color: rgba(255,255,255,0.16);
+    background-color: rgba(255,255,255,0.06);
 }
 
 .home-secondary-button {
@@ -131,12 +151,10 @@
 
 @media (min-width: 1024px) {
     .home-page .section { padding-block: 88px; }
-    .home-page .section-heading { font-size: 40px; }
 }
 
 @media (max-width: 639px) {
     .home-page .section { padding-block: 48px; }
-    .home-page .section-heading { font-size: 28px; }
     .home-page p.text-sm { font-size: 16px; line-height: 1.65; }
     .home-page .btn-primary { max-width: 100%; white-space: normal; }
 }

@@ -1,10 +1,7 @@
-"use client"
-import React from 'react'
-
 const Loading = () => {
     return (
-        <div className='fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-white z-[999999]'>
-            <div className="loader"></div>
+        <div role='status' aria-label='Loading page' className='fixed top-0 left-0 w-full h-[3px] overflow-hidden z-[999999] bg-primary-soft'>
+            <div className='route-progress h-full w-full bg-primary' />
         </div>
     )
 }

@@ -7,6 +7,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata = {
     title: 'Blogs & Resources | Vaforus',
+    description: 'Practical guides on business process outsourcing, remote teams, and getting more done without hiring in-house.',
 };
 
 const Page = async () => {
@@ -18,7 +19,7 @@ const Page = async () => {
                     Blogs and Resources
                 </h1>
                 <p className='page-intro'>
-                    No empty promises, just results that speak for themselves.
+                    Practical guides on outsourcing, remote teams, and getting more done without hiring in-house.
                 </p>
             </header>
             <div className="container mx-auto sm:py-16 py-6 lg:px-0 px-3">

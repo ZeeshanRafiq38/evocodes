@@ -1,17 +1,17 @@
 import React from 'react'
 import Tabs from './Tabs'
-import { ProcessLeftShapeSvg } from '@/assets/svgs'
 import SlideOnScroll from '@/components/global/SlideOnScroll'
 
 const Process = () => {
     return (
         <div className='relative overflow-hidden'>
-            <SlideOnScroll direction='top'>
+            <SlideOnScroll direction='bottom'>
                 <div className='section container mx-auto relative z-10'>
                     <header className='text-center'>
-                        <h3 className='section-heading'>
+                        <p className='home-eyebrow mb-4'>How it works</p>
+                        <h2 className='section-heading'>
                             From First Call to Managed Delivery
-                        </h3>
+                        </h2>
                         <p className='sub-text'>
                             From understanding your needs to managing delivery, Vaforus keeps the entire outsourcing process clear and accountable.
                         </p>
@@ -21,11 +21,6 @@ const Process = () => {
                     </div>
                 </div>
             </SlideOnScroll>
-
-
-            <div className='absolute -top-[400px] left-0 sm:block hidden'>
-                <ProcessLeftShapeSvg />
-            </div>
         </div>
 
     )

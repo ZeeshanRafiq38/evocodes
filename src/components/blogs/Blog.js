@@ -17,7 +17,7 @@ const Blog = ({ blog }) => {
                 />
             </div>
             <div className='mt-4'>
-                <span className='text-sm text-light'>Date: {moment(blog?.createdAt)?.format('DD MMM YYYY')}</span>
+                <span className='text-sm text-light'><time dateTime={blog?.createdAt}>{moment(blog?.createdAt)?.format('DD MMM YYYY')}</time></span>
                 <div className='flex flex-wrap items-center gap-3 mt-4'>
                     {
                         blog?.tags?.map(item => (
@@ -31,10 +31,9 @@ const Blog = ({ blog }) => {
                 <h3 className='article-title mt-3'>
                     <Link href={`/blogs/${blog?.slug}`} className='hover:text-primary'>{blog?.title}</Link>
                 </h3>
-                <Link
-                href={`/blogs/${blog?.slug}`} 
-                className="inline-block mt-4 btn-primary py-2 px-4 text-sm">
-                    LEARN MORE
+                <Link href={`/blogs/${blog?.slug}`} className='inline-flex items-center gap-1.5 mt-4 font-semibold text-primary'>
+                    <span className='link-grow'>Read article</span> <span aria-hidden='true' className='arrow-icon'>→</span>
+                    <span className='sr-only'>: {blog?.title}</span>
                 </Link>
             </div>
         </div>

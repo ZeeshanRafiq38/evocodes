@@ -1,0 +1,113 @@
+/* Shared motion and hover system. Every hover effect is gated on a real pointer and on motion preference. */
+:root {
+    --ease-out: cubic-bezier(.2, .8, .2, 1);
+}
+
+/* Arrow that nudges forward on hover, used in buttons and text links. */
+.arrow-icon {
+    display: inline-block;
+    transition: transform 220ms var(--ease-out);
+}
+
+/* Text link with an underline that grows from the left. */
+.link-grow {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 250ms var(--ease-out), color 200ms;
+}
+
+/* Cards: thin brand line that expands across the top edge. */
+.card-accent {
+    position: relative;
+    overflow: hidden;
+}
+.card-accent::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background-image: var(--primary-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms var(--ease-out);
+}
+.card-accent:focus-within::before { transform: scaleX(1); }
+
+/* Logos stay quiet until hovered. */
+.logo-mono {
+    filter: grayscale(1);
+    opacity: .75;
+    transition: filter 250ms, opacity 250ms;
+}
+
+.tool-tile {
+    transition: transform 220ms var(--ease-out), box-shadow 220ms, border-color 220ms;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    a:hover .arrow-icon, button:hover .arrow-icon, .group:hover .arrow-icon { transform: translateX(4px); }
+    .link-grow:hover, a:hover .link-grow, .group:hover .link-grow { background-size: 100% 1.5px; }
+    .card-accent:hover::before { transform: scaleX(1); }
+    .logo-mono:hover { filter: none; opacity: 1; }
+    .tool-tile:hover {
+        transform: translateY(-3px) scale(1.04);
+        border-color: var(--primary);
+        box-shadow: 0 10px 24px rgba(24,34,48,.08);
+    }
+    .social-icon { transition: transform 200ms var(--ease-out), color 200ms; }
+    .social-icon:hover { transform: translateY(-3px); color: #F2B08B; }
+}
+
+/* Touch screens get press feedback instead of hover. */
+@media (hover: none) {
+    .btn-primary:active, .home-secondary-button:active, .card-press:active { transform: scale(.98); }
+}
+
+/* Hero entrance: each line rises in sequence on first paint. */
+@keyframes rise-in {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .hero-reveal { animation: rise-in 700ms var(--ease-out) both; }
+    .hero-reveal-2 { animation-delay: 120ms; }
+    .hero-reveal-3 { animation-delay: 240ms; }
+    .hero-reveal-4 { animation-delay: 360ms; }
+}
+
+/* Process tab timer. */
+@keyframes tab-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+.tab-progress {
+    transform-origin: left;
+    animation: tab-progress var(--tab-duration, 6s) linear forwards;
+}
+.tab-progress.is-paused { animation-play-state: paused; }
+
+/* Route-change indicator: a thin bar instead of a full-screen loader. */
+@keyframes route-progress {
+    0% { transform: translateX(-100%) scaleX(.3); }
+    60% { transform: translateX(40%) scaleX(.6); }
+    100% { transform: translateX(100%) scaleX(.3); }
+}
+.route-progress {
+    animation: route-progress 1.1s var(--ease-out) infinite;
+}
+
+/* Leave room for the fixed mobile CTA bar so it never covers the footer. */
+@media (max-width: 767px) {
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* Testimonial strip: every card in the row takes the height of the tallest one. */
+.testimonial-strip .rfm-marquee,
+.testimonial-strip .rfm-initial-child-container {
+    align-items: stretch;
+}
+.testimonial-strip .rfm-child {
+    display: flex;
+}

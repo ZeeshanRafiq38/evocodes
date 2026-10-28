@@ -1,42 +1,33 @@
-'use client'
 import app from "@/constants/app.constants";
 
+const info = [
+    { label : 'Phone' , value : app.contactNo , href : `tel:${app.contactForCall}` } ,
+    { label : 'WhatsApp' , value : 'Chat with us' , href : app.whatsappUrl , external : true } ,
+    { label : 'Email' , value : app.email , href : `mailto:${app.email}` } ,
+    { label : 'Office' , value : app.officeAddress } ,
+    { label : 'Working Hours' , value : 'Available 24/7' } ,
+]
 
 const ContactInfo = () => {
-
-    const info = [
-        {
-            id : 2 ,
-            label : 'Phone' ,
-            value : app.contactNo
-        } ,
-        {
-            id : 3 ,
-            label : 'Email' ,
-            value : app.email
-        } ,
-        {
-            id : 4 ,
-            label : 'Working Hours' ,
-            value : 'Available 24/7'
-        } ,
-    ]
-
     return (
-        <div className='sm:my-0 my-3 '>
-            <h6 className='text-lg font-medium font-clash tracking-wide w-spacing-sm'>
-                CONTACT INFORMATION
-            </h6>
-            <ul className="mt-4 flex flex-col gap-4 text-sm">
+        <div>
+            <h2 className='text-lg font-semibold font-clash'>
+                Contact
+            </h2>
+            <ul className="mt-4 flex flex-col gap-1 text-sm">
                 {
-                    info?.map(item => (
-                        <li
-                            key={item.id}
-                        >
-                            <span className='font-medium'>
-                                {item.label}:
+                    info.map(item => (
+                        <li key={item.label}>
+                            <span className='block text-xs uppercase tracking-[.08em] text-gray-400'>
+                                {item.label}
                             </span>
-                            <span className='text-gray-200 break-words'> {item.value}</span>
+                            {item.href ? (
+                                <a href={item.href} {...(item.external && { target: '_blank', rel: 'noopener noreferrer' })} className='break-all'>
+                                    <span className='link-grow text-gray-100 hover:text-white'>{item.value}</span>
+                                </a>
+                            ) : (
+                                <span className='flex items-center min-h-[44px] text-gray-100 break-words'>{item.value}</span>
+                            )}
                         </li>
                     ))
                 }

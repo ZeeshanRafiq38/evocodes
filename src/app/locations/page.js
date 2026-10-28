@@ -16,10 +16,10 @@ const Locations = () => {
         <div>
             <header className='listing-header bg-secondary bg-[image:var(--section-gradient)] text-center text-pure'>
                 <h1 className='page-title'>
-                    Where Innovation Meets Your Location
+                    Serving Businesses Wherever They Operate
                 </h1>
                 <p className='page-intro'>
-                    From here to anywhere, we bring solutions closer to you with personalized service and local insight.
+                    Our remote teams support businesses across regions and time zones, with one point of contact and founder-led supervision.
                 </p>
             </header>
             <div className='container mx-auto px-3'>
@@ -52,13 +52,14 @@ const Locations = () => {
                             <a 
                             href={app.discoveryCallUrl}
                             target='_blank'
+                            rel='noopener noreferrer'
                             >
                                 <div className='flex items-center gap-4'>
                                     <BookSvg className='md:w-[50px] w-[30px] text-secondary' />
                                     <h4 className='md:text-xl sm:text-lg text-base font-semibold text-secondary'>BOOK A CALL</h4>
                                 </div>
                                 <div className='md:ml-[66px] ml-[46px]'>
-                                    15 Minute Discovery Call
+                                    {app.ctaLabel}
                                 </div>
                             </a>
                         </div>

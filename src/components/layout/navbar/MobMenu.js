@@ -92,7 +92,7 @@ const MobMenu = () => {
                     }
                 </ul>
                 <div className='w-full max-w-lg px-9 pb-8'>
-                    <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' onClick={() => setShowMenu(false)} className='btn-primary w-full px-5 py-3.5 text-sm font-medium'>Book a 15-Minute Discovery Call</a>
+                    <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' onClick={() => setShowMenu(false)} className='btn-primary w-full px-5 py-3.5 text-sm font-medium'>{app.ctaLabel}</a>
                 </div>
 
             </div>

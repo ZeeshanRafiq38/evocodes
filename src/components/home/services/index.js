@@ -11,6 +11,7 @@ const Services = ({ shapes = true }) => {
                 <div className='section container mx-auto relative z-10'>
                     <SlideOnScroll direction='bottom'>
                     <header className='text-center'>
+                        <p className='home-eyebrow mb-4'>Our services</p>
                         <h3 className='section-heading'>
                             What Can We Take Off Your Plate?
                         </h3>

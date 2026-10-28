@@ -11,6 +11,9 @@ import 'swiper/css/scrollbar';
 import "react-accordion-comp/dist/styles.css";
 import { Suspense } from "react";
 import Provider from "./Provider";
+import MobileCta from "@/components/global/MobileCta";
+import CookieBanner from "@/components/global/CookieBanner";
+import { CONSENT_KEY } from "@/constants/consent.constants";
 // import "animate.css/animate.compat.css";
 
 
@@ -47,6 +50,28 @@ export default function RootLayout({ children}) {
     return (
         <html lang="en" className="light">
             <head>
+                {/* Consent Mode: storage stays denied until the visitor accepts in the cookie banner. Must run before GA/GTM. */}
+                <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('consent', 'default', {
+                        ad_storage: 'denied',
+                        ad_user_data: 'denied',
+                        ad_personalization: 'denied',
+                        analytics_storage: 'denied',
+                        wait_for_update: 500
+                    });
+                    try {
+                        if (localStorage.getItem('${CONSENT_KEY}') === 'granted') {
+                            gtag('consent', 'update', { analytics_storage: 'granted' });
+                        }
+                    } catch (e) {}
+                    `,
+                }}
+                ></script>
+
                 {/* Google Analytics */}
                 <script
                 async
@@ -90,7 +115,7 @@ export default function RootLayout({ children}) {
                 </noscript>
                 
                 <Provider>
-                    <header>
+                    <header className='sticky top-0 z-50'>
                         <Navbar />
                     </header>
                     <main>
@@ -99,6 +124,8 @@ export default function RootLayout({ children}) {
                     <footer>
                         <Footer />
                     </footer>
+                    <MobileCta />
+                    <CookieBanner />
                 </Provider>
             </body>
         </html>
