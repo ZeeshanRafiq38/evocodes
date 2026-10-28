@@ -11,6 +11,8 @@ import 'swiper/css/scrollbar';
 import "react-accordion-comp/dist/styles.css";
 import { Suspense } from "react";
 import Provider from "./Provider";
+import app from "@/constants/app.constants";
+import socialLinks from "@/constants/socialLinks.constants";
 import MobileCta from "@/components/global/MobileCta";
 import CookieBanner from "@/components/global/CookieBanner";
 import { CONSENT_KEY } from "@/constants/consent.constants";
@@ -44,12 +46,27 @@ export const metadata = {
         { rel: 'apple-touch-icon', sizes: '180x180', url: '/apple-touch-icon.png' },
     ],
     manifest: '/site.webmanifest',
+    // Set GOOGLE_SITE_VERIFICATION to the code from Search Console's "HTML tag" method.
+    ...(process.env.GOOGLE_SITE_VERIFICATION && { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }),
+};
+
+const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Vaforus',
+    url: 'https://vaforus.com',
+    logo: 'https://vaforus.com/web-app-manifest-512x512.png',
+    email: app.email,
+    telephone: app.contactForCall,
+    address: { '@type': 'PostalAddress', addressLocality: 'Multan', addressCountry: 'PK' },
+    sameAs: socialLinks.map(link => link.url),
 };
 
 export default function RootLayout({ children}) {
     return (
         <html lang="en" className="light">
             <head>
+                <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
                 {/* Consent Mode: storage stays denied until the visitor accepts in the cookie banner. Must run before GA/GTM. */}
                 <script
                 dangerouslySetInnerHTML={{

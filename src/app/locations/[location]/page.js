@@ -6,12 +6,16 @@ import Section2 from '@/components/locations/locationDetails/Section2';
 import Axios from '@/config/api';
 import React , { cache } from 'react'
 import AddressLayout from './AddressLayout';
+import { notFound } from 'next/navigation';
+import pageMetadata from '@/utils/pageMetadata';
 
 const getLocation = cache(async (slug) => {
     try {
         const { data: { data: { doc  } } } = await Axios(`/location/slug/${slug}`)
         return doc
     } catch (error) {
+        // Unknown slug -> real 404 instead of an error page.
+        if (/not found/i.test(error?.response?.data?.message || '')) return null
         console.error("Error fetching location details:", error);
         throw new Error("Could not fetch location details. Please try again later.");
     }
@@ -19,16 +23,17 @@ const getLocation = cache(async (slug) => {
 
 export const generateMetadata = async ({ params }) => {
     const location = await getLocation(params.location);
-
-    const metadata = {
-        title: location?.name || 'Location Details',
-    };
-
-    return metadata;
+    if (!location) notFound();
+    return pageMetadata(
+        `${location.mainHeading || location.name} | Vaforus`,
+        location.mainHeadingSubText,
+        `/locations/${location.slug}`
+    );
 };
 
 const page = async ({ params }) => {
     const location = await getLocation(params.location);
+    if (!location) notFound();
 
     return (
         <AddressLayout footerAddress={location?.officeAddress}>

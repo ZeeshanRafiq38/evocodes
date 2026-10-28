@@ -3,13 +3,16 @@ import Loader from '@/components/global/Loader'
 import AllLocations from '@/components/locations/AllLocations'
 import app from '@/constants/app.constants';
 import React, { Suspense } from 'react';
+import pageMetadata from '@/utils/pageMetadata';
 
 export const dynamic = 'force-dynamic'
 
 
-export const metadata = {
-    title: 'All Locations | Vaforus Global Services',
-};
+export const metadata = pageMetadata(
+    'Locations | Vaforus',
+    'Vaforus is based in Multan, Pakistan and supports businesses across the Middle East, Europe, the UK and the US with managed remote teams.',
+    '/locations'
+);
 
 const Locations = () => {
     return (

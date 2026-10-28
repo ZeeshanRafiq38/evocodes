@@ -1,14 +1,16 @@
 import AllBlogs from '@/components/blogs/AllBlogs';
 import Loader from '@/components/global/Loader';
 import React, { Suspense } from 'react';
+import pageMetadata from '@/utils/pageMetadata';
 
 export const dynamic = 'force-dynamic'
 
 
-export const metadata = {
-    title: 'Blogs & Resources | Vaforus',
-    description: 'Practical guides on business process outsourcing, remote teams, and getting more done without hiring in-house.',
-};
+export const metadata = pageMetadata(
+    'Blogs & Resources | Vaforus',
+    'Practical guides on business process outsourcing, remote teams, and getting more done without hiring in-house.',
+    '/blogs'
+);
 
 const Page = async () => {
     

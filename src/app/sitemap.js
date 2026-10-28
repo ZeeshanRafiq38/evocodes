@@ -45,9 +45,10 @@ function documentEntries(documents, path) {
 }
 
 export default async function sitemap() {
+    // If the API is unreachable, still publish the static pages rather than a broken sitemap.
     const [blogs, locations] = await Promise.all([
-        getDocuments('blog'),
-        getDocuments('location'),
+        getDocuments('blog').catch(error => { console.error(error); return [] }),
+        getDocuments('location').catch(error => { console.error(error); return [] }),
     ])
 
     const entries = [
