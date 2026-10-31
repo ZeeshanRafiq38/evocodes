@@ -7,6 +7,7 @@ import { getTestimonials } from '@/constants/testimonials.constants'
 // One 24px line icon per service, used as the card avatar instead of a person.
 const serviceIcons = {
     '/services/web-development': <><path d='m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14' /></>,
+    '/services/app-development': <><rect x='6' y='2' width='12' height='20' rx='3' /><path d='M10 5h4M11 19h2' /></>,
     '/services/ai-integrations': <><path d='M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z' /><path d='M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z' /></>,
     '/services/ui-ux-graphic-design': <><path d='M12 20h9' /><path d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z' /></>,
     '/services/seo-content': <><circle cx='11' cy='11' r='7' /><path d='m20 20-3.5-3.5' /></>,

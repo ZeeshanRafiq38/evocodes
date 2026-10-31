@@ -21,6 +21,7 @@ const innerDemoNames = [
     ['Matthew Ellis', 'Alice Hamilton', 'Tariq Al Farsi', 'Jessica Warren', 'Thomas Barrett', 'Reem Nasser'],
     ['Andrew Sullivan', 'Hannah West', 'Zaid Al Shamsi', 'Natalie Price', 'William Ashford', 'Salma Darwish'],
     ['Christopher Lane', 'Freya Marshall', 'Abdullah Al Saud', 'Rebecca Stone', 'Edward Palmer', 'Aisha Rahman'],
+    ['Kevin Bennett', 'Victoria Shaw', 'Hamdan Al Mazrouei', 'Ashley Simmons', 'Samuel Hartley', 'Noor Al Otaibi'],
 ]
 const innerDemoRegions = ['USA', 'UK', 'UAE', 'USA', 'UK', 'Saudi Arabia', 'USA', 'UK', 'UAE']
 
@@ -127,6 +128,21 @@ const clientFeedback = [
     },
 ]
 
+// Draft examples for the app-development layout, not statements from actual clients.
+clientFeedback.push({
+    label: 'App development',
+    href: '/services/app-development',
+    sample: true,
+    quotes: [
+        "We had the main idea for our app but needed help working through the details. Vaforus helped us turn that into a clear plan and kept us involved as the screens and features came together.",
+        "What we appreciated most was being able to try the app during development and give feedback. The team listened to our suggestions and explained the options without making things overly technical.",
+        "Our app needed to connect with systems we already used. The team took time to understand that workflow and helped us think through how everything should work together.",
+        "We wanted an app that felt straightforward for our customers. Vaforus paid attention to the navigation and the small details, rather than just adding features for the sake of it.",
+        "Communication was easy throughout the project. We knew what the team was working on, what they needed from us, and which decisions were coming next.",
+        "We started with a focused first version instead of trying to build everything at once. The team helped us prioritize the essentials and discuss what could come later.",
+    ],
+})
+
 // Filter chips, in the same priority order as the services.
 export const testimonialCategories = clientFeedback.map(({ label, href }) => ({ label, href }))
 
@@ -134,6 +150,7 @@ const feedbackItems = clientFeedback.flatMap((group, groupIndex) => group.quotes
     text,
     label: group.label,
     href: group.href,
+    sample: Boolean(group.sample),
     demoProfile: index < 6 ? demoProfiles[group.href] : undefined,
     innerDemoProfile: { name: innerDemoNames[groupIndex][index], region: innerDemoRegions[index] },
 })))
