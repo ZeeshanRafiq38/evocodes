@@ -35,7 +35,7 @@ const Footer = () => {
                     <h2 className={headingClass}>Company</h2>
                     <ul className="mt-3 flex flex-col text-sm">
                         {
-                            navLinks?.filter(item => item.name !== 'Services').map(item => (
+                            navLinks?.filter(item => !['Services', 'Contact Us'].includes(item.name)).map(item => (
                                 <li key={item.id}>
                                     <Link href={item.path}><span className={linkClass}>{item.name}</span></Link>
                                 </li>

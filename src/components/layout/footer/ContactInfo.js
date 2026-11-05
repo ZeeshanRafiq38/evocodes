@@ -1,11 +1,12 @@
 import app from "@/constants/app.constants";
+import Link from "next/link";
 
 const info = [
     { label : 'Phone' , value : app.contactNo , href : `tel:${app.contactForCall}` } ,
     { label : 'WhatsApp' , value : 'Chat with us' , href : app.whatsappUrl , external : true } ,
     { label : 'Email' , value : app.email , href : `mailto:${app.email}` } ,
     { label : 'Office' , value : app.officeAddress } ,
-    { label : 'Working Hours' , value : 'Available 24/7' } ,
+    { label : 'Working Hours' , value : '8AM - 9PM GMT' } ,
 ]
 
 const ContactInfo = () => {
@@ -15,6 +16,11 @@ const ContactInfo = () => {
                 Contact
             </h2>
             <ul className="mt-4 flex flex-col gap-1 text-sm">
+                <li>
+                    <Link href='/contact' className='inline-flex min-h-[44px] items-center text-gray-100 hover:text-white'>
+                        <span className='link-grow'>Contact Us</span>
+                    </Link>
+                </li>
                 {
                     info.map(item => (
                         <li key={item.label}>

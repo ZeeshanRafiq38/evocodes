@@ -7,6 +7,7 @@ import NavLink from './NavLink'
 import MobMenu from './MobMenu'
 import Image from 'next/image'
 import ServicesDropdown from './ServicesDropdown'
+import CompanyDropdown from './CompanyDropdown'
 import app from '@/constants/app.constants'
 
 const Navbar = () => {
@@ -24,12 +25,15 @@ const Navbar = () => {
                     </Link>
                     <ul className='xl:flex hidden items-center gap-7 text-dark '>
                         {
-                            navLinks?.map(item => (
+                            navLinks?.filter(item => item.group !== 'company' && item.path !== '/blogs' && item.path !== '/contact').map(item => (
                                 <li key={item.id} className='nav-link'>
                                     {item.name === 'Services' ? <ServicesDropdown /> : <NavLink href={item.path}>{item.name}</NavLink>}
                                 </li>
                             ))
                         }
+                        <li className='nav-link'><CompanyDropdown /></li>
+                        <li className='nav-link'><NavLink href='/blogs'>Blogs</NavLink></li>
+                        <li className='nav-link'><NavLink href='/contact'>Contact Us</NavLink></li>
                     </ul>
                     <div className='xl:flex hidden items-center gap-4'>
                         <a

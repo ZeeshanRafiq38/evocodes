@@ -52,7 +52,7 @@ export default async function sitemap() {
     ])
 
     const entries = [
-        ...['/', '/about-us', '/blogs', '/locations', '/privacy-policy', '/terms', ...services.map(service => service.href)]
+        ...['/', '/about-us', '/blogs', '/locations', '/contact', '/privacy-policy', '/terms', ...services.map(service => service.href)]
             .map(path => ({ url: `${siteUrl}${path}` })),
         ...documentEntries(blogs.filter(blog => blog.published !== false), 'blogs'),
         ...documentEntries(locations, 'locations'),

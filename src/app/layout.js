@@ -39,8 +39,8 @@ const clashDisplay = localFont({
 
 export const metadata = {
     metadataBase: new URL('https://vaforus.com'),
-    title: "Business Process Outsourcing & Remote Teams | Vaforus",
-    description: "Vaforus provides business process outsourcing and remote team services across marketing, sales, web development, SEO, content, and digital operations.",
+    title: "Business Outsourcing Services & Remote Teams | Vaforus",
+    description: "Outsource business tasks without hiring a full-time team. Vaforus builds dedicated remote teams for marketing, sales, and development. Book a free call.",
     icons: [
         { rel: 'icon', type: 'image/png', url: '/favicon-96x96.png', sizes: '96x96' },
         { rel: 'apple-touch-icon', sizes: '180x180', url: '/apple-touch-icon.png' },
