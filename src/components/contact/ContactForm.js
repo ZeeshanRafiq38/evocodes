@@ -1,7 +1,8 @@
 'use client'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import services from '@/constants/services.constants'
+import Axios from '@/config/api'
 
 const MESSAGE_MAX = 1000
 
@@ -17,7 +18,7 @@ const Check = ({ className }) => (
     </svg>
 )
 
-const emptyForm = { name: '', email: '', company: '', services: [], message: '', consent: false }
+const emptyForm = { name: '', email: '', company: '', services: [], message: '', consent: false, website: '' }
 
 const fieldClass = (hasError) =>
     `w-full rounded-xl border bg-white px-4 py-3 text-base text-secondary placeholder:text-gray-400 transition-[border-color,box-shadow] duration-200 outline-none focus-visible:outline-none focus:border-primary focus:ring-4 focus:ring-[rgba(196,81,34,0.12)] ${hasError ? 'border-red-400' : 'border-gray-200 hover:border-gray-300'}`
@@ -42,18 +43,22 @@ const validate = form => {
     return errors
 }
 
-// UI only for now. Replace this with the real request (API route, email service, CRM).
-// Resolve on success; throw to show the error message.
-const submitContact = async () => {
-    await new Promise(resolve => setTimeout(resolve, 900))
+const submitContact = async (form, requestId) => {
+    const response = await Axios.post('/contact', { ...form, requestId }, { timeout: 20000 })
+    if (!response.data?.success) throw new Error('We could not confirm your submission. Please try again.')
 }
 
 export default function ContactForm() {
     const [form, setForm] = useState(emptyForm)
     const [errors, setErrors] = useState({})
     const [status, setStatus] = useState('idle') // idle | sending | success | error
+    const [errorMessage, setErrorMessage] = useState('')
+    const requestId = useRef(null)
+    const submitting = useRef(false)
 
     const update = (key, value) => {
+        if (submitting.current) return
+        requestId.current = null
         setForm(current => ({ ...current, [key]: value }))
         if (errors[key]) setErrors(current => ({ ...current, [key]: undefined }))
     }
@@ -63,19 +68,26 @@ export default function ContactForm() {
 
     const onSubmit = async event => {
         event.preventDefault()
+        if (submitting.current) return
         const found = validate(form)
         setErrors(found)
         if (Object.keys(found).length) {
             document.getElementById(`contact-${Object.keys(found)[0]}`)?.focus()
             return
         }
+        submitting.current = true
         setStatus('sending')
+        setErrorMessage('')
         try {
-            await submitContact(form)
+            requestId.current ||= crypto.randomUUID()
+            await submitContact(form, requestId.current)
             setStatus('success')
-        } catch {
+        } catch (error) {
+            const data = error.response?.data
+            if (data?.errors) setErrors(data.errors)
+            setErrorMessage(data?.message || data?.data?.message || 'We could not confirm your submission. Please try again, or email us directly.')
             setStatus('error')
-        }
+        } finally { submitting.current = false }
     }
 
     if (status === 'success') {
@@ -90,7 +102,7 @@ export default function ContactForm() {
                 <p className='mt-3 max-w-md text-base leading-relaxed text-gray-600'>
                     Your message has been received. We&apos;ll review it and get back to you within 24 hours at <span className='font-medium text-secondary break-all'>{form.email}</span>.
                 </p>
-                <button type='button' onClick={() => { setForm(emptyForm); setStatus('idle') }} className='mt-8 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-hover'>
+                <button type='button' onClick={() => { setForm(emptyForm); setStatus('idle'); requestId.current = null }} className='mt-8 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-hover'>
                     Send another message
                 </button>
             </div>
@@ -100,30 +112,36 @@ export default function ContactForm() {
     const sending = status === 'sending'
 
     return (
-        <form onSubmit={onSubmit} noValidate className='space-y-6'>
+        <form onSubmit={onSubmit} noValidate aria-busy={sending} className='space-y-6'>
+            <div aria-hidden='true' style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', overflow: 'hidden' }}>
+                <label htmlFor='contact-website'>Leave this field empty</label>
+                <input id='contact-website' name='website' type='text' tabIndex={-1} autoComplete='off' value={form.website} onChange={e => update('website', e.target.value)} />
+            </div>
             <div className='grid gap-6 sm:grid-cols-2'>
                 <div>
                     <Label htmlFor='contact-name'>Full name</Label>
-                    <input id='contact-name' type='text' autoComplete='name' value={form.name} onChange={e => update('name', e.target.value)}
+                    <input id='contact-name' type='text' maxLength={100} disabled={sending} autoComplete='name' value={form.name} onChange={e => update('name', e.target.value)}
                         aria-invalid={!!errors.name} aria-describedby={errors.name ? 'contact-name-error' : undefined}
                         placeholder='Your name' className={fieldClass(errors.name)} />
                     <ErrorText id='contact-name-error' message={errors.name} />
                 </div>
                 <div>
                     <Label htmlFor='contact-email'>Email</Label>
-                    <input id='contact-email' type='email' autoComplete='email' value={form.email} onChange={e => update('email', e.target.value)}
+                    <input id='contact-email' type='email' maxLength={254} disabled={sending} autoComplete='email' value={form.email} onChange={e => update('email', e.target.value)}
                         aria-invalid={!!errors.email} aria-describedby={errors.email ? 'contact-email-error' : undefined}
                         placeholder='you@company.com' className={fieldClass(errors.email)} />
                     <ErrorText id='contact-email-error' message={errors.email} />
                 </div>
                 <div className='sm:col-span-2'>
                     <Label htmlFor='contact-company' optional>Company name</Label>
-                    <input id='contact-company' type='text' autoComplete='organization' value={form.company} onChange={e => update('company', e.target.value)}
-                        placeholder='Company or brand' className={fieldClass(false)} />
+                    <input id='contact-company' type='text' maxLength={150} disabled={sending} autoComplete='organization' value={form.company} onChange={e => update('company', e.target.value)}
+                        aria-invalid={!!errors.company} aria-describedby={errors.company ? 'contact-company-error' : undefined}
+                        placeholder='Company or brand' className={fieldClass(errors.company)} />
+                    <ErrorText id='contact-company-error' message={errors.company} />
                 </div>
             </div>
 
-            <fieldset aria-describedby={errors.services ? 'contact-services-error' : undefined}>
+            <fieldset disabled={sending} aria-describedby={errors.services ? 'contact-services-error' : undefined}>
                 <legend className='mb-3 text-sm font-medium text-secondary'>
                     What can we help with?<span aria-hidden='true' className='text-primary'> *</span>
                     <span className='ml-2 text-xs font-normal text-light'>Choose all that apply</span>
@@ -152,7 +170,7 @@ export default function ContactForm() {
 
             <div>
                 <Label htmlFor='contact-message'>Message</Label>
-                <textarea id='contact-message' rows={5} maxLength={MESSAGE_MAX} value={form.message} onChange={e => update('message', e.target.value)}
+                <textarea id='contact-message' rows={5} disabled={sending} maxLength={MESSAGE_MAX} value={form.message} onChange={e => update('message', e.target.value)}
                     aria-invalid={!!errors.message} aria-describedby={errors.message ? 'contact-message-error contact-message-hint' : 'contact-message-hint'}
                     placeholder='Tell us about your business, the work you want to outsource, and any timelines.'
                     className={`${fieldClass(errors.message)} resize-y min-h-[140px]`} />
@@ -166,7 +184,7 @@ export default function ContactForm() {
             <div>
                 <label className='flex items-start gap-3 text-sm leading-relaxed text-dark cursor-pointer'>
                     <span className='relative mt-0.5 h-5 w-5 shrink-0'>
-                        <input id='contact-consent' type='checkbox' checked={form.consent} onChange={e => update('consent', e.target.checked)}
+                        <input id='contact-consent' type='checkbox' disabled={sending} checked={form.consent} onChange={e => update('consent', e.target.checked)}
                             aria-invalid={!!errors.consent} aria-describedby={errors.consent ? 'contact-consent-error' : undefined}
                             className={`peer h-5 w-5 appearance-none rounded-md border-2 bg-white cursor-pointer transition-colors checked:border-primary checked:bg-[image:var(--primary-gradient)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${errors.consent ? 'border-red-400' : 'border-gray-300 hover:border-primary'}`} />
                         <Check className='pointer-events-none absolute inset-0 m-auto w-3 h-3 text-white opacity-0 peer-checked:opacity-100' />
@@ -181,7 +199,7 @@ export default function ContactForm() {
 
             {status === 'error' && (
                 <p role='alert' className='rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700'>
-                    Something went wrong and your message wasn&apos;t sent. Please try again, or email us directly.
+                    {errorMessage}
                 </p>
             )}
 
