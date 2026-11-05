@@ -12,7 +12,7 @@ const steps = [
         icon: DiscoverCallSvg,
         image: '/images/call.png',
         alt: 'Discovery call with a client',
-        text: 'We learn about your business, the work you need completed, and the areas where your existing team needs support. We discuss your goals, priorities, and the services we can manage for you.',
+        text: 'On your free discovery call, we learn about your business, the work you need completed, and the areas where your existing team needs support. We discuss your goals, priorities, and the services we can manage for you.',
     },
     {
         name: 'Define the Scope',
@@ -22,7 +22,7 @@ const steps = [
         text: "We agree on the services, responsibilities, priorities, and workflow. You don't have to recruit or manage individual freelancers. Vaforus takes responsibility for managing the outsourced work internally.",
     },
     {
-        name: 'Build Your Team',
+        name: 'Build Your Dedicated Team',
         icon: AgileDevSvg,
         image: '/images/build-vaforus-team.jpg',
         alt: 'Vaforus remote team collaborating online',

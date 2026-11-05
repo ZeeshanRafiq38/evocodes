@@ -29,7 +29,7 @@ const Comparison = () => {
                     <header className='text-center'>
                         <p className='home-eyebrow mb-4'>Compare your options</p>
                         <h2 className='section-heading mx-auto'>Freelancers, In&#8209;House, or Vaforus?</h2>
-                        <p className='sub-text'>Each option has its place. Here is how they compare for businesses that need work done across several areas.</p>
+                        <p className='sub-text'>Each option has its place. Here is how they compare for businesses that need work done across several areas and want to outsource it without hiring a full-time team.</p>
                     </header>
                 </SlideOnScroll>
 

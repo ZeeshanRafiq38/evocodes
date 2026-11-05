@@ -12,7 +12,7 @@ export default function Hero() {
                     <span className='block mt-1 text-orange-200'>Without Building Another Full-Time Team</span>
                 </h1>
                 <p className='hero-reveal hero-reveal-2 max-w-[760px] mx-auto mt-6 sm:mt-7 text-base sm:text-lg leading-[1.7] text-gray-100'>
-                    Discover How Vaforus Outsourcing Services Can Save You Time and Money
+                    Discover How Vaforus Business Outsourcing Services Can Save You Time and Money
                 </p>
                 <div className='hero-reveal hero-reveal-3 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-4 mt-8 max-w-[680px] mx-auto'>
                     <a href={app.discoveryCallUrl} target='_blank' rel='noopener noreferrer' className='btn-primary px-6 py-4 font-medium'>{app.ctaLabel}</a>

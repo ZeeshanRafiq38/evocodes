@@ -5,6 +5,17 @@ import ServiceCard from './ServiceCard'
 
 import services from '@/constants/services.constants'
 
+const groups = [
+    {
+        title: 'Outsource Website Development, Apps & AI',
+        hrefs: ['/services/web-development', '/services/app-development', '/services/ui-ux-graphic-design', '/services/ai-integrations'],
+    },
+    {
+        title: 'Outsource Digital Marketing & Sales',
+        hrefs: ['/services/seo-content', '/services/lead-generation-outbound-sales', '/services/social-media-management', '/services/email-marketing', '/services/digital-advertising'],
+    },
+]
+
 const Services = ({ shapes = true }) => {
     return (
         <div className='relative overflow-hidden px-3'>
@@ -16,17 +27,23 @@ const Services = ({ shapes = true }) => {
                             What Can We Take Off Your Plate?
                         </h3>
                         <p className='sub-text'>
-                            Choose the expertise you need across development, marketing and sales. We coordinate the specialists and manage delivery.
+                            Choose the expertise you need and outsource business tasks across development, marketing and sales. We coordinate the specialists and manage delivery.
                         </p>
                     </header>
                     </SlideOnScroll>
-                    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-16'>
-                        {services.map(service => (
-                            <SlideOnScroll key={service.title} direction='bottom' className='h-full min-w-0'>
-                                <ServiceCard {...service} />
-                            </SlideOnScroll>
-                        ))}
-                    </div>
+                    {groups.map((group, index) => (
+                        <div key={group.title} className={index === 0 ? 'mt-14' : 'mt-16'}>
+                            <h4 className='text-center font-clash text-xl sm:text-2xl font-semibold text-secondary'>{group.title}</h4>
+                            {/* Flex-wrap instead of grid so a short last row sits centred under the full rows. */}
+                            <div className='mt-8 flex flex-wrap justify-center gap-6'>
+                                {group.hrefs.map(href => services.find(service => service.href === href)).map(service => (
+                                    <SlideOnScroll key={service.title} direction='bottom' className='w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] min-w-0'>
+                                        <ServiceCard {...service} />
+                                    </SlideOnScroll>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
             {

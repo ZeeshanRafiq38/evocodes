@@ -15,7 +15,7 @@ const Portfolio = () => {
                                 See What We&apos;ve Built
                             </h2>
                             <p className='text-dark sm:w-[520px] w-full max-w-full text-base leading-relaxed mt-4'>
-                                Explore our development and design work, from business websites to digital products. Let&apos;s discuss what your business needs next.
+                                Explore our web and app development and design work, from business websites to digital products. Let&apos;s discuss what your business needs next.
                             </p>
                         </div>
                         <a href='#discovery-call' className='shrink-0 font-semibold text-primary'>

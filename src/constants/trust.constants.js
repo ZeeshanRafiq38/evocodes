@@ -19,7 +19,7 @@ export const engagementModels = [
     },
     {
         name: 'Multi-Service Team',
-        summary: 'Several services coordinated under one team.',
+        summary: 'Several services coordinated under one dedicated remote team.',
         includes: ['One point of contact', 'Specialists across development, marketing and sales', 'Founder-led supervision'],
         example: 'A website, SEO, and outbound sales running together',
     },
@@ -44,15 +44,15 @@ export const comparison = {
         },
         {
             label: 'Development, marketing and sales skills',
-            cells: [{ value: false, text: 'A separate person for each' }, { value: false, text: 'A separate hire for each' }, { value: true, text: 'One coordinated team' }],
+            cells: [{ value: false, text: 'A separate person for each' }, { value: false, text: 'A separate hire for each' }, { value: true, text: 'One coordinated, dedicated remote team' }],
         },
         {
             label: 'Scaling up or down',
-            cells: [{ value: true, text: 'Flexible' }, { value: false, text: 'Slow to change' }, { value: true, text: 'Scope reviewed as needs change' }],
+            cells: [{ value: true, text: 'Flexible' }, { value: false, text: 'Slow to change' }, { value: true, text: 'Scale up or down; scope reviewed as needs change' }],
         },
         {
             label: 'Knows your business day to day',
-            cells: [{ value: null, text: 'Varies by person' }, { value: true, text: 'Yes, works only for you' }, { value: true, text: 'Yes, through one ongoing team' }],
+            cells: [{ value: null, text: 'Varies by person' }, { value: true, text: 'Yes, works only for you' }, { value: true, text: 'Yes, through one dedicated remote team' }],
         },
     ],
 }

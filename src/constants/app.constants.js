@@ -4,7 +4,7 @@ const app = {
     contactForCall: '+923009321368' ,
     whatsappUrl : 'https://wa.me/923009321368',
     discoveryCallUrl : 'https://calendly.com/rasheeduzair1994/audit-intro',
-    ctaLabel : 'Book a 15-Minute Discovery Call',
+    ctaLabel : 'Book a Free 15-Minute Discovery Call',
     ctaNote : 'Free · 15 minutes · No commitment',
     email : 'uzair.rasheed@vaforus.info'
 }

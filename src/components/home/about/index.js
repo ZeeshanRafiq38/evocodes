@@ -8,11 +8,11 @@ import Link from 'next/link'
 import team from '@/constants/team.constants'
 
 const benefits = [
-    { icon: '↓', title: 'Lower operating costs', text: 'Skilled remote professionals without salaries, workspace, benefits, and other full-time hiring costs.' },
-    { icon: '◎', title: 'One team, not five freelancers', text: 'Your work is managed through Vaforus instead of you coordinating several contractors.' },
+    { icon: '↓', title: 'Lower operating costs', text: 'Reduce operating costs with skilled remote professionals, without salaries, workspace, benefits, and other full-time hiring costs.' },
+    { icon: '◎', title: 'One team, not five freelancers', text: 'Your work is managed through one dedicated remote team at Vaforus instead of you coordinating several contractors.' },
     { icon: '★', title: 'Founder-led supervision', text: 'Leadership stays involved in every project to maintain standards and accountability.' },
-    { icon: '⇄', title: 'Flexible outsourcing', text: 'Outsource one function, several services, or ongoing day-to-day tasks as your needs change.' },
-    { icon: '↗', title: 'Global remote talent', text: 'Access skilled professionals beyond your local hiring market.' },
+    { icon: '⇄', title: 'Flexible outsourcing', text: 'Outsource one function, several services, or ongoing day-to-day tasks and scale your team up or down as your needs change.' },
+    { icon: '↗', title: 'Global remote talent', text: 'Access specialists and skilled professionals beyond your local hiring market.' },
 ]
 
 const stats = [
@@ -31,6 +31,9 @@ const About = () => {
                         <h2 className='section-heading !text-pure'>
                             More Support.<span className='block'>Less Hiring Overhead.</span>
                         </h2>
+                        <p className='mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-gray-300'>
+                            Vaforus is an outsourcing company for startups, small businesses and growing companies that need dedicated remote teams across marketing, sales and development.
+                        </p>
                     </SlideOnScroll>
                     <ul className='mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-6'>
                         {benefits.map((item, index) => (

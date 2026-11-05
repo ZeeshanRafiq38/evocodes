@@ -15,8 +15,8 @@ import pageMetadata from '@/utils/pageMetadata'
 
 export const metadata = {
     ...pageMetadata(
-        'Business Process Outsourcing & Remote Teams | Vaforus',
-        'Vaforus provides business process outsourcing and remote team services across marketing, sales, web development, SEO, content, and digital operations.',
+        'Business Outsourcing Services & Remote Teams | Vaforus',
+        'Outsource business tasks without hiring a full-time team. Vaforus builds dedicated remote teams for marketing, sales, and development. Book a free call.',
         '/'
     ),
     keywords: ['business process outsourcing', 'outsourcing services', 'remote teams', 'outsourced business services', 'remote talent', 'outsourced marketing services', 'sales outsourcing', 'web development outsourcing', 'digital operations', 'virtual assistant services']

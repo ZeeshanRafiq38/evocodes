@@ -30,7 +30,7 @@ const Technologies = () => {
                         Tools Our Team Works In
                     </h2>
                     <p className='sub-text'>
-                        From development platforms and design tools to ad, CRM and outreach software, our specialists work in the tools your business already uses.
+                        From development platforms and design tools to ad, CRM and outreach software, our remote specialists work in the tools your business already uses.
                     </p>
                 </header>
             </SlideOnScroll>

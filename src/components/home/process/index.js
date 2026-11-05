@@ -13,7 +13,7 @@ const Process = () => {
                             From First Call to Managed Delivery
                         </h2>
                         <p className='sub-text'>
-                            From understanding your needs to managing delivery, Vaforus keeps the entire outsourcing process clear and accountable.
+                            From understanding your needs to managing delivery, Vaforus keeps the entire business outsourcing process clear and accountable.
                         </p>
                     </header>
                     <div className='md:mt-12 mt-8'>

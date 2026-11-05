@@ -15,7 +15,7 @@ const Engagement = () => {
                     <header className='text-center'>
                         <p className='home-eyebrow mb-4'>Ways to work with us</p>
                         <h2 className='section-heading mx-auto'>Start Small or Bring Us the Whole Workload</h2>
-                        <p className='sub-text'>Choose how you want to begin. You can change the arrangement as your needs grow.</p>
+                        <p className='sub-text'>Whether you run a startup, a small business or a growing company, choose how you want to begin. You can change the arrangement as your needs grow.</p>
                     </header>
                 </SlideOnScroll>
 
@@ -47,7 +47,7 @@ const Engagement = () => {
                 <div className='mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 text-center'>
                     <p className='text-dark'>Fees and timelines depend on scope and are agreed before any work starts.</p>
                     <a href='#discovery-call' className='font-semibold text-primary sm:whitespace-nowrap'>
-                        <span className='link-grow'>Find the right fit on a call</span> <span aria-hidden='true' className='arrow-icon'>→</span>
+                        <span className='link-grow'>Find the right fit on a free call</span> <span aria-hidden='true' className='arrow-icon'>→</span>
                     </a>
                 </div>
             </div>
