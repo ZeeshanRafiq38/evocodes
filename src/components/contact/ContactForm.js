@@ -1,5 +1,5 @@
 'use client'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import services from '@/constants/services.constants'
 import Axios from '@/config/api'
@@ -51,10 +51,17 @@ const submitContact = async (form, requestId) => {
 export default function ContactForm() {
     const [form, setForm] = useState(emptyForm)
     const [errors, setErrors] = useState({})
-    const [status, setStatus] = useState('idle') // idle | sending | success | error
+    const [status, setStatus] = useState('idle') // idle | sending | error
     const [errorMessage, setErrorMessage] = useState('')
+    const [successToast, setSuccessToast] = useState('')
     const requestId = useRef(null)
     const submitting = useRef(false)
+
+    useEffect(() => {
+        if (!successToast) return
+        const timeout = setTimeout(() => setSuccessToast(''), 4000)
+        return () => clearTimeout(timeout)
+    }, [successToast])
 
     const update = (key, value) => {
         if (submitting.current) return
@@ -81,7 +88,11 @@ export default function ContactForm() {
         try {
             requestId.current ||= crypto.randomUUID()
             await submitContact(form, requestId.current)
-            setStatus('success')
+            setForm(emptyForm)
+            setErrors({})
+            requestId.current = null
+            setSuccessToast('Message sent successfully.')
+            setStatus('idle')
         } catch (error) {
             const data = error.response?.data
             if (data?.errors) setErrors(data.errors)
@@ -90,28 +101,21 @@ export default function ContactForm() {
         } finally { submitting.current = false }
     }
 
-    if (status === 'success') {
-        return (
-            <div role='status' className='flex flex-col items-center justify-center text-center py-16 px-4'>
-                <span aria-hidden='true' className='w-16 h-16 rounded-full bg-[image:var(--primary-gradient)] text-white flex items-center justify-center shadow-[0_10px_24px_rgba(196,81,34,0.3)]'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2.4' strokeLinecap='round' strokeLinejoin='round' className='w-8 h-8'>
-                        <path d='M5 12.5 10 17.5 19 7' />
-                    </svg>
-                </span>
-                <h2 className='mt-6 font-clash text-2xl sm:text-3xl font-semibold text-secondary'>Thanks, {form.name.split(' ')[0]}!</h2>
-                <p className='mt-3 max-w-md text-base leading-relaxed text-gray-600'>
-                    Your message has been received. We&apos;ll review it and get back to you within 24 hours at <span className='font-medium text-secondary break-all'>{form.email}</span>.
-                </p>
-                <button type='button' onClick={() => { setForm(emptyForm); setStatus('idle'); requestId.current = null }} className='mt-8 text-sm font-semibold text-primary underline underline-offset-4 hover:text-primary-hover'>
-                    Send another message
-                </button>
-            </div>
-        )
-    }
-
     const sending = status === 'sending'
 
     return (
+        <>
+        {successToast && (
+            <div role='status' aria-live='polite' className='fixed right-4 top-4 z-50 flex items-center gap-3 rounded-xl border border-primary/20 bg-secondary px-4 py-3 text-sm font-medium text-pure shadow-[0_10px_30px_rgba(24,35,49,0.25)] sm:right-6 sm:top-6'>
+                <span className='flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-white'>
+                    <Check className='h-4 w-4' />
+                </span>
+                <span>{successToast}</span>
+                <button type='button' onClick={() => setSuccessToast('')} aria-label='Dismiss notification' className='ml-2 text-lg leading-none text-gray-300 transition-colors hover:text-white'>
+                    &times;
+                </button>
+            </div>
+        )}
         <form onSubmit={onSubmit} noValidate aria-busy={sending} className='space-y-6'>
             <div aria-hidden='true' style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', overflow: 'hidden' }}>
                 <label htmlFor='contact-website'>Leave this field empty</label>
@@ -219,5 +223,6 @@ export default function ContactForm() {
             </p>
             </div>
         </form>
+        </>
     )
 }
