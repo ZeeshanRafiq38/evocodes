@@ -1,14 +1,14 @@
-import { baseURL } from '@/config/api'
 import Image from 'next/image'
 import React from 'react'
+import { getImageUrl } from '@/utils/getImageUrl'
 
 const Section2 = ({ location }) => {
     return (
         <div className='flex md:flex-row flex-col md:gap-12 gap-8 items-center justify-between'>
             <div className='flex-1 min-w-0 w-full'>
                 <Image
-                src={baseURL + location?.sectionTwo?.image}
-                alt='Location'
+                src={getImageUrl(location?.sectionTwo?.image, '/images/blog.png')}
+                alt={`${location?.name || 'Vaforus'} location`}
                 width={500}
                 height={500}
                 className='object-cover'

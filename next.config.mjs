@@ -8,6 +8,10 @@ const nextConfig = (phase) => ({
                 hostname : 'evocodes-server-production.up.railway.app' ,
             } ,
             {
+                protocol : 'https' ,
+                hostname : 'res.cloudinary.com' ,
+            } ,
+            {
                 hostname : 'localhost'
             }
         ]
