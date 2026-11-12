@@ -4,3 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Keep the Netlify-generated hostname out of search results and consolidate
+# all visitors and ranking signals on the primary Vaforus domain.
+[[redirects]]
+  from = "https://vaforus-web.netlify.app/*"
+  to = "https://vaforus.com/:splat"
+  status = 301
+  force = true
