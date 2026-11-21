@@ -3,9 +3,9 @@
 const demoProfiles = {
     '/services/lead-generation-outbound-sales': { name: 'Ethan Parker', region: 'USA', position: '3.2% 4.9%' },
     '/services/email-marketing': { name: 'Olivia Bennett', region: 'UK', position: '34.4% 4.9%' },
-    '/services/seo-content': { name: 'Omar Al Mansoori', region: 'UAE', position: '65.5% 4.9%' },
+    '/services/seo-outsourcing': { name: 'Omar Al Mansoori', region: 'UAE', position: '65.5% 4.9%' },
     '/services/social-media-management': { name: 'Charlotte Hughes', region: 'UK', position: '96.6% 4.9%' },
-    '/services/web-development': { name: 'Michael Reed', region: 'USA', position: '3.2% 73.2%' },
+    '/services/web-development-outsourcing': { name: 'Michael Reed', region: 'USA', position: '3.2% 73.2%' },
     '/services/digital-advertising': { name: 'Layla Haddad', region: 'UAE', position: '34.4% 73.2%' },
     '/services/ai-integrations': { name: 'Daniel Brooks', region: 'USA', position: '65.5% 73.2%' },
     '/services/ui-ux-graphic-design': { name: 'Noura Al Harbi', region: 'Saudi Arabia', position: '96.6% 73.2%' },
@@ -29,7 +29,7 @@ const innerDemoRegions = ['USA', 'UK', 'UAE', 'USA', 'UK', 'Saudi Arabia', 'USA'
 const clientFeedback = [
     {
         label: 'Web development',
-        href: '/services/web-development',
+        href: '/services/web-development-outsourcing',
         quotes: [
             "Vaforus did an excellent job on our website. The final result looked polished and exceeded our expectations.",
             "The team was communicative throughout the project and made sure every detail was right before launch.",
@@ -67,8 +67,8 @@ const clientFeedback = [
         ],
     },
     {
-        label: 'SEO & content',
-        href: '/services/seo-content',
+        label: 'SEO',
+        href: '/services/seo-outsourcing',
         quotes: [
             "Vaforus delivered excellent work from start to finish. The content was well-written, clear, and exactly what we needed.",
             "They were communicative throughout the project and made sure we were completely satisfied with the final result.",

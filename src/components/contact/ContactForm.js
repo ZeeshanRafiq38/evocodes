@@ -8,8 +8,8 @@ const MESSAGE_MAX = 1000
 
 const titlesFor = hrefs => hrefs.map(href => services.find(service => service.href === href).title)
 const serviceChipGroups = [
-    { label: 'Development & Design', titles: titlesFor(['/services/web-development', '/services/app-development', '/services/ui-ux-graphic-design', '/services/ai-integrations']) },
-    { label: 'Marketing & Sales', titles: titlesFor(['/services/seo-content', '/services/lead-generation-outbound-sales', '/services/social-media-management', '/services/email-marketing', '/services/digital-advertising']) },
+    { label: 'Development & Design', titles: titlesFor(['/services/web-development-outsourcing', '/services/app-development', '/services/ui-ux-graphic-design', '/services/ai-integrations']) },
+    { label: 'Marketing & Sales', titles: titlesFor(['/services/seo-outsourcing', '/services/lead-generation-outbound-sales', '/services/social-media-management', '/services/email-marketing', '/services/digital-advertising']) },
 ]
 
 const Check = ({ className }) => (

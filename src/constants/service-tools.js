@@ -6,7 +6,7 @@ const serviceTools = {
     'App Development': [svg('flutter', 'Flutter'), svg('react', 'React Native'), svg('swift', 'Swift')],
     'UI/UX & Graphic Design': [svg('figma', 'Figma'), png('canva', 'Canva'), svg('framer', 'Framer')],
     'AI Integrations': [png('openai', 'OpenAI'), png('claude', 'Claude'), svg('gemini', 'Gemini')],
-    'SEO & Content': [svg('search-console', 'Search Console'), svg('google-analytics', 'Google Analytics'), svg('semrush', 'Semrush')],
+    'SEO Outsourcing': [svg('search-console', 'Search Console'), svg('google-analytics', 'Google Analytics'), svg('semrush', 'Semrush')],
     'Lead Generation & Outbound Sales': [png('apollo', 'Apollo'), png('instantly', 'Instantly'), png('clay', 'Clay')],
     'Social Media Management': [svg('meta', 'Meta'), png('buffer', 'Buffer'), png('canva', 'Canva')],
     'Email Marketing': [png('klaviyo', 'Klaviyo'), svg('mailchimp', 'Mailchimp'), png('omnisend', 'Omnisend')],

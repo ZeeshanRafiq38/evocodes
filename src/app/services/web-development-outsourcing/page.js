@@ -11,7 +11,7 @@ import Faqs from '@/components/home/faqs'
 export const metadata = pageMetadata(
     'Web Development Outsourcing Services | Vaforus',
     'Outsource web development to Vaforus. Get managed WordPress, Shopify, Webflow and custom website development services without hiring a full-time team.',
-    '/services/web-development'
+    '/services/web-development-outsourcing'
 )
 
 const capabilities = [
@@ -75,7 +75,7 @@ export default function WebDevelopmentPage() {
                         <span aria-current='page'>Web Development</span>
                     </nav>
                     <p className='mb-4 text-sm font-semibold uppercase tracking-[.14em] text-[#FFDCBE]'>Managed website development</p>
-                    <h1 className='page-title'>Web Development Outsourcing Services</h1>
+                    <h1 className='page-title max-w-[24ch]'>Web Development Outsourcing Services Without the Cost of Another Full-Time Hire</h1>
                     <p className='service-hook mt-5 max-w-3xl font-clash'>Your website shouldn&apos;t become another task on your to-do list.</p>
                     <p className='mt-5 max-w-2xl text-gray-200'>Get a managed development team to build, improve, and maintain your website—without hiring full-time developers or coordinating multiple freelancers.</p>
                     <div className='mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center'>
@@ -199,7 +199,7 @@ export default function WebDevelopmentPage() {
                 </div>
             </section>
 
-            <Testimonials category='/services/web-development' />
+            <Testimonials category='/services/web-development-outsourcing' />
             <Faqs faqsData={faqs} />
 
             <section id='discovery-call' className='section bg-secondary bg-[image:var(--section-gradient)] text-pure'>
@@ -218,7 +218,7 @@ export default function WebDevelopmentPage() {
                     </FadeOnScroll>
                 </div>
             </section>
-            <RelatedServices href='/services/web-development' />
+            <RelatedServices href='/services/web-development-outsourcing' />
         </div>
     )
 }

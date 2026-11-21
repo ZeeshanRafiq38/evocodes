@@ -1,7 +1,7 @@
 const services = [
     {
         title: 'Web Development',
-        href: '/services/web-development',
+        href: '/services/web-development-outsourcing',
         tagline: 'Websites, landing pages & upkeep',
         description: 'Build and maintain professional websites without hiring an in-house development team.'
     },
@@ -24,8 +24,8 @@ const services = [
         description: 'Connect practical AI tools with your products and workflows to automate tasks and improve customer experiences.'
     },
     {
-        title: 'SEO & Content',
-        href: '/services/seo-content',
+        title: 'SEO Outsourcing',
+        href: '/services/seo-outsourcing',
         tagline: 'SEO content & AI search visibility',
         description: 'Create search-focused content and support your organic growth with ongoing SEO execution.'
     },
@@ -66,7 +66,7 @@ export const serviceGroups = [
             { src: '/images/service-figma.svg', alt: 'Figma' },
             { src: '/images/tool-openai.png', alt: 'OpenAI' },
         ],
-        hrefs: ['/services/web-development', '/services/app-development', '/services/ai-integrations', '/services/ui-ux-graphic-design'],
+        hrefs: ['/services/web-development-outsourcing', '/services/app-development', '/services/ai-integrations', '/services/ui-ux-graphic-design'],
     },
     {
         label: 'Marketing',
@@ -77,7 +77,7 @@ export const serviceGroups = [
             { src: '/images/service-meta.svg', alt: 'Meta' },
             { src: '/images/service-mailchimp.svg', alt: 'Mailchimp' },
         ],
-        hrefs: ['/services/seo-content', '/services/social-media-management', '/services/email-marketing'],
+        hrefs: ['/services/seo-outsourcing', '/services/social-media-management', '/services/email-marketing'],
     },
     {
         label: 'Sales',

@@ -6,11 +6,11 @@ import { getTestimonials } from '@/constants/testimonials.constants'
 
 // One 24px line icon per service, used as the card avatar instead of a person.
 const serviceIcons = {
-    '/services/web-development': <><path d='m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14' /></>,
+    '/services/web-development-outsourcing': <><path d='m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14' /></>,
     '/services/app-development': <><rect x='6' y='2' width='12' height='20' rx='3' /><path d='M10 5h4M11 19h2' /></>,
     '/services/ai-integrations': <><path d='M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z' /><path d='M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z' /></>,
     '/services/ui-ux-graphic-design': <><path d='M12 20h9' /><path d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z' /></>,
-    '/services/seo-content': <><circle cx='11' cy='11' r='7' /><path d='m20 20-3.5-3.5' /></>,
+    '/services/seo-outsourcing': <><circle cx='11' cy='11' r='7' /><path d='m20 20-3.5-3.5' /></>,
     '/services/social-media-management': <><circle cx='18' cy='5' r='3' /><circle cx='6' cy='12' r='3' /><circle cx='18' cy='19' r='3' /><path d='m8.6 13.5 6.8 4M15.4 6.5l-6.8 4' /></>,
     '/services/email-marketing': <><rect x='3' y='5' width='18' height='14' rx='2' /><path d='m3 7 9 6 9-6' /></>,
     '/services/lead-generation-outbound-sales': <><circle cx='12' cy='12' r='9' /><circle cx='12' cy='12' r='5' /><circle cx='12' cy='12' r='1' /></>,

@@ -6,7 +6,7 @@ const info = [
     { label : 'WhatsApp' , value : 'Chat with us' , href : app.whatsappUrl , external : true } ,
     { label : 'Email' , value : app.email , href : `mailto:${app.email}` } ,
     { label : 'Office' , value : app.officeAddress , href : '/locations/multan-pakistan' , internal : true } ,
-    { label : 'Working Hours' , value : '8AM - 9PM GMT' } ,
+    { label : 'Working Hours' , value : '8AM GMT to 9PM GMT' } ,
 ]
 
 const ContactInfo = () => {

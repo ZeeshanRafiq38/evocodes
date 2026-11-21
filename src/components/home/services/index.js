@@ -8,11 +8,11 @@ import services from '@/constants/services.constants'
 const groups = [
     {
         title: 'Outsource Website Development, Apps & AI',
-        hrefs: ['/services/web-development', '/services/app-development', '/services/ui-ux-graphic-design', '/services/ai-integrations'],
+        hrefs: ['/services/web-development-outsourcing', '/services/app-development', '/services/ui-ux-graphic-design', '/services/ai-integrations'],
     },
     {
         title: 'Outsource Digital Marketing & Sales',
-        hrefs: ['/services/seo-content', '/services/lead-generation-outbound-sales', '/services/social-media-management', '/services/email-marketing', '/services/digital-advertising'],
+        hrefs: ['/services/seo-outsourcing', '/services/lead-generation-outbound-sales', '/services/social-media-management', '/services/email-marketing', '/services/digital-advertising'],
     },
 ]
 

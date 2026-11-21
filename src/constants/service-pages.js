@@ -71,44 +71,6 @@ const servicePages = {
         ctaTitle: 'Add AI Capability Without Building a Separate Team',
         ctaParagraphs: ['You do not need to connect every tool or automate every process at once.', 'Vaforus can work alongside your business to deliver a focused integration, gather feedback, and support the next iteration.', 'Let us discuss which workflow would benefit from practical AI support.']
     },
-    "seo-content": {
-        coverImage: '/images/cover-seo-content.jpg',
-        "title": "SEO & Content",
-        "seoTitle": "SEO & Content Outsourcing Services | Vaforus",
-        "description": "Outsource SEO and content to Vaforus. Get ongoing SEO execution, keyword-focused content, and search optimization from a managed remote team.",
-        "headline": "Publishing more content won't help if nobody finds it.",
-        "intro": [
-            "Many businesses know they need SEO but struggle to keep up with keyword research, content production, on-page optimization, technical improvements, and ongoing search changes.",
-            "Vaforus provides outsourced SEO and content services to keep your search strategy moving.",
-            "Our team handles the ongoing execution while your business gets a dedicated extension of its team without hiring an entire SEO department."
-        ],
-        "capabilitiesTitle": "Our SEO & Content Services",
-        "capabilities": [
-            "Keyword research and content planning",
-            "SEO blog content",
-            "On-page SEO",
-            "Content optimization",
-            "Internal linking",
-            "SEO-friendly website content",
-            "Search-focused content updates",
-            "Ongoing SEO execution"
-        ],
-        "sections": [
-            {
-                "title": "SEO That Goes Beyond Keywords",
-                "paragraphs": [
-                    "Modern search visibility requires more than inserting keywords into articles.",
-                    "We focus on creating useful, well-structured content that addresses real customer questions while making your website easier for search engines and AI-powered search systems to understand.",
-                    "Our team combines SEO strategy, content creation, and ongoing execution rather than treating them as separate tasks."
-                ]
-            }
-        ],
-        "ctaTitle": "Stop Letting SEO Sit on the Back Burner",
-        "ctaParagraphs": [
-            "You don't need another strategy document that never gets implemented.",
-            "Vaforus becomes an extension of your team and handles the work required to consistently improve your organic presence."
-        ]
-    },
     "lead-generation-outbound-sales": {
         coverImage: '/images/cover-lead-generation-outbound-sales.jpg',
         "title": "Lead Generation & Outbound Sales",
