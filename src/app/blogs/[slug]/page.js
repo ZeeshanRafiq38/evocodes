@@ -1,10 +1,12 @@
 import BlogHeader from '@/components/blogs/blogDetails/BlogHeader'
 import RelatedPosts from '@/components/blogs/blogDetails/RelatedPosts'
+import BlogServiceCta from '@/components/blogs/blogDetails/BlogServiceCta'
 import Axios from '@/config/api'
 import React, { cache } from 'react'
 import { notFound } from 'next/navigation'
 import pageMetadata from '@/utils/pageMetadata'
 import { getImageUrl } from '@/utils/getImageUrl'
+import { pickRelatedBlogs, getBlogServiceHref } from '@/utils/relatedBlogs'
 
 
 const getBlog = cache(async (slug) => {
@@ -16,6 +18,18 @@ const getBlog = cache(async (slug) => {
         if (/not found/i.test(error?.response?.data?.message || '')) return null
         console.error("Error fetching blog details:", error);
         throw new Error("Could not fetch blog details. Please try again later.");
+    }
+});
+
+// All published blogs, used to pick related articles. Never breaks the page:
+// if this fails, the related section is simply hidden.
+const getAllBlogs = cache(async () => {
+    try {
+        const { data: { data: { docs } } } = await Axios('/blog', { params: { pageSize: 100 } })
+        return docs || []
+    } catch (error) {
+        console.error('Error fetching blogs for related posts:', error)
+        return []
     }
 });
 
@@ -37,6 +51,8 @@ const page = async ({ params }) => {
     const data = await getBlog(params.slug);
     if (!data?.blog) notFound();
     const { blog, relatedBlogs } = data;
+    const related = pickRelatedBlogs(blog, await getAllBlogs(), relatedBlogs);
+    const serviceHref = getBlogServiceHref(blog);
 
     return (
         <>
@@ -51,9 +67,8 @@ const page = async ({ params }) => {
                             dangerouslySetInnerHTML={{ __html: blog?.content }}
                         />
                     </div>
-                    <div>
-                        <RelatedPosts blogs={relatedBlogs} />
-                    </div>
+                    <BlogServiceCta href={serviceHref} />
+                    <RelatedPosts blogs={related} />
                 </div>
             </div>
         </>

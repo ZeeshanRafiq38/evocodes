@@ -1,30 +1,28 @@
 import React from 'react'
+import Link from 'next/link'
 import Blog from '../Blog'
 
+// Related articles under a blog post. Hidden when there is nothing to show.
 const RelatedPosts = ({ blogs }) => {
+    if (!blogs?.length) return null
+
     return (
-        <div className='border-t-2 border-t-gray-400 my-10 px-3'>
-            <h3 className='lg:text-3xl sm:text-2xl text-xl font-semibold font-clash w-spacing-sm tracking-wide text-center py-6 text-secondary'>
-                Related Posts
-            </h3>
-            <div>
-                {
-                    blogs?.length > 0 
-                    ?
-                        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
-                            {
-                                blogs?.map(item => (
-                                    <Blog key={item?._id} blog={item} />
-                                ))
-                            }
-                        </div>
-                    : 
-                        <div className='flex items-center justify-center rounded-md h-[150px] text-lg font-semibold border border-gray-300'>
-                            Not related posts found.
-                        </div>
-                }
+        <section className='mt-16 pt-12 border-t border-gray-200 px-3' aria-labelledby='related-articles'>
+            <div className='flex flex-col md:flex-row md:items-end justify-between gap-4'>
+                <div>
+                    <p className='home-eyebrow mb-3'>Keep reading</p>
+                    <h2 id='related-articles' className='section-heading'>Related Articles</h2>
+                </div>
+                <Link href='/blogs' className='shrink-0 font-semibold text-primary'>
+                    <span className='link-grow'>View all articles</span> <span aria-hidden='true' className='arrow-icon'>→</span>
+                </Link>
             </div>
-        </div>
+            <div className='mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
+                {blogs.map(item => (
+                    <Blog key={item?._id || item?.slug} blog={item} />
+                ))}
+            </div>
+        </section>
     )
 }
 
